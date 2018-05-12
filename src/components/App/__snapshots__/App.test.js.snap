@@ -1,0 +1,572 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render the correct JSX 1`] = `
+.c6 {
+  padding-top: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c3 {
+  font-size: 16px;
+  padding: 13px 6px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: transparent;
+  color: #6272a4;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.c4 {
+  font-size: 16px;
+  padding: 13px 6px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: transparent;
+  color: #6272a4;
+  box-sizing: border-box;
+  border: 0;
+  color: #ff79c6;
+}
+
+.c0 {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background: #151617 linear-gradient(#1a0f21,#151617 70%) no-repeat;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.c2 {
+  max-width: 150px;
+}
+
+.c1 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  background: #1e1b2f;
+  width: 100%;
+  text-align: center;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c16 {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.c13 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c12 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.c9 {
+  padding-bottom: 26px;
+  margin: 0 13px;
+}
+
+.c10 {
+  font-family: 'Roboto Slab',serif;
+  margin-top: 0;
+}
+
+.c11 {
+  margin-bottom: 26px;
+}
+
+.c15 {
+  border: 1px solid #ff79c6;
+  background: transparent;
+  font-size: 18px;
+  padding: 9px;
+  border-radius: 10px;
+  color: #ff79c6;
+}
+
+.c7 {
+  background: #151617 linear-gradient(#1a0f21,#151617 70%) no-repeat;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 52px;
+  display: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c8 {
+  padding: 0;
+  margin-bottom: 26px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  height: 200px;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media screen and (min-width:700px) {
+  .c3 {
+    padding: 13px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c4 {
+    padding: 13px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c0 {
+    bottom: auto;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c1 {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c9 {
+    padding: 0;
+    margin: 0 6px 6px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin-left: 52px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c10 {
+    -webkit-flex: 1 100%;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c14 {
+    -webkit-flex: 1 100%;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c11 {
+    max-width: 600px;
+    margin-right: 52px;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c7 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c8 {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c8 {
+    width: 450px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c5 {
+    padding-top: 170px;
+  }
+}
+
+<App>
+  <div>
+    <Navigation
+      attributionText=""
+      comics={Array []}
+      dateDescriptor="thisWeek"
+      dateDescriptors={
+        Array [
+          "Last Week",
+          "This Week",
+          "Next Week",
+        ]
+      }
+      handleClick={[Function]}
+      isSpotlightVisible={false}
+      spotlight={Object {}}
+    >
+      <styled.nav>
+        <nav
+          className="c0"
+        >
+          <styled.header>
+            <header
+              className="c1"
+            >
+              <styled.img
+                alt="MVL"
+                src="logo.svg"
+              >
+                <img
+                  alt="MVL"
+                  className="c2"
+                  src="logo.svg"
+                />
+              </styled.img>
+            </header>
+          </styled.header>
+          <Button
+            current={false}
+            dateDescriptor="Last Week"
+            handleClick={[Function]}
+            key="button-Last Week"
+          >
+            <styled.button
+              current={false}
+              onClick={[Function]}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+              >
+                Last Week
+              </button>
+            </styled.button>
+          </Button>
+          <Button
+            current={true}
+            dateDescriptor="This Week"
+            handleClick={[Function]}
+            key="button-This Week"
+          >
+            <styled.button
+              current={true}
+              onClick={[Function]}
+            >
+              <button
+                className="c4"
+                onClick={[Function]}
+              >
+                This Week
+              </button>
+            </styled.button>
+          </Button>
+          <Button
+            current={false}
+            dateDescriptor="Next Week"
+            handleClick={[Function]}
+            key="button-Next Week"
+          >
+            <styled.button
+              current={false}
+              onClick={[Function]}
+            >
+              <button
+                className="c3"
+                onClick={[Function]}
+              >
+                Next Week
+              </button>
+            </styled.button>
+          </Button>
+        </nav>
+      </styled.nav>
+    </Navigation>
+    <styled.div>
+      <div
+        className="c5"
+      >
+        <Comics
+          attributionText=""
+          changeSpotlight={[Function]}
+          comics={Array []}
+          dateDescriptor="thisWeek"
+          dateDescriptors={
+            Array [
+              "Last Week",
+              "This Week",
+              "Next Week",
+            ]
+          }
+          isSpotlightVisible={false}
+          spotlight={Object {}}
+        >
+          <styled.section>
+            <section
+              className="c6"
+            />
+          </styled.section>
+        </Comics>
+        <Spotlight
+          close={[Function]}
+          creators={
+            Array [
+              Object {
+                "name": "",
+                "role": "",
+              },
+            ]
+          }
+          dates={
+            Array [
+              Object {
+                "date": "",
+                "type": "",
+              },
+            ]
+          }
+          description=""
+          isSpotlightVisible={false}
+          thumbnail={
+            Object {
+              "extension": "",
+              "path": "",
+            }
+          }
+          title=""
+          urls={
+            Array [
+              Object {
+                "type": "",
+                "url": "",
+              },
+            ]
+          }
+        >
+          <styled.section
+            isSpotlightVisible={false}
+          >
+            <section
+              className="c7"
+            >
+              <styled.img
+                alt=""
+                src="."
+              >
+                <img
+                  alt=""
+                  className="c8"
+                  src="."
+                />
+              </styled.img>
+              <Detail
+                close={[Function]}
+                creators={
+                  Array [
+                    Object {
+                      "name": "",
+                      "role": "",
+                    },
+                  ]
+                }
+                dates={
+                  Array [
+                    Object {
+                      "date": "",
+                      "type": "",
+                    },
+                  ]
+                }
+                description=""
+                title=""
+                urls={
+                  Array [
+                    Object {
+                      "type": "",
+                      "url": "",
+                    },
+                  ]
+                }
+              >
+                <styled.div>
+                  <div
+                    className="c9"
+                  >
+                    <styled.h2>
+                      <h2
+                        className="c10"
+                      />
+                    </styled.h2>
+                    <styled.div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                    >
+                      <div
+                        className="c11"
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "",
+                          }
+                        }
+                      />
+                    </styled.div>
+                    <Creators
+                      creators={
+                        Array [
+                          Object {
+                            "name": "",
+                            "role": "",
+                          },
+                        ]
+                      }
+                    >
+                      <div>
+                        <styled.h3>
+                          <h3
+                            className="c12"
+                          >
+                            Creative team
+                          </h3>
+                        </styled.h3>
+                        <styled.ul>
+                          <ul
+                            className="c13"
+                          >
+                            <Creator
+                              key="c-"
+                              name=""
+                              role=""
+                            >
+                              <li>
+                                 - 
+                              </li>
+                            </Creator>
+                          </ul>
+                        </styled.ul>
+                      </div>
+                    </Creators>
+                    <styled.p>
+                      <p
+                        className="c14"
+                      />
+                    </styled.p>
+                    <styled.button
+                      onClick={[Function]}
+                    >
+                      <button
+                        className="c15"
+                        onClick={[Function]}
+                      >
+                        Close
+                      </button>
+                    </styled.button>
+                  </div>
+                </styled.div>
+              </Detail>
+            </section>
+          </styled.section>
+        </Spotlight>
+      </div>
+    </styled.div>
+    <Footer
+      attributionText=""
+      comics={Array []}
+      dateDescriptor="thisWeek"
+      dateDescriptors={
+        Array [
+          "Last Week",
+          "This Week",
+          "Next Week",
+        ]
+      }
+      isSpotlightVisible={false}
+      spotlight={Object {}}
+    >
+      <styled.footer>
+        <footer
+          className="c16"
+        >
+          <p />
+        </footer>
+      </styled.footer>
+    </Footer>
+  </div>
+</App>
+`;

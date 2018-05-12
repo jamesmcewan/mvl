@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comic should render the correct JSX 1`] = `
+.c0 {
+  padding: 0;
+  margin: 0 3px 3px;
+  margin-bottom: 26px;
+  border: 0;
+  background: transparent;
+}
+
+.c1 {
+  width: 100%;
+}
+
+@media screen and (min-width:700px) {
+  .c0 {
+    padding: 0;
+    margin: 0 6px 6px;
+    max-width: 240px;
+  }
+}
+
+<Comic
+  id=""
+  thumbnail={
+    Object {
+      "extension": "",
+      "path": "",
+    }
+  }
+  title=""
+>
+  <styled.button
+    onClick={[Function]}
+  >
+    <button
+      className="c0"
+      onClick={[Function]}
+    >
+      <ProgressiveImage
+        placeholder="placeholder.jpg"
+        src="."
+      >
+        <styled.img
+          alt=""
+          src="http://localhost/"
+        >
+          <img
+            alt=""
+            className="c1"
+            src="http://localhost/"
+          />
+        </styled.img>
+      </ProgressiveImage>
+    </button>
+  </styled.button>
+</Comic>
+`;

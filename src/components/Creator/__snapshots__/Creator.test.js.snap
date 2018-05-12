@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creator should render the correct JSX 1`] = `
+<Creator>
+  <li>
+     - 
+  </li>
+</Creator>
+`;
