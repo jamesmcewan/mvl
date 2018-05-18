@@ -3,7 +3,7 @@ import { isArray } from 'util';
 import styled from 'styled-components';
 import Comic from '../Comic/Comic';
 
-const Section = styled.section`
+const StyledSection = styled.section`
   padding-top: 0;
   margin: 0 auto;
   text-align: center;
@@ -15,7 +15,7 @@ const Section = styled.section`
 `;
 
 const Comics = ({ comics, changeSpotlight, isSpotlightVisible }) => (
-  <Section>
+  <StyledSection>
     {isArray(comics) &&
       comics.map(comic => (
         <Comic
@@ -25,7 +25,7 @@ const Comics = ({ comics, changeSpotlight, isSpotlightVisible }) => (
           isSpotlightVisible={isSpotlightVisible}
         />
       ))}
-  </Section>
+  </StyledSection>
 );
 
 export default Comics;

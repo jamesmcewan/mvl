@@ -25,7 +25,7 @@ const StyledButton = styled.button`
 
 const Button = ({ dateDescriptor, handleClick, current }) => (
   <StyledButton
-    current={current}
+    {...{current}}
     onClick={e => handleClick(e, camelCase(dateDescriptor))}
   >
     {dateDescriptor}

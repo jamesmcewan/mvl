@@ -5,7 +5,7 @@ import camelCase from 'lodash.camelcase';
 import mvl from '../../images/logo.svg';
 import { isArray } from 'util';
 
-const Nav = styled.nav`
+const StyledNav = styled.nav`
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -20,11 +20,11 @@ const Nav = styled.nav`
   }
 `;
 
-const Img = styled.img`
+const StyledImg = styled.img`
   max-width: 150px;
 `;
 
-const Header = styled.header`
+const StyledHeader = styled.header`
   flex-grow: 0;
   background: #1e1b2f;
   width: 100%;
@@ -37,10 +37,10 @@ const Header = styled.header`
 `;
 
 const Navigation = ({ dateDescriptor, dateDescriptors, handleClick }) => (
-  <Nav>
-    <Header>
-      <Img src={mvl} alt="MVL" />
-    </Header>
+  <StyledNav>
+    <StyledHeader>
+      <StyledImg src={mvl} alt="MVL" />
+    </StyledHeader>
     {isArray(dateDescriptors) &&
       dateDescriptors.map(d => {
         const current = camelCase(d) === dateDescriptor;
@@ -53,7 +53,7 @@ const Navigation = ({ dateDescriptor, dateDescriptors, handleClick }) => (
           />
         );
       })}
-  </Nav>
+  </StyledNav>
 );
 
 export default Navigation;

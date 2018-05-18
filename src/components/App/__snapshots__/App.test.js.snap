@@ -85,67 +85,9 @@ exports[`App should render the correct JSX 1`] = `
   order: 1;
 }
 
-.c16 {
+.c7 {
   text-align: center;
   margin-bottom: 120px;
-}
-
-.c13 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c12 {
-  margin-top: 0;
-  font-size: 22px;
-}
-
-.c9 {
-  padding-bottom: 26px;
-  margin: 0 13px;
-}
-
-.c10 {
-  font-family: 'Roboto Slab',serif;
-  margin-top: 0;
-}
-
-.c11 {
-  margin-bottom: 26px;
-}
-
-.c15 {
-  border: 1px solid #ff79c6;
-  background: transparent;
-  font-size: 18px;
-  padding: 9px;
-  border-radius: 10px;
-  color: #ff79c6;
-}
-
-.c7 {
-  background: #151617 linear-gradient(#1a0f21,#151617 70%) no-repeat;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 52px;
-  display: none;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
-.c8 {
-  padding: 0;
-  margin-bottom: 26px;
-  width: 100%;
-  box-sizing: border-box;
-  border: 0;
-  background: transparent;
-  height: 200px;
-  object-fit: cover;
-  object-position: left top;
 }
 
 .c5 {
@@ -191,72 +133,6 @@ exports[`App should render the correct JSX 1`] = `
 }
 
 @media screen and (min-width:700px) {
-  .c9 {
-    padding: 0;
-    margin: 0 6px 6px;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c9 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-    margin-left: 52px;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c10 {
-    -webkit-flex: 1 100%;
-    -ms-flex: 1 100%;
-    flex: 1 100%;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c14 {
-    -webkit-flex: 1 100%;
-    -ms-flex: 1 100%;
-    flex: 1 100%;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c11 {
-    max-width: 600px;
-    margin-right: 52px;
-  }
-}
-
-@media screen and (min-width:700px) {
-  .c7 {
-    padding: 0;
-  }
-}
-
-@media screen and (min-width:700px) {
-  .c8 {
-    height: 400px;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c8 {
-    width: 450px;
-    height: auto;
-  }
-}
-
-@media screen and (min-width:700px) {
   .c5 {
     padding-top: 170px;
   }
@@ -265,8 +141,6 @@ exports[`App should render the correct JSX 1`] = `
 <App>
   <div>
     <Navigation
-      attributionText=""
-      comics={Array []}
       dateDescriptor="thisWeek"
       dateDescriptors={
         Array [
@@ -276,8 +150,6 @@ exports[`App should render the correct JSX 1`] = `
         ]
       }
       handleClick={[Function]}
-      isSpotlightVisible={false}
-      spotlight={Object {}}
     >
       <styled.nav>
         <nav
@@ -361,19 +233,9 @@ exports[`App should render the correct JSX 1`] = `
         className="c5"
       >
         <Comics
-          attributionText=""
           changeSpotlight={[Function]}
           comics={Array []}
-          dateDescriptor="thisWeek"
-          dateDescriptors={
-            Array [
-              "Last Week",
-              "This Week",
-              "Next Week",
-            ]
-          }
           isSpotlightVisible={false}
-          spotlight={Object {}}
         >
           <styled.section>
             <section
@@ -381,187 +243,14 @@ exports[`App should render the correct JSX 1`] = `
             />
           </styled.section>
         </Comics>
-        <Spotlight
-          close={[Function]}
-          creators={
-            Array [
-              Object {
-                "name": "",
-                "role": "",
-              },
-            ]
-          }
-          dates={
-            Array [
-              Object {
-                "date": "",
-                "type": "",
-              },
-            ]
-          }
-          description=""
-          isSpotlightVisible={false}
-          thumbnail={
-            Object {
-              "extension": "",
-              "path": "",
-            }
-          }
-          title=""
-          urls={
-            Array [
-              Object {
-                "type": "",
-                "url": "",
-              },
-            ]
-          }
-        >
-          <styled.section
-            isSpotlightVisible={false}
-          >
-            <section
-              className="c7"
-            >
-              <styled.img
-                alt=""
-                src="."
-              >
-                <img
-                  alt=""
-                  className="c8"
-                  src="."
-                />
-              </styled.img>
-              <Detail
-                close={[Function]}
-                creators={
-                  Array [
-                    Object {
-                      "name": "",
-                      "role": "",
-                    },
-                  ]
-                }
-                dates={
-                  Array [
-                    Object {
-                      "date": "",
-                      "type": "",
-                    },
-                  ]
-                }
-                description=""
-                title=""
-                urls={
-                  Array [
-                    Object {
-                      "type": "",
-                      "url": "",
-                    },
-                  ]
-                }
-              >
-                <styled.div>
-                  <div
-                    className="c9"
-                  >
-                    <styled.h2>
-                      <h2
-                        className="c10"
-                      />
-                    </styled.h2>
-                    <styled.div
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "",
-                        }
-                      }
-                    >
-                      <div
-                        className="c11"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "",
-                          }
-                        }
-                      />
-                    </styled.div>
-                    <Creators
-                      creators={
-                        Array [
-                          Object {
-                            "name": "",
-                            "role": "",
-                          },
-                        ]
-                      }
-                    >
-                      <div>
-                        <styled.h3>
-                          <h3
-                            className="c12"
-                          >
-                            Creative team
-                          </h3>
-                        </styled.h3>
-                        <styled.ul>
-                          <ul
-                            className="c13"
-                          >
-                            <Creator
-                              key="c-"
-                              name=""
-                              role=""
-                            >
-                              <li>
-                                 - 
-                              </li>
-                            </Creator>
-                          </ul>
-                        </styled.ul>
-                      </div>
-                    </Creators>
-                    <styled.p>
-                      <p
-                        className="c14"
-                      />
-                    </styled.p>
-                    <styled.button
-                      onClick={[Function]}
-                    >
-                      <button
-                        className="c15"
-                        onClick={[Function]}
-                      >
-                        Close
-                      </button>
-                    </styled.button>
-                  </div>
-                </styled.div>
-              </Detail>
-            </section>
-          </styled.section>
-        </Spotlight>
       </div>
     </styled.div>
     <Footer
       attributionText=""
-      comics={Array []}
-      dateDescriptor="thisWeek"
-      dateDescriptors={
-        Array [
-          "Last Week",
-          "This Week",
-          "Next Week",
-        ]
-      }
-      isSpotlightVisible={false}
-      spotlight={Object {}}
     >
       <styled.footer>
         <footer
-          className="c16"
+          className="c7"
         >
           <p />
         </footer>

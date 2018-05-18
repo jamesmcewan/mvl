@@ -1,32 +1,26 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Detail from '../Detail/Detail';
 
-const SpotlightSection = styled.section`
+const StyledSpotlightSection = styled.section`
   background: #151617 linear-gradient(#1a0f21, #151617 70%) no-repeat;
   position: relative;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 52px;
-  display: none;
   order: 1;
 
   @media screen and (min-width: 700px) {
     padding: 0;
   }
 
-  ${props =>
-    props.isSpotlightVisible &&
-    css`
-      display: block;
-      @media screen and (min-width: 1000px) {
-        display: flex;
-        align-items: flex-start;
-      }
-    `};
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    align-items: flex-start;
+  }
 `;
 
-const SpotlightImg = styled.img`
+const StyledSpotlightImg = styled.img`
   padding: 0;
   margin-bottom: 26px;
   width: 100%;
@@ -58,20 +52,12 @@ const Spotlight = ({
   isSpotlightVisible,
 }) => {
   const { path, extension } = thumbnail;
-  const detailProps = {
-    title,
-    description,
-    creators,
-    diamondCode,
-    urls,
-    close,
-  };
 
   return (
-    <SpotlightSection isSpotlightVisible={isSpotlightVisible}>
-      <SpotlightImg src={`${path}.${extension}`} alt={title} />
-      <Detail {...detailProps} />
-    </SpotlightSection>
+    <StyledSpotlightSection>
+      <StyledSpotlightImg src={`${path}.${extension}`} alt={title} />
+      <Detail {...{title, description, creators, diamondCode, urls, close}} />
+    </StyledSpotlightSection>
   );
 };
 

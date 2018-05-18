@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Creators from '../Creators/Creators';
 
-const DetailWrapper = styled.div`
+const StyledDetailWrapper = styled.div`
   padding-bottom: 26px;
   margin: 0 13px;
 
@@ -19,7 +19,7 @@ const DetailWrapper = styled.div`
   }
 `;
 
-const DetailHeading = styled.h2`
+const StyledDetailHeading = styled.h2`
   font-family: 'Roboto Slab', serif;
   margin-top: 0;
   @media screen and (min-width: 1000px) {
@@ -27,13 +27,13 @@ const DetailHeading = styled.h2`
   }
 `;
 
-const DiamondCode = styled.p`
+const StyledDiamondCode = styled.p`
   @media screen and (min-width: 1000px) {
     flex: 1 100%;
   }
 `;
 
-const DetailDescription = styled.div`
+const StyledDetailDescription = styled.div`
   margin-bottom: 26px;
 
   @media screen and (min-width: 1000px) {
@@ -42,7 +42,7 @@ const DetailDescription = styled.div`
   }
 `;
 
-const DetailButton = styled.button`
+const StyledDetailButton = styled.button`
   border: 1px solid #ff79c6;
   background: transparent;
   font-size: 18px;
@@ -52,13 +52,13 @@ const DetailButton = styled.button`
 `;
 
 const Detail = ({ title, description, creators, diamondCode, urls, close }) => (
-  <DetailWrapper>
-    <DetailHeading>{title}</DetailHeading>
-    <DetailDescription dangerouslySetInnerHTML={{ __html: description }} />
-    <Creators creators={creators} />
-    <DiamondCode>{diamondCode}</DiamondCode>
-    <DetailButton onClick={e => close(e)}>Close</DetailButton>
-  </DetailWrapper>
+  <StyledDetailWrapper>
+    <StyledDetailHeading>{title}</StyledDetailHeading>
+    <StyledDetailDescription dangerouslySetInnerHTML={{ __html: description }} />
+    <Creators {...{creators}} />
+    <StyledDiamondCode>{diamondCode}</StyledDiamondCode>
+    <StyledDetailButton onClick={e => close(e)}>Close</StyledDetailButton>
+  </StyledDetailWrapper>
 );
 
 Detail.defaultProps = {

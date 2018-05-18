@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import placeHolder from '../../images/placeholder.jpg';
 import ProgressiveImage from 'react-progressive-image';
 
-const ComicButton = styled.button`
+const StyledComicButton = styled.button`
   padding: 0;
   margin: 0 3px 3px;
   margin-bottom: 26px;
@@ -23,7 +23,7 @@ const ComicButton = styled.button`
     `};
 `;
 
-const Img = styled.img`
+const StyledImg = styled.img`
   width: 100%;
 `;
 
@@ -38,7 +38,7 @@ const Comic = ({
   changeSpotlight,
   isSpotlightVisible,
 }) => (
-  <ComicButton
+  <StyledComicButton
     onClick={e => changeSpotlight(e, id)}
     isSpotlightVisible={isSpotlightVisible}
   >
@@ -46,9 +46,9 @@ const Comic = ({
       src={`${replaceHttp(thumbnail.path)}.${thumbnail.extension}`}
       placeholder={placeHolder}
     >
-      {src => <Img src={src} alt={title} />}
+      {src => <StyledImg src={src} alt={title} />}
     </ProgressiveImage>
-  </ComicButton>
+  </StyledComicButton>
 );
 
 Comic.defaultProps = {

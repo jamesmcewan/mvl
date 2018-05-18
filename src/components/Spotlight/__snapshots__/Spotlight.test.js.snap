@@ -41,7 +41,6 @@ exports[`Spotlight should render the correct JSX 1`] = `
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 52px;
-  display: none;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
@@ -109,6 +108,19 @@ exports[`Spotlight should render the correct JSX 1`] = `
 @media screen and (min-width:700px) {
   .c0 {
     padding: 0;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
   }
 }
 
