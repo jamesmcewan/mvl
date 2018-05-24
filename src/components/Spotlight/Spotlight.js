@@ -56,7 +56,7 @@ const Spotlight = ({
   return (
     <StyledSpotlightSection>
       <StyledSpotlightImg src={`${path}.${extension}`} alt={title} />
-      <Detail {...{title, description, creators, diamondCode, urls, close}} />
+      <Detail {...{ title, description, creators, diamondCode, urls, close }} />
     </StyledSpotlightSection>
   );
 };

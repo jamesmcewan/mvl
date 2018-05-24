@@ -10,4 +10,16 @@ import Navigation from './Navigation/Navigation';
 import Spotlight from './Spotlight/Spotlight';
 import Urls from './Urls/Urls';
 
-export { App, Button, Comic, Comics, Creator, Creators, Detail, Footer, Navigation, Spotlight, Urls };
+export {
+  App,
+  Button,
+  Comic,
+  Comics,
+  Creator,
+  Creators,
+  Detail,
+  Footer,
+  Navigation,
+  Spotlight,
+  Urls,
+};

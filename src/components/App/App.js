@@ -110,18 +110,54 @@ class App extends Component {
   };
 
   render() {
-    const { comics, isSpotlightVisible, spotlight, attributionText, dateDescriptor, dateDescriptors } = this.state;
-    const { title, description, thumbnail, creators, diamondCode, urls } = spotlight;
+    const {
+      comics,
+      isSpotlightVisible,
+      spotlight,
+      attributionText,
+      dateDescriptor,
+      dateDescriptors,
+    } = this.state;
+    const {
+      title,
+      description,
+      thumbnail,
+      creators,
+      diamondCode,
+      urls,
+    } = spotlight;
     return (
       <div>
-        <Navigation {...{dateDescriptor, dateDescriptors, handleClick: this.handleClick}} />
+        <Navigation
+          {...{
+            dateDescriptor,
+            dateDescriptors,
+            handleClick: this.handleClick,
+          }}
+        />
         <ComicsGrid>
-          <Comics {...{comics, isSpotlightVisible, changeSpotlight: this.changeSpotlight}} />
-          { isSpotlightVisible && 
-            <Spotlight {...{title, description, thumbnail, creators, diamondCode, urls, close: this.closeSpotlight}} /> 
-          }
+          <Comics
+            {...{
+              comics,
+              isSpotlightVisible,
+              changeSpotlight: this.changeSpotlight,
+            }}
+          />
+          {isSpotlightVisible && (
+            <Spotlight
+              {...{
+                title,
+                description,
+                thumbnail,
+                creators,
+                diamondCode,
+                urls,
+                close: this.closeSpotlight,
+              }}
+            />
+          )}
         </ComicsGrid>
-        <Footer {...{attributionText}} />
+        <Footer {...{ attributionText }} />
       </div>
     );
   }

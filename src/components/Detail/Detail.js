@@ -54,8 +54,10 @@ const StyledDetailButton = styled.button`
 const Detail = ({ title, description, creators, diamondCode, urls, close }) => (
   <StyledDetailWrapper>
     <StyledDetailHeading>{title}</StyledDetailHeading>
-    <StyledDetailDescription dangerouslySetInnerHTML={{ __html: description }} />
-    <Creators {...{creators}} />
+    <StyledDetailDescription
+      dangerouslySetInnerHTML={{ __html: description }}
+    />
+    <Creators {...{ creators }} />
     <StyledDiamondCode>{diamondCode}</StyledDiamondCode>
     <StyledDetailButton onClick={e => close(e)}>Close</StyledDetailButton>
   </StyledDetailWrapper>
