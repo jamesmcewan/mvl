@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isArray } from 'util';
-import Creator from '../Creator/Creator';
+import { Creator } from '..';
 
 const StyledCreatorsList = styled.ul`
   list-style-type: none;

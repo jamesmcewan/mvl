@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../Button/Button';
+import { Button } from '..';
 import camelCase from 'lodash.camelcase';
 import mvl from '../../images/logo.svg';
 import { isArray } from 'util';

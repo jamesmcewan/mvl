@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Creators from '../Creators/Creators';
+import { Creators } from '..';
 
 const StyledDetailWrapper = styled.div`
   padding-bottom: 26px;

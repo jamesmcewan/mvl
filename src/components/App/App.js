@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import styled, { injectGlobal } from 'styled-components';
 import getData from '../../getData';
-import Comics from '../Comics/Comics';
-import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
-import Spotlight from '../Spotlight/Spotlight';
+import { Comics, Navigation, Footer, Spotlight } from '..';
 
 injectGlobal`
   html {

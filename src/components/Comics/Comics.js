@@ -1,7 +1,7 @@
 import React from 'react';
 import { isArray } from 'util';
 import styled from 'styled-components';
-import Comic from '../Comic/Comic';
+import { Comic } from '..';
 
 const StyledSection = styled.section`
   padding-top: 0;

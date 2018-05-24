@@ -1,30 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render the correct JSX 1`] = `
-.c6 {
-  padding-top: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
 .c3 {
   font-size: 16px;
   padding: 13px 6px;
@@ -50,6 +26,35 @@ exports[`App should render the correct JSX 1`] = `
   box-sizing: border-box;
   border: 0;
   color: #ff79c6;
+}
+
+.c6 {
+  padding-top: 0;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c7 {
+  text-align: center;
+  margin-bottom: 120px;
 }
 
 .c0 {
@@ -83,11 +88,6 @@ exports[`App should render the correct JSX 1`] = `
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-}
-
-.c7 {
-  text-align: center;
-  margin-bottom: 120px;
 }
 
 .c5 {

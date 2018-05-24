@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Detail from '../Detail/Detail';
+import { Detail } from '..';
 
 const StyledSpotlightSection = styled.section`
   background: #151617 linear-gradient(#1a0f21, #151617 70%) no-repeat;
