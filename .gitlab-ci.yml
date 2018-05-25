@@ -6,9 +6,9 @@ run_tests:
   stage: test
   image: node:9.11.1-alpine
   before_script:
-    - yarn install
+    - npm install
   script: 
-    - yarn test
+    - npm test
 
 run_build:
   stage: build
