@@ -18,16 +18,16 @@ const ComicsGrid = styled.div`
 export default class ComicsNav extends Component {
   static defaultProps = {
     match: {
-      url: '/'
-    }
-  }
+      url: '/',
+    },
+  };
 
   state = {
     comics: [],
     isSpotlightVisible: false,
     comicsLoading: true,
-    spotlight: {}
-  }
+    spotlight: {},
+  };
 
   getMarvelData = dateDescriptor => {
     getData(dateDescriptor)
@@ -35,7 +35,7 @@ export default class ComicsNav extends Component {
         const { comics } = res;
         return this.setState({
           comics,
-          comicsLoading: false
+          comicsLoading: false,
         });
       })
       .catch(err => console.log(err));
@@ -44,12 +44,14 @@ export default class ComicsNav extends Component {
   resetComics = () => {
     return this.setState({
       comics: [],
-      comicsLoading: true
-    })
-  }
+      comicsLoading: true,
+    });
+  };
 
   componentWillMount() {
-    const { match: { url }} = this.props;
+    const {
+      match: { url },
+    } = this.props;
     this.resetComics();
 
     if (url === '/') {
@@ -103,16 +105,19 @@ export default class ComicsNav extends Component {
     });
   };
 
-
   render() {
     const { comics, comicsLoading, isSpotlightVisible, spotlight } = this.state;
 
     return (
       <ComicsGrid>
-        {comicsLoading && <Loading /> }
-        {!comicsLoading && <Comics {...{ comics }} changeSpotlight={this.changeSpotlight} /> }
-        {isSpotlightVisible && <Spotlight {...spotlight} close={this.closeSpotlight}  />}
+        {comicsLoading && <Loading />}
+        {!comicsLoading && (
+          <Comics {...{ comics }} changeSpotlight={this.changeSpotlight} />
+        )}
+        {isSpotlightVisible && (
+          <Spotlight {...spotlight} close={this.closeSpotlight} />
+        )}
       </ComicsGrid>
-    )
+    );
   }
 }

@@ -18,9 +18,9 @@ const LoadingContainer = styled.div`
 
 const Gear = styled.div`
   animation: ${rotate360} 2s linear infinite;
-  font-size:100px;
-  width:100px;
-`
+  font-size: 100px;
+  width: 100px;
+`;
 
 const Loading = () => (
   <LoadingContainer>

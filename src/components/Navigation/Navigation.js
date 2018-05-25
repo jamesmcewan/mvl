@@ -50,7 +50,7 @@ const StyledLink = styled(NavLink)`
     font-size: 26px;
   }
 
-  &[aria-current=true] {
+  &[aria-current='true'] {
     color: #ff79c6;
   }
 `;

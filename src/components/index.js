@@ -11,7 +11,6 @@ import Spotlight from './Spotlight/Spotlight';
 import Urls from './Urls/Urls';
 import ComicsNav from './ComicsNav/ComicsNav';
 
-
 export {
   App,
   Button,
