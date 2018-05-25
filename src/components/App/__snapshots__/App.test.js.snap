@@ -1,57 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render the correct JSX 1`] = `
-.c3 {
-  font-size: 16px;
-  padding: 13px 6px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  background: transparent;
-  color: #6272a4;
-  box-sizing: border-box;
-  border: 0;
-}
-
-.c4 {
-  font-size: 16px;
-  padding: 13px 6px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  background: transparent;
-  color: #6272a4;
-  box-sizing: border-box;
-  border: 0;
-  color: #ff79c6;
-}
-
-.c6 {
-  padding-top: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-}
-
 .c7 {
   text-align: center;
   margin-bottom: 120px;
@@ -90,7 +39,42 @@ exports[`App should render the correct JSX 1`] = `
   order: 1;
 }
 
+.c3 {
+  font-size: 16px;
+  padding: 13px 6px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: transparent;
+  color: #6272a4;
+  box-sizing: border-box;
+  border: 0;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3[aria-current=true] {
+  color: #ff79c6;
+}
+
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 52px auto;
+}
+
+.c6 {
+  -webkit-animation: iVXCSc 2s linear infinite;
+  animation: iVXCSc 2s linear infinite;
+  font-size: 100px;
+  width: 100px;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,20 +86,6 @@ exports[`App should render the correct JSX 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-
-@media screen and (min-width:700px) {
-  .c3 {
-    padding: 13px;
-    font-size: 26px;
-  }
-}
-
-@media screen and (min-width:700px) {
-  .c4 {
-    padding: 13px;
-    font-size: 26px;
-  }
 }
 
 @media screen and (min-width:700px) {
@@ -133,129 +103,248 @@ exports[`App should render the correct JSX 1`] = `
 }
 
 @media screen and (min-width:700px) {
-  .c5 {
+  .c3 {
+    padding: 13px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c4 {
     padding-top: 170px;
   }
 }
 
 <App>
-  <div>
-    <Navigation
-      dateDescriptor="thisWeek"
-      dateDescriptors={
-        Array [
-          "Last Week",
-          "This Week",
-          "Next Week",
-        ]
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
       }
-      handleClick={[Function]}
     >
-      <styled.nav>
-        <nav
-          className="c0"
-        >
-          <styled.header>
-            <header
-              className="c1"
-            >
-              <styled.img
-                alt="MVL"
-                src="logo.svg"
+      <Navigation>
+        <styled.nav>
+          <nav
+            className="c0"
+          >
+            <styled.header>
+              <header
+                className="c1"
               >
-                <img
+                <styled.img
                   alt="MVL"
-                  className="c2"
                   src="logo.svg"
-                />
-              </styled.img>
-            </header>
-          </styled.header>
-          <Button
-            current={false}
-            dateDescriptor="Last Week"
-            handleClick={[Function]}
-            key="button-Last Week"
-          >
-            <styled.button
-              current={false}
-              onClick={[Function]}
+                >
+                  <img
+                    alt="MVL"
+                    className="c2"
+                    src="logo.svg"
+                  />
+                </styled.img>
+              </header>
+            </styled.header>
+            <Styled(NavLink)
+              to="/lastweek"
             >
-              <button
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
                 className="c3"
-                onClick={[Function]}
+                to="/lastweek"
               >
-                Last Week
-              </button>
-            </styled.button>
-          </Button>
-          <Button
-            current={true}
-            dateDescriptor="This Week"
-            handleClick={[Function]}
-            key="button-This Week"
-          >
-            <styled.button
-              current={true}
-              onClick={[Function]}
+                <Route
+                  path="/lastweek"
+                >
+                  <Link
+                    aria-current={false}
+                    className="c3"
+                    replace={false}
+                    to="/lastweek"
+                  >
+                    <a
+                      aria-current={false}
+                      className="c3"
+                      href="/lastweek"
+                      onClick={[Function]}
+                    >
+                      Last week
+                    </a>
+                  </Link>
+                </Route>
+              </NavLink>
+            </Styled(NavLink)>
+            <Styled(NavLink)
+              to="/thisweek"
             >
-              <button
-                className="c4"
-                onClick={[Function]}
-              >
-                This Week
-              </button>
-            </styled.button>
-          </Button>
-          <Button
-            current={false}
-            dateDescriptor="Next Week"
-            handleClick={[Function]}
-            key="button-Next Week"
-          >
-            <styled.button
-              current={false}
-              onClick={[Function]}
-            >
-              <button
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
                 className="c3"
-                onClick={[Function]}
+                to="/thisweek"
               >
-                Next Week
-              </button>
-            </styled.button>
-          </Button>
-        </nav>
-      </styled.nav>
-    </Navigation>
-    <styled.div>
-      <div
-        className="c5"
+                <Route
+                  path="/thisweek"
+                >
+                  <Link
+                    aria-current={false}
+                    className="c3"
+                    replace={false}
+                    to="/thisweek"
+                  >
+                    <a
+                      aria-current={false}
+                      className="c3"
+                      href="/thisweek"
+                      onClick={[Function]}
+                    >
+                      This week
+                    </a>
+                  </Link>
+                </Route>
+              </NavLink>
+            </Styled(NavLink)>
+            <Styled(NavLink)
+              to="/nextweek"
+            >
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
+                className="c3"
+                to="/nextweek"
+              >
+                <Route
+                  path="/nextweek"
+                >
+                  <Link
+                    aria-current={false}
+                    className="c3"
+                    replace={false}
+                    to="/nextweek"
+                  >
+                    <a
+                      aria-current={false}
+                      className="c3"
+                      href="/nextweek"
+                      onClick={[Function]}
+                    >
+                      Next week
+                    </a>
+                  </Link>
+                </Route>
+              </NavLink>
+            </Styled(NavLink)>
+          </nav>
+        </styled.nav>
+      </Navigation>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
       >
-        <Comics
-          changeSpotlight={[Function]}
-          comics={Array []}
-          isSpotlightVisible={false}
+        <ComicsNav
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
         >
-          <styled.section>
-            <section
-              className="c6"
-            />
-          </styled.section>
-        </Comics>
-      </div>
-    </styled.div>
-    <Footer
-      attributionText=""
-    >
-      <styled.footer>
-        <footer
-          className="c7"
-        >
-          <p />
-        </footer>
-      </styled.footer>
-    </Footer>
-  </div>
+          <styled.div>
+            <div
+              className="c4"
+            >
+              <Loading>
+                <styled.div>
+                  <div
+                    className="c5"
+                  >
+                    <styled.div>
+                      <div
+                        className="c6"
+                      >
+                        ⚙
+                      </div>
+                    </styled.div>
+                  </div>
+                </styled.div>
+              </Loading>
+            </div>
+          </styled.div>
+        </ComicsNav>
+      </Route>
+      <Route
+        component={[Function]}
+        path="/thisweek"
+      />
+      <Route
+        component={[Function]}
+        path="/lastweek"
+      />
+      <Route
+        component={[Function]}
+        path="/nextweek"
+      />
+      <Footer
+        attributionText="© Marvel"
+      >
+        <styled.footer>
+          <footer
+            className="c7"
+          >
+            <p>
+              © Marvel
+            </p>
+          </footer>
+        </styled.footer>
+      </Footer>
+    </Router>
+  </BrowserRouter>
 </App>
 `;

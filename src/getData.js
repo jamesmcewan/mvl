@@ -4,7 +4,7 @@ function getData(dateDescriptor) {
       ? '//localhost:8080'
       : '//service.mvl.defuser.club';
 
-  return fetch(`${dataUrl}/api/${dateDescriptor}`)
+  return fetch(`${dataUrl}/api${dateDescriptor}`)
     .then(res => res.json())
     .catch(error => error);
 }

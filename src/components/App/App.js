@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled, { injectGlobal } from 'styled-components';
-import getData from '../../getData';
-import { Comics, Navigation, Footer, Spotlight } from '..';
+import React, { Component, Fragment } from 'react';
+import { injectGlobal } from 'styled-components';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Navigation, Footer, ComicsNav } from '..';
 
 injectGlobal`
   html {
@@ -24,141 +24,25 @@ injectGlobal`
   }
 `;
 
-const ComicsGrid = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  @media screen and (min-width: 700px) {
-    padding-top: 170px;
-  }
-`;
-
 class App extends Component {
   state = {
-    attributionText: '',
-    comics: [],
-    dateDescriptor: 'thisWeek',
-    dateDescriptors: ['Last Week', 'This Week', 'Next Week'],
-    spotlight: {},
-    isSpotlightVisible: false,
-  };
-
-  getMarvelData = dateDescriptor => {
-    getData(dateDescriptor)
-      .then(res => {
-        const { attributionText, comics } = res;
-        return this.setState({
-          attributionText,
-          comics,
-        });
-      })
-      .catch(err => console.log(err));
-  };
-
-  handleClick = (e, dateDescriptor) => {
-    e.preventDefault();
-    this.setState({ dateDescriptor, isSpotlightVisible: false });
-    this.getMarvelData(dateDescriptor);
-  };
-
-  componentWillMount() {
-    this.getMarvelData('thisWeek');
-  }
-
-  changeSpotlight = (e, comicId) => {
-    e.preventDefault();
-    const comics = [...this.state.comics];
-    const result = comics.filter(comic => comic.id === comicId);
-
-    const [
-      {
-        description,
-        title,
-        thumbnail,
-        creators: { items },
-        diamondCode,
-        urls,
-        dates,
-      },
-    ] = result;
-
-    const spotlight = {
-      description,
-      title,
-      thumbnail,
-      creators: items,
-      diamondCode,
-      urls,
-      dates,
-    };
-
-    this.setState({
-      spotlight,
-      isSpotlightVisible: true,
-    });
-
-    window.scrollTo(0, 0);
-  };
-
-  closeSpotlight = e => {
-    e.preventDefault();
-    this.setState({
-      spotlight: {},
-      isSpotlightVisible: false,
-    });
+    attributionText: '© Marvel',
   };
 
   render() {
-    const {
-      comics,
-      isSpotlightVisible,
-      spotlight,
-      attributionText,
-      dateDescriptor,
-      dateDescriptors,
-    } = this.state;
-    const {
-      title,
-      description,
-      thumbnail,
-      creators,
-      diamondCode,
-      urls,
-    } = spotlight;
+    const { attributionText } = this.state;
+
     return (
-      <div>
-        <Navigation
-          {...{
-            dateDescriptor,
-            dateDescriptors,
-            handleClick: this.handleClick,
-          }}
-        />
-        <ComicsGrid>
-          <Comics
-            {...{
-              comics,
-              isSpotlightVisible,
-              changeSpotlight: this.changeSpotlight,
-            }}
-          />
-          {isSpotlightVisible && (
-            <Spotlight
-              {...{
-                title,
-                description,
-                thumbnail,
-                creators,
-                diamondCode,
-                urls,
-                close: this.closeSpotlight,
-              }}
-            />
-          )}
-        </ComicsGrid>
-        <Footer {...{ attributionText }} />
-      </div>
+      <Router>
+        <Fragment>
+          <Navigation />
+          <Route exact path="/" component={ComicsNav} />
+          <Route path="/thisweek" component={ComicsNav} />
+          <Route path="/lastweek" component={ComicsNav} />
+          <Route path="/nextweek" component={ComicsNav} />
+          <Footer {...{ attributionText }} />
+        </Fragment>
+      </Router>
     );
   }
 }

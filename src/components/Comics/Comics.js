@@ -14,7 +14,7 @@ const StyledSection = styled.section`
   order: 2;
 `;
 
-const Comics = ({ comics, changeSpotlight, isSpotlightVisible }) => (
+const Comics = ({ comics, changeSpotlight }) => (
   <StyledSection>
     {isArray(comics) &&
       comics.map(comic => (
@@ -22,7 +22,6 @@ const Comics = ({ comics, changeSpotlight, isSpotlightVisible }) => (
           {...comic}
           changeSpotlight={changeSpotlight}
           key={comic.id}
-          isSpotlightVisible={isSpotlightVisible}
         />
       ))}
   </StyledSection>
