@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 // import Link from 'react-router-dom';
-import { Comics } from '..';
+import { Comics, Spotlight } from '..';
 import getData from '../../getData';
 import Loading from '../Loading/Loading';
 
@@ -25,7 +25,8 @@ export default class ComicsNav extends Component {
   state = {
     comics: [],
     isSpotlightVisible: false,
-    comicsLoading: true
+    comicsLoading: true,
+    spotlight: {}
   }
 
   getMarvelData = dateDescriptor => {
@@ -50,22 +51,67 @@ export default class ComicsNav extends Component {
   componentWillMount() {
     const { match: { url }} = this.props;
     this.resetComics();
+
     if (url === '/') {
-      this.getMarvelData('/');
+      this.getMarvelData('/thisweek');
       return;
     }
 
     this.getMarvelData(url);
   }
 
+  changeSpotlight = (e, comicId) => {
+    e.preventDefault();
+    const comics = [...this.state.comics];
+    const result = comics.filter(comic => comic.id === comicId);
+
+    const [
+      {
+        description,
+        title,
+        thumbnail,
+        creators: { items },
+        diamondCode,
+        urls,
+        dates,
+      },
+    ] = result;
+
+    const spotlight = {
+      description,
+      title,
+      thumbnail,
+      creators: items,
+      diamondCode,
+      urls,
+      dates,
+    };
+
+    this.setState({
+      spotlight,
+      isSpotlightVisible: true,
+    });
+
+    window.scrollTo(0, 0);
+  };
+
+  closeSpotlight = e => {
+    e.preventDefault();
+    this.setState({
+      spotlight: {},
+      isSpotlightVisible: false,
+    });
+  };
+
 
   render() {
-    const { comics, comicsLoading } = this.state;
+    const { comics, comicsLoading, isSpotlightVisible, spotlight } = this.state;
 
     return (
       <ComicsGrid>
         {comicsLoading && <Loading /> }
-        {!comicsLoading && <Comics {...{ comics }} /> }
+        {!comicsLoading && <Comics {...{ comics }} changeSpotlight={this.changeSpotlight} /> }
+        {isSpotlightVisible && <Spotlight {...spotlight} close={this.closeSpotlight}  />}
       </ComicsGrid>
     )
   }
