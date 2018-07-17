@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import Link from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Comics, Spotlight } from '..';
-import getData from '../../getData';
 import Loading from '../Loading/Loading';
+import { getComics, openSpotlight, closeSpotlight } from '../../actions/comics';
 
 const ComicsGrid = styled.div`
   display: flex;
@@ -15,109 +16,49 @@ const ComicsGrid = styled.div`
   }
 `;
 
-export default class ComicsNav extends Component {
-  static defaultProps = {
-    match: {
-      url: '/',
-    },
-  };
-
-  state = {
-    comics: [],
-    isSpotlightVisible: false,
-    comicsLoading: true,
-    spotlight: {},
-  };
-
-  getMarvelData = dateDescriptor => {
-    getData(dateDescriptor)
-      .then(res => {
-        const { comics } = res;
-        return this.setState({
-          comics,
-          comicsLoading: false,
-        });
-      })
-      .catch(err => console.log(err));
-  };
-
-  resetComics = () => {
-    return this.setState({
-      comics: [],
-      comicsLoading: true,
-    });
-  };
-
-  componentWillMount() {
-    const {
-      match: { url },
-    } = this.props;
-    this.resetComics();
-
-    if (url === '/') {
-      this.getMarvelData('/thisweek');
-      return;
+class ComicsNav extends Component {
+  componentDidMount() {
+    const { getComics, comicsLoaded } = this.props;
+    if (!comicsLoaded) {
+      getComics('thisWeek');
     }
-
-    this.getMarvelData(url);
   }
 
-  changeSpotlight = (e, comicId) => {
-    e.preventDefault();
-    const comics = [...this.state.comics];
-    const result = comics.filter(comic => comic.id === comicId);
-
-    const [
-      {
-        description,
-        title,
-        thumbnail,
-        creators: { items },
-        diamondCode,
-        urls,
-        dates,
-      },
-    ] = result;
-
-    const spotlight = {
-      description,
-      title,
-      thumbnail,
-      creators: items,
-      diamondCode,
-      urls,
-      dates,
-    };
-
-    this.setState({
-      spotlight,
-      isSpotlightVisible: true,
-    });
-
-    window.scrollTo(0, 0);
-  };
-
-  closeSpotlight = e => {
-    e.preventDefault();
-    this.setState({
-      spotlight: {},
-      isSpotlightVisible: false,
-    });
-  };
-
   render() {
-    const { comics, comicsLoading, isSpotlightVisible, spotlight } = this.state;
+    const {
+      comics,
+      comicsLoaded,
+      isSpotlightVisible,
+      spotlight,
+      openSpotlight,
+      closeSpotlight,
+    } = this.props;
 
     return (
       <ComicsGrid>
-        {comicsLoading && <Loading />}
-        {!comicsLoading && (
-          <Comics {...{ comics }} changeSpotlight={this.changeSpotlight} />
+        {!comicsLoaded && <Loading />}
+        {comicsLoaded && (
+          <Comics {...{ comics }} changeSpotlight={openSpotlight} />
         )}
         {isSpotlightVisible && (
-          <Spotlight {...spotlight} close={this.closeSpotlight} />
+          <Spotlight {...spotlight} close={closeSpotlight} />
         )}
       </ComicsGrid>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    comics: state.comics.comics,
+    comicsLoaded: state.comics.comicsLoaded,
+    isSpotlightVisible: state.comics.isSpotlightVisible,
+    spotlight: state.comics.spotlight,
+  };
+};
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ getComics, openSpotlight, closeSpotlight }, dispatch);
+
+export { ComicsNav };
+export default connect(mapStateToProps, mapDispatchToProps)(ComicsNav);

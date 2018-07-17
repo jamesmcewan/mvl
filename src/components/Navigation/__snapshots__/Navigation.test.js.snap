@@ -34,26 +34,6 @@ exports[`Navigation should render the correct JSX 1`] = `
   order: 1;
 }
 
-.c3 {
-  font-size: 16px;
-  padding: 13px 6px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  background: transparent;
-  color: #6272a4;
-  box-sizing: border-box;
-  border: 0;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3[aria-current=true] {
-  color: #ff79c6;
-}
-
 @media screen and (min-width:700px) {
   .c0 {
     bottom: auto;
@@ -65,13 +45,6 @@ exports[`Navigation should render the correct JSX 1`] = `
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
-  }
-}
-
-@media screen and (min-width:700px) {
-  .c3 {
-    padding: 13px;
-    font-size: 26px;
   }
 }
 
@@ -119,96 +92,6 @@ exports[`Navigation should render the correct JSX 1`] = `
               </styled.img>
             </header>
           </styled.header>
-          <Styled(NavLink)
-            to="/lastweek"
-          >
-            <NavLink
-              activeClassName="active"
-              ariaCurrent="true"
-              className="c3"
-              to="/lastweek"
-            >
-              <Route
-                path="/lastweek"
-              >
-                <Link
-                  aria-current={false}
-                  className="c3"
-                  replace={false}
-                  to="/lastweek"
-                >
-                  <a
-                    aria-current={false}
-                    className="c3"
-                    href="/lastweek"
-                    onClick={[Function]}
-                  >
-                    Last week
-                  </a>
-                </Link>
-              </Route>
-            </NavLink>
-          </Styled(NavLink)>
-          <Styled(NavLink)
-            to="/thisweek"
-          >
-            <NavLink
-              activeClassName="active"
-              ariaCurrent="true"
-              className="c3"
-              to="/thisweek"
-            >
-              <Route
-                path="/thisweek"
-              >
-                <Link
-                  aria-current={false}
-                  className="c3"
-                  replace={false}
-                  to="/thisweek"
-                >
-                  <a
-                    aria-current={false}
-                    className="c3"
-                    href="/thisweek"
-                    onClick={[Function]}
-                  >
-                    This week
-                  </a>
-                </Link>
-              </Route>
-            </NavLink>
-          </Styled(NavLink)>
-          <Styled(NavLink)
-            to="/nextweek"
-          >
-            <NavLink
-              activeClassName="active"
-              ariaCurrent="true"
-              className="c3"
-              to="/nextweek"
-            >
-              <Route
-                path="/nextweek"
-              >
-                <Link
-                  aria-current={false}
-                  className="c3"
-                  replace={false}
-                  to="/nextweek"
-                >
-                  <a
-                    aria-current={false}
-                    className="c3"
-                    href="/nextweek"
-                    onClick={[Function]}
-                  >
-                    Next week
-                  </a>
-                </Link>
-              </Route>
-            </NavLink>
-          </Styled(NavLink)>
         </nav>
       </styled.nav>
     </Navigation>

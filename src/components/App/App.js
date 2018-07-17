@@ -37,9 +37,6 @@ class App extends Component {
         <Fragment>
           <Navigation />
           <Route exact path="/" component={ComicsNav} />
-          <Route path="/thisweek" component={ComicsNav} />
-          <Route path="/lastweek" component={ComicsNav} />
-          <Route path="/nextweek" component={ComicsNav} />
           <Footer {...{ attributionText }} />
         </Fragment>
       </Router>

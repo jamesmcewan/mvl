@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 import mvl from '../../images/logo.svg';
 
 const StyledNav = styled.nav`
@@ -34,35 +33,11 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledLink = styled(NavLink)`
-  font-size: 16px;
-  padding: 13px 6px;
-  flex-grow: 1;
-  background: transparent;
-  color: #6272a4;
-  box-sizing: border-box;
-  border: 0;
-  text-align: center;
-  text-decoration: none;
-
-  @media screen and (min-width: 700px) {
-    padding: 13px;
-    font-size: 26px;
-  }
-
-  &[aria-current='true'] {
-    color: #ff79c6;
-  }
-`;
-
 const Navigation = () => (
   <StyledNav>
     <StyledHeader>
       <StyledImg src={mvl} alt="MVL" />
     </StyledHeader>
-    <StyledLink to="/lastweek">Last week</StyledLink>
-    <StyledLink to="/thisweek">This week</StyledLink>
-    <StyledLink to="/nextweek">Next week</StyledLink>
   </StyledNav>
 );
 

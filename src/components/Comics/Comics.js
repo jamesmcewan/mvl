@@ -18,7 +18,12 @@ const Comics = ({ comics, changeSpotlight }) => (
   <StyledSection>
     {isArray(comics) &&
       comics.map(comic => (
-        <Comic {...comic} changeSpotlight={changeSpotlight} key={comic.id} />
+        <Comic
+          {...comic}
+          changeSpotlight={changeSpotlight}
+          comics={comics}
+          key={comic.id}
+        />
       ))}
   </StyledSection>
 );

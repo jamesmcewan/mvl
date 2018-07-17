@@ -37,11 +37,7 @@ exports[`ComicsNav should render the correct JSX 1`] = `
 }
 
 <ComicsNav
-  match={
-    Object {
-      "url": "/",
-    }
-  }
+  getComics={[Function]}
 >
   <styled.div>
     <div
