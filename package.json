@@ -17,8 +17,8 @@
   },
   "license": "ISC",
   "scripts": {
-    "precommit": "yarn lint && yarn format && git add .",
-    "prepush": "CI=true yarn test",
+    "precommit": "npm run lint && npm run format && git add .",
+    "prepush": "CI=true npm test",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:test": "CI=true react-scripts test --env=jsdom",
@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "format": "prettier --write 'src/**/*.js'",
-    "setup:prod": "yarn install && yarn build:test && yarn lint && yarn install --production"
+    "setup:prod": "npm install && npm run build:test && npm run lint && npm install --production"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",

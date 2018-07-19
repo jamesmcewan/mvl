@@ -10,6 +10,7 @@ export const getComics = dateDescriptor => {
     try {
       const response = await getData(dateDescriptor);
       const { comics } = await response;
+
       return dispatch({
         type: 'GET_COMICS',
         data: comics,
@@ -23,40 +24,19 @@ export const getComics = dateDescriptor => {
   };
 };
 
-export const openSpotlight = (e, comicId, currentComics) => {
-  e.preventDefault();
-
+export const openSpotlight = (comicId, currentComics) => {
   // TODO: clean this up
-
   const comics = [...currentComics];
-  const result = comics.filter(comic => comic.id === comicId);
+  const issue = comics.filter(comic => comic.id === comicId)[0];
 
-  const [
-    {
-      description,
-      title,
-      thumbnail,
-      creators: { items },
-      diamondCode,
-      urls,
-      dates,
-    },
-  ] = result;
-
-  const spotlight = {
-    description,
-    title,
-    thumbnail,
-    creators: items,
-    diamondCode,
-    urls,
-    dates,
-  };
   return async dispatch =>
-    dispatch({ type: 'OPEN_SPOTLIGHT', data: spotlight });
+    dispatch({
+      type: 'OPEN_SPOTLIGHT',
+      data: issue,
+    });
 };
 
-export const closeSpotlight = e => {
-  e.preventDefault();
-  return async dispatch => dispatch({ type: 'CLOSE_SPOTLIGHT' });
-};
+export const closeSpotlight = () => async dispatch =>
+  dispatch({
+    type: 'CLOSE_SPOTLIGHT',
+  });

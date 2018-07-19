@@ -59,7 +59,7 @@ const Detail = ({ title, description, creators, diamondCode, urls, close }) => (
     />
     <Creators {...{ creators }} />
     <StyledDiamondCode>{diamondCode}</StyledDiamondCode>
-    <StyledDetailButton onClick={e => close(e)}>Close</StyledDetailButton>
+    <StyledDetailButton onClick={() => close()}>Close</StyledDetailButton>
   </StyledDetailWrapper>
 );
 

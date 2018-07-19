@@ -40,7 +40,7 @@ const Comic = ({
   comics,
 }) => (
   <StyledComicButton
-    onClick={e => changeSpotlight(e, id, comics)}
+    onClick={() => changeSpotlight(id, comics)}
     isSpotlightVisible={isSpotlightVisible}
   >
     <ProgressiveImage

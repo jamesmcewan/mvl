@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Detail } from '..';
 
@@ -41,25 +41,32 @@ const StyledSpotlightImg = styled.img`
   }
 `;
 
-const Spotlight = ({
-  title,
-  description,
-  thumbnail,
-  close,
-  creators,
-  diamondCode,
-  urls,
-  isSpotlightVisible,
-}) => {
-  const { path, extension } = thumbnail;
+class Spotlight extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
-  return (
-    <StyledSpotlightSection>
-      <StyledSpotlightImg src={`${path}.${extension}`} alt={title} />
-      <Detail {...{ title, description, creators, diamondCode, urls, close }} />
-    </StyledSpotlightSection>
-  );
-};
+  render() {
+    const {
+      title,
+      description,
+      thumbnail,
+      close,
+      creators,
+      diamondCode,
+      urls,
+    } = this.props;
+    const { path, extension } = thumbnail;
+    return (
+      <StyledSpotlightSection>
+        <StyledSpotlightImg src={`${path}.${extension}`} alt={title} />
+        <Detail
+          {...{ title, description, creators, diamondCode, urls, close }}
+        />
+      </StyledSpotlightSection>
+    );
+  }
+}
 
 Spotlight.defaultProps = {
   title: '',
