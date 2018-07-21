@@ -61,4 +61,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators({ getComics, openSpotlight, closeSpotlight }, dispatch);
 
 export { ComicsNav };
-export default connect(mapStateToProps, mapDispatchToProps)(ComicsNav);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ComicsNav);
