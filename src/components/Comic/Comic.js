@@ -33,14 +33,25 @@ function replaceHttp(url) {
 
 const Comic = ({
   title,
-  id,
   thumbnail,
   changeSpotlight,
   isSpotlightVisible,
-  comics,
+  description,
+  creators,
+  diamondCode,
+  urls,
 }) => (
   <StyledComicButton
-    onClick={() => changeSpotlight(id, comics)}
+    onClick={() =>
+      changeSpotlight({
+        title,
+        thumbnail,
+        description,
+        creators,
+        diamondCode,
+        urls,
+      })
+    }
     isSpotlightVisible={isSpotlightVisible}
   >
     <ProgressiveImage

@@ -24,16 +24,26 @@ export const getComics = dateDescriptor => {
   };
 };
 
-export const openSpotlight = (comicId, currentComics) => {
-  // TODO: clean this up
-  const comics = [...currentComics];
-  const issue = comics.filter(comic => comic.id === comicId)[0];
-
-  return async dispatch =>
-    dispatch({
-      type: 'OPEN_SPOTLIGHT',
-      data: issue,
-    });
+export const openSpotlight = ({
+  title,
+  thumbnail,
+  description,
+  creators,
+  diamondCode,
+  urls,
+}) => async dispatch => {
+  const { items } = creators;
+  return dispatch({
+    type: 'OPEN_SPOTLIGHT',
+    data: {
+      title,
+      thumbnail,
+      description,
+      creators: items,
+      diamondCode,
+      urls,
+    },
+  });
 };
 
 export const closeSpotlight = () => async dispatch =>
