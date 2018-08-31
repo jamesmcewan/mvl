@@ -9,11 +9,13 @@ export const getComics = dateDescriptor => {
   return async dispatch => {
     try {
       const response = await getData(dateDescriptor);
-      const { comics } = await response;
+      const {
+        data: { results },
+      } = await response;
 
       return dispatch({
         type: 'GET_COMICS',
-        data: comics,
+        data: results,
       });
     } catch (err) {
       return dispatch({
