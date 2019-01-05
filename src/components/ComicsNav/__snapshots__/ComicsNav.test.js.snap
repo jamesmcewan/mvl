@@ -37,7 +37,21 @@ exports[`ComicsNav should render the correct JSX 1`] = `
 }
 
 <ComicsNav
-  getComics={[Function]}
+  getComics={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "thisWeek",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <styled.div>
     <div
