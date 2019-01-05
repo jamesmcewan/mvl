@@ -44,12 +44,12 @@ exports[`Comic should render the correct JSX 1`] = `
       >
         <styled.img
           alt=""
-          src="http://localhost/"
+          src="placeholder.jpg"
         >
           <img
             alt=""
             className="c1"
-            src="http://localhost/"
+            src="placeholder.jpg"
           />
         </styled.img>
       </ProgressiveImage>
