@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Loading from './Loading';
+import Logo from './Logo';
 import 'jest-styled-components';
 
-describe('Loading', () => {
+describe('Logo', () => {
   it('should render without crashing', () => {
-    const wrapper = shallow(<Loading />);
+    const wrapper = shallow(<Logo />);
     expect(wrapper).toHaveLength(1);
   });
 });

@@ -1,13 +1,13 @@
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import reducers from './reducers';
 import { save, load } from 'redux-localstorage-simple';
 
 const middleware = [thunk];
 
 const store = createStore(
-  rootReducer,
+  reducers,
   load(),
   composeWithDevTools(applyMiddleware(...middleware, save()))
 );

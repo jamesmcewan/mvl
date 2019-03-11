@@ -7,7 +7,7 @@ const getData = async dateDescriptor => {
     const response = await Axios.get(`${url}/${dateDescriptor}`);
     return response;
   } catch (err) {
-    return { error: 'Unable to fetch' };
+    return `Unable to fetch`;
   }
 };
 

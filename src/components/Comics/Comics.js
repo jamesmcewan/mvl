@@ -1,31 +1,38 @@
-import React from 'react';
-import { isArray } from 'util';
-import styled from 'styled-components';
-import { Comic } from '..';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Comic from '../Comic/Comic';
+import { getComics } from '../../state/comics/selectors';
+import { requestComicsIfNeeded } from '../../state/comics/actions';
+import ComicsSection from '../../styles/ComicsSection';
 
-const StyledSection = styled.section`
-  padding-top: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  order: 2;
-`;
+class Comics extends Component {
+  async componentWillMount() {
+    const { comics, requestComicsIfNeeded } = this.props;
 
-const Comics = ({ comics, changeSpotlight }) => (
-  <StyledSection>
-    {isArray(comics) &&
-      comics.map(comic => (
-        <Comic
-          {...comic}
-          changeSpotlight={changeSpotlight}
-          comics={comics}
-          key={comic.id}
-        />
-      ))}
-  </StyledSection>
-);
+    try {
+      await requestComicsIfNeeded(comics);
+    } catch (err) {}
+  }
 
-export default Comics;
+  render() {
+    const { comics } = this.props;
+    return (
+      <ComicsSection>
+        {comics && comics.map(comic => <Comic {...comic} key={comic.id} />)}
+      </ComicsSection>
+    );
+  }
+}
+
+const mapPropsToState = state => ({
+  comics: getComics(state)
+});
+
+const mapDispatchToProps = {
+  requestComicsIfNeeded
+};
+
+export default connect(
+  mapPropsToState,
+  mapDispatchToProps
+)(Comics);
