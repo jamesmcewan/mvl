@@ -1,8 +1,7 @@
 function getData(dateDescriptor) {
-  const API_KEY = process.env.REACT_APP_MARVEL_KEY;
-  const dataUrl = 'https://gateway.marvel.com:443/v1/public/comics';
+  const dataUrl = 'https://mvl-service.mutant.sh';
 
-  return fetch(`${dataUrl}?dateDescriptor=${dateDescriptor}&apikey=${API_KEY}`)
+  return fetch(`${dataUrl}/${dateDescriptor}`)
     .then(res => res.json())
     .catch(error => error);
 }
