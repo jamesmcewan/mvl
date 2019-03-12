@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import placeHolder from '../../images/placeholder.jpg';
 import ProgressiveImage from 'react-progressive-image';
 import getCover from '../../functions/getCover';
@@ -12,5 +13,10 @@ const Comic = ({ title, thumbnail }) => (
     </ProgressiveImage>
   </ComicButton>
 );
+
+Comic.propTypes = {
+  title: PropTypes.string,
+  thumbnail: PropTypes.object
+};
 
 export default Comic;

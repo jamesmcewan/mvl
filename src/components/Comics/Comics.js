@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Comic from '../Comic/Comic';
 import { getComics } from '../../state/comics/selectors';
@@ -24,6 +25,10 @@ class Comics extends Component {
   }
 }
 
+Comics.propTypes = {
+  comics: PropTypes.array
+};
+
 const mapPropsToState = state => ({
   comics: getComics(state)
 });
@@ -32,6 +37,7 @@ const mapDispatchToProps = {
   requestComicsIfNeeded
 };
 
+export { Comics };
 export default connect(
   mapPropsToState,
   mapDispatchToProps

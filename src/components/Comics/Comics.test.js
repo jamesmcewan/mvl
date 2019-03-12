@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Comics from './Comics';
+import { Comics } from './Comics';
 import 'jest-styled-components';
 
 describe('Comics', () => {
