@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const getData = async () => {
-  const dateDescriptor = 'thisWeek';
+  const dateDescriptor = 'thisWek';
   const API_KEY = process.env.REACT_APP_MARVEL_KEY;
   const dataUrl = 'https://gateway.marvel.com/v1/public/comics';
 
@@ -18,7 +18,7 @@ const getData = async () => {
 
     return results;
   } catch (err) {
-    return [];
+    throw new Error(err);
   }
 };
 
