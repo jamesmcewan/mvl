@@ -9,5 +9,5 @@ steps:
     versionSpec: '10.7.0'
   
 - script: npm install
-- script: npm test
+- script: npm run build:test
 - script: npm run build
