@@ -1,13 +1,11 @@
 import Axios from 'axios';
 
 const getData = async () => {
-  const dateDescriptor = 'thisWek';
-  const API_KEY = process.env.REACT_APP_MARVEL_KEY;
-  const dataUrl = 'https://gateway.marvel.com/v1/public/comics';
+  const url = 'https://sleepy-badlands-68050.herokuapp.com/'
 
   try {
     const response = await Axios.get(
-      `${dataUrl}?dateDescriptor=${dateDescriptor}&apikey=${API_KEY}`
+      `${url}`
     );
 
     const {
