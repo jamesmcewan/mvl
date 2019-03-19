@@ -1,12 +1,8 @@
 import Axios from 'axios';
 
-const getData = async () => {
-  const url = 'https://sleepy-badlands-68050.herokuapp.com/'
-
+const getData = async (source, weekId) => {
   try {
-    const response = await Axios.get(
-      `${url}`
-    );
+    const response = await Axios.get(`${source}/${weekId}`);
 
     const {
       data: {

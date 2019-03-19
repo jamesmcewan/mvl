@@ -3,9 +3,10 @@ import { ThemeProvider } from 'styled-components';
 import Logo from '../Logo/Logo';
 import Footer from '../Footer/Footer';
 import GlobalStyle from '../../styles/GlobalStyle';
-import Comics from '../Comics/Comics';
 import Wrapper from '../../styles/Wrapper';
 import theme from '../../styles/theme';
+import Routes from '../Routes/Routes';
+import Nav from '../Nav/Nav';
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
         <Wrapper>
           <GlobalStyle />
           <Logo />
-          <Comics />
+          <Nav />
+          <Routes />
           <Footer />
         </Wrapper>
       </ThemeProvider>

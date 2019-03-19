@@ -11,11 +11,11 @@ const comicsRequestError = createAction(COMICS_REQUEST_ERROR);
 
 const comicsReceived = createAction(COMICS_RECEIVED);
 
-const requestComics = async dispatch => {
+const requestComics = async (dispatch, weekId) => {
   dispatch(comicsRequested());
 
   try {
-    const data = await getData();
+    const data = await getData(process.env.REACT_APP_SOURCE, weekId);
 
     dispatch(comicsReceived(await data));
   } catch (err) {
@@ -23,9 +23,9 @@ const requestComics = async dispatch => {
   }
 };
 
-const requestComicsIfNeeded = comics => dispatch => {
+const requestComicsIfNeeded = (comics, weekId) => dispatch => {
   if (comics.length === 0) {
-    dispatch(requestComics(dispatch));
+    dispatch(requestComics(dispatch, weekId));
   }
 };
 
