@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    background: #151617 linear-gradient(#1a0f21, #151617 70%) no-repeat;
+    background: ${props => props.theme.darkBg};
   }
 
   body {
-    color: #ccd3dc;
+    color: ${props => props.theme.primaryText};
     font-family: "IBM Plex Sans", sans-serif;
     font-style: normal;
     font-weight: 300;

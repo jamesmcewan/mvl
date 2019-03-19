@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   display: grid;
   justify-content: center;
   grid-gap: ${props => props.theme.vSpacing};
+  max-width: 600px;
 `;
 
 export default Wrapper;

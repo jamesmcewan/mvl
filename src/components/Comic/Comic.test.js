@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Comic from './Comic';
-import 'jest-styled-components';
 
 const mockProps = {
   thumbnail: {

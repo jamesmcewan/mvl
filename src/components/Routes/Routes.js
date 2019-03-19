@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import ThisWeek from '../ThisWeek/ThisWeek';
-import NextWeek from '../NextWeek/NextWeek';
-import LastWeek from '../LastWeek/LastWeek';
+import ThisWeek from '../../pages/ThisWeek/ThisWeek';
+import NextWeek from '../../pages/NextWeek/NextWeek';
+import LastWeek from '../../pages/LastWeek/LastWeek';
 
 const Routes = props => {
   return (

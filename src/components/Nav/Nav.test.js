@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Loading from './Loading';
+import Nav from './Nav';
 
-describe('Loading', () => {
+describe('Nav', () => {
   it('should render without crashing', () => {
-    const wrapper = shallow(<Loading />);
+    const wrapper = shallow(<Nav />);
     expect(wrapper).toHaveLength(1);
   });
 });

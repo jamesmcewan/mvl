@@ -1,12 +1,22 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import NavList from '../../styles/NavList';
+import NavListItem from '../../styles/NavListItem';
+import NavLink from '../../styles/NavLink';
 
-const Nav = () => {
+const Nav = props => {
   return (
     <nav>
-      <Link to="/lastweek">Last week</Link>
-      <Link to="/">This week</Link>
-      <Link to="/nextweek">Next week</Link>
+      <NavList>
+        <NavListItem>
+          <NavLink to="/lastweek">Last week</NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink to="/">This week</NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink to="/nextweek">Next week</NavLink>
+        </NavListItem>
+      </NavList>
     </nav>
   );
 };
