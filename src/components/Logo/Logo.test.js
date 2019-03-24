@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Creators from './Creators';
+import Logo from './Logo';
 
-describe('Creators', () => {
-  const wrapper = shallow(<Creators />);
-
+describe('Logo', () => {
   it('should render without crashing', () => {
+    const wrapper = shallow(<Logo />);
     expect(wrapper).toHaveLength(1);
   });
 });

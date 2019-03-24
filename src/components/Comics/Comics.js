@@ -1,31 +1,49 @@
 import React from 'react';
-import { isArray } from 'util';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Comic } from '..';
+import Comic from '../Comic/Comic';
+import Loading from '../Loading/Loading';
 
-const StyledSection = styled.section`
-  padding-top: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: center;
-  order: 2;
+const ComicsSection = styled.section`
+  display: grid;
+  grid-gap: ${props => props.theme.gSpacing};
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
-const Comics = ({ comics, changeSpotlight }) => (
-  <StyledSection>
-    {isArray(comics) &&
-      comics.map(comic => (
-        <Comic
-          {...comic}
-          changeSpotlight={changeSpotlight}
-          comics={comics}
-          key={comic.id}
-        />
-      ))}
-  </StyledSection>
-);
+const WeekTitle = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  margin: 0;
+`;
 
+const comicMap = comic => <Comic {...comic} key={comic.id} />;
+const weekRm = weekId => weekId.replace('week', '');
+
+const Comics = ({ comics, isLoading, weekId }) => {
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  return (
+    <>
+      <WeekTitle>{`Comic releases for ${weekRm(weekId)} week`}</WeekTitle>
+      <ComicsSection>{comics && comics.map(comicMap)}</ComicsSection>
+    </>
+  );
+};
+
+Comics.propTypes = {
+  comics: PropTypes.array
+};
+
+export { WeekTitle, ComicsSection, comicMap };
 export default Comics;
