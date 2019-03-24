@@ -4,13 +4,17 @@ import Comics, { ComicsSection, WeekTitle } from './Comics';
 import Loading from '../Loading/Loading';
 
 describe('Comics', () => {
+  const mockProps = {
+    weekId: 'thisweek'
+  };
+
   it('should render without crashing', () => {
-    const wrapper = shallow(<Comics />);
+    const wrapper = shallow(<Comics {...mockProps} />);
     expect(wrapper).toHaveLength(1);
   });
 
   describe('when loading', () => {
-    const wrapper = shallow(<Comics isLoading />);
+    const wrapper = shallow(<Comics {...mockProps} isLoading />);
 
     it('does not include a WeekTitle component', () => {
       expect(wrapper.find(WeekTitle)).toHaveLength(0);
@@ -26,7 +30,7 @@ describe('Comics', () => {
   });
 
   describe('when ready', () => {
-    const wrapper = shallow(<Comics Loading />);
+    const wrapper = shallow(<Comics {...mockProps} Loading />);
 
     it('includes a WeekTitle component', () => {
       expect(wrapper.find(WeekTitle)).toHaveLength(1);
