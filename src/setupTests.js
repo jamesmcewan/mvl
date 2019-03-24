@@ -5,4 +5,3 @@ import 'jest-styled-components';
 
 expect.addSnapshotSerializer(enzymeSerializer);
 enzyme.configure({ adapter: new Adapter() });
-global.fetch = require('jest-fetch-mock');
