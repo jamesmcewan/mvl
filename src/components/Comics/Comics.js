@@ -21,8 +21,16 @@ const WeekTitle = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 120px;
+  min-height: 70px;
   margin: 0;
+
+  @media (min-width: 1000px) {
+    min-height: 90px;
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 120px;
+  }
 `;
 
 const comicMap = comic => <Comic {...comic} key={comic.id} />;

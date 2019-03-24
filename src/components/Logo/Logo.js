@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import mvl from '../../images/logo.svg';
 
 const LogoHeader = styled.header`
-  max-height: 100px;
+  max-height: 50px;
   display: flex;
   justify-content: center;
   .block {
