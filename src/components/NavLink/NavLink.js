@@ -2,12 +2,19 @@ import styled from 'styled-components';
 import { Link } from '@reach/router';
 
 const NavLink = styled(Link)`
-  background: ${props =>
-    props.isCurrent ? 'rgba(0, 0, 0, 0.4)' : 'rgba(0, 0, 0, 0.6)'};
+  background: rgba(0, 0, 0, 0.6);
   color: ${props => props.theme.navFg};
-  padding: 13px 0;
+  padding: 26px 0;
   display: block;
   text-decoration: none;
+
+  @media (min-width: 1000px) {
+    padding: 13px 0;
+  }
+
+  &[data-current='true'] {
+    background: rgba(0, 0, 0, 0.4);
+  }
 
   &:hover {
     color: ${props => props.theme.linkHover};

@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import placeHolder from '../../images/placeholder.jpg';
-import ProgressiveImage from 'react-progressive-image';
-import getCover from '../../functions/getCover';
-import Img from '../../styles/Img';
-import ComicButton from '../../styles/ComicButton';
+import styled from 'styled-components';
+import Cover from '../Cover/Cover';
+import Info from '../Info/Info';
 
-const Comic = ({ title, thumbnail }) => (
-  <ComicButton>
-    <ProgressiveImage src={getCover(thumbnail)} placeholder={placeHolder}>
-      {src => <Img src={src} alt={title} />}
-    </ProgressiveImage>
-  </ComicButton>
-);
+const ComicWrapper = styled.div`
+  position: relative;
+`;
+
+const Comic = ({ ...rest }) => {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <ComicWrapper>
+      <Cover {...rest} {...{ visible, setVisible }} />
+      <Info {...rest} {...{ visible, setVisible }} />
+    </ComicWrapper>
+  );
+};
 
 Comic.propTypes = {
   title: PropTypes.string,
   thumbnail: PropTypes.object
 };
 
+export { ComicWrapper };
 export default Comic;

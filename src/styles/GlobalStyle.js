@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: ${props => props.theme.primaryText};
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;

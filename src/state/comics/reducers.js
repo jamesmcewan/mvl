@@ -1,15 +1,21 @@
-import { combineReducers } from 'redux';
-import { lastWeek, lastWeekLoading } from './lastWeek/reducer';
-import { nextWeek, nextWeekLoading } from './nextWeek/reducer';
-import { thisWeek, thisWeekLoading } from './thisWeek/reducer';
+import { handleActions } from 'redux-actions';
 
-const comics = combineReducers({
-  nextWeek,
-  nextWeekLoading,
-  lastWeek,
-  lastWeekLoading,
-  thisWeek,
-  thisWeekLoading
-});
+import { COMICS_REQUESTED, COMICS_RECEIVED, COMICS_ERROR } from './actions';
 
-export default comics;
+const comics = handleActions(
+  {
+    [COMICS_RECEIVED]: (state, action) => action.payload
+  },
+  {}
+);
+
+const isLoading = handleActions(
+  {
+    [COMICS_REQUESTED]: () => true,
+    [COMICS_RECEIVED]: () => false,
+    [COMICS_ERROR]: () => false
+  },
+  false
+);
+
+export { comics, isLoading };

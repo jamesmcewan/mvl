@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Nav from './Nav';
+import Info from './Info';
 
-describe('Nav', () => {
-  const wrapper = shallow(<Nav />);
+describe('Info', () => {
+  const wrapper = shallow(<Info />);
 
   it('should render without crashing', () => {
     expect(wrapper).toHaveLength(1);

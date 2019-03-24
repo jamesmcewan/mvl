@@ -10,7 +10,8 @@ const theme = {
   linkHover: '#d801af',
   navFg: '#b099de',
   navBg: '#340aa0',
-  darkBg: '#0b011c'
+  darkBg: '#0b011c',
+  borderRadius: '20px'
 };
 
 export default theme;

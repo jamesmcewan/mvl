@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Comics from './Comics';
-import ComicsSection from '../../styles/ComicsSection';
+import Comics, { ComicsSection, WeekTitle } from './Comics';
 import Loading from '../Loading/Loading';
 
 describe('Comics', () => {
@@ -12,6 +11,10 @@ describe('Comics', () => {
 
   describe('when loading', () => {
     const wrapper = shallow(<Comics isLoading />);
+
+    it('does not include a WeekTitle component', () => {
+      expect(wrapper.find(WeekTitle)).toHaveLength(0);
+    });
 
     it('does not include a ComicsSection component', () => {
       expect(wrapper.find(ComicsSection)).toHaveLength(0);
@@ -24,6 +27,10 @@ describe('Comics', () => {
 
   describe('when ready', () => {
     const wrapper = shallow(<Comics Loading />);
+
+    it('includes a WeekTitle component', () => {
+      expect(wrapper.find(WeekTitle)).toHaveLength(1);
+    });
 
     it('includes a ComicsSection component', () => {
       expect(wrapper.find(ComicsSection)).toHaveLength(1);

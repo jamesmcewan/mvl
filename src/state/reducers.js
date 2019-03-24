@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import comics from './comics/reducers';
+import { comics, isLoading } from './comics/reducers';
 
-const reducers = combineReducers({ comics });
+const reducers = combineReducers({ comics, isLoading });
 
 export default reducers;

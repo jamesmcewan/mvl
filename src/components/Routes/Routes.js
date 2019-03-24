@@ -1,15 +1,12 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import ThisWeek from '../../pages/ThisWeek/ThisWeek';
-import NextWeek from '../../pages/NextWeek/NextWeek';
-import LastWeek from '../../pages/LastWeek/LastWeek';
+import Page from '../Page/Page';
 
 const Routes = props => {
   return (
     <Router>
-      <ThisWeek path="/" />
-      <NextWeek path="/nextweek" />
-      <LastWeek path="/lastweek" />
+      <Page path="/" weekId="thisweek" />
+      <Page path="/:weekId" />
     </Router>
   );
 };
