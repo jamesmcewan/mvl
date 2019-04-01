@@ -8,6 +8,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-helmet-async": "^1.0.2",
     "react-progressive-image": "^0.6.0",
     "react-redux": "^5.1.1",
     "react-scripts": "^2.1.8",
