@@ -8,8 +8,6 @@ steps:
       - npm install
       - npm run lint
       - CI=true npm test
-
   - name: build
-      commands:
-        - npm run build --production
-  
+    commands:
+      - npm run build --production
