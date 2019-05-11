@@ -1,38 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { isArray } from 'util';
-import { Creator } from '..';
 
-const StyledCreatorsList = styled.ul`
-  list-style-type: none;
-  margin: 0;
+const List = styled.ul`
   padding: 0;
 `;
 
-const StyledCreatorsHeading = styled.h3`
-  margin-top: 0;
-  font-size: 22px;
+const ListItem = styled.li`
+  list-style-type: none;
 `;
 
-const Creators = ({ creators }) => (
-  <div>
-    <StyledCreatorsHeading>Creative team</StyledCreatorsHeading>
-    <StyledCreatorsList>
-      {isArray(creators) &&
-        creators.map(creator => (
-          <Creator {...creator} key={`c-${creator.name}`} />
-        ))}
-    </StyledCreatorsList>
-  </div>
+const creatorMap = creator => (
+  <ListItem key={`${creator.name}-${creator.role}`}>
+    {creator.name} - {creator.role}
+  </ListItem>
 );
 
-Creators.defaultProps = {
-  creators: [
-    {
-      name: '',
-      role: '',
-    },
-  ],
+const Creators = ({ items }) => {
+  return <List>{items && items.map(creatorMap)}</List>;
+};
+
+Creators.propTypes = {
+  items: PropTypes.array
 };
 
 export default Creators;

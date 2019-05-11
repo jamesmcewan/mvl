@@ -1,0 +1,15 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: test
+    image: node:10.7.0
+    commands:
+      - npm install
+      - npm run lint
+      - CI=true npm test
+  - name: build
+    image: node:10.7.0
+    commands:
+      - npm install --production
+      - npm run build --production
