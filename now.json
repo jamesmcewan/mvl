@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "env": {
+    "PRIVATE": "@mvl_private",
+    "PUBLIC": "@mvl_public"
+  },
+  "builds": [
+    {
+      "src": "mvl-app/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    },
+    { "src": "api/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    {
+      "src": "/api/",
+      "dest": "api/index.js?dateDescriptor=thisWeek",
+      "headers": { "cache-control": "s-maxage=345600" }
+    },
+    {
+      "src": "/api/thisweek",
+      "dest": "api/index.js?dateDescriptor=thisWeek",
+      "headers": { "cache-control": "s-maxage=345600" }
+    },
+    {
+      "src": "/api/nextweek",
+      "dest": "api/index.js?dateDescriptor=nextWeek",
+      "headers": { "cache-control": "s-maxage=345600" }
+    },
+    {
+      "src": "/api/lastweek",
+      "dest": "api/index.js?dateDescriptor=lastWeek",
+      "headers": { "cache-control": "s-maxage=345600" }
+    },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000,immutable" },
+      "dest": "/mvl-app/static/$1"
+    },
+    { "src": "/icon-114.png", "dest": "icon-114.png" },
+    { "src": "/icon-144.png", "dest": "icon-144.png" },
+    { "src": "/icon-512.png", "dest": "icon-512.png" },
+    { "src": "/favicon.ico", "dest": "/mvl-app/favicon.png" },
+    { "src": "/asset-manifest.json", "dest": "/mvl-app/asset-manifest.json" },
+    { "src": "/manifest.json", "dest": "/mvl-app/manifest.json" },
+    {
+      "src": "/precache-manifest.(.*)",
+      "dest": "/mvl-app/precache-manifest.$1"
+    },
+    {
+      "src": "/service-worker.js",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/mvl-app/service-worker.js"
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/mvl-app/index.html"
+    }
+  ]
+}
