@@ -28,11 +28,13 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/**/**/*.js",
     "format": "prettier --write 'src/**/**/**/*.js'",
-    "setup:prod": "yarn && yarn build:test && yarn lint && npm install --production"
+    "setup:prod": "yarn && yarn build:test && yarn lint && yarn install --production",
+    "now-dev": "yarn start",
+    "pre-commit": "lint-staged && yarn build:test"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn build:test"
+      "pre-commit": "yarn pre-commit"
     }
   },
   "lint-staged": {
@@ -46,11 +48,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
-    "enzyme-to-json": "^3.3.5",
-    "husky": "^1.3.1",
-    "jest-styled-components": "^6.3.1",
-    "lint-staged": "^8.1.5",
-    "prettier": "^1.16.4"
+    "enzyme-to-json": "^3.3.5"
   },
   "browserslist": [
     ">0.2%",
