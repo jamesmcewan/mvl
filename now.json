@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "mvl.mcewan.io",
   "env": {
     "PRIVATE": "@mvl_private",
     "PUBLIC": "@mvl_public"
