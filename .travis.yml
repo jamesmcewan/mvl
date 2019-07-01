@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 12.5.0
+cache:
+  directories:
+    yarn: true
+
+install:
+  - yarn
+script:
+  - yarn workspace mvl-app test
+  - yarn workspace mvl-app build --production

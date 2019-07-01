@@ -5,7 +5,13 @@
     "mvl-app"
   ],
   "devDependencies": {
-    "now": "^15.6.2"
+    "husky": "3.0.0",
+    "now": "15.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn workspace mvl-app pre-commit"
+    }
   },
   "scripts": {
     "start": "now dev"
