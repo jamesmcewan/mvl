@@ -15,7 +15,7 @@ action "Test" {
 }
 
 action "Build" {
-  needs = "Build"
+  needs = "Test"
   uses = "Borales/actions-yarn@master"
   args = "workspace mvl-app build"
 }
