@@ -11,27 +11,27 @@
       "use": "@now/static-build",
       "config": { "distDir": "build" }
     },
-    { "src": "api/index.js", "use": "@now/node" }
+    { "src": "mvl-api/index.js", "use": "@now/node" }
   ],
   "routes": [
     {
       "src": "/api/",
-      "dest": "api/index.js?dateDescriptor=thisWeek",
+      "dest": "mvl-api/index.js?dateDescriptor=thisWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/thisweek",
-      "dest": "api/index.js?dateDescriptor=thisWeek",
+      "dest": "mvl-api/index.js?dateDescriptor=thisWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/nextweek",
-      "dest": "api/index.js?dateDescriptor=nextWeek",
+      "dest": "mvl-api/index.js?dateDescriptor=nextWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/lastweek",
-      "dest": "api/index.js?dateDescriptor=lastWeek",
+      "dest": "mvl-api/index.js?dateDescriptor=lastWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
