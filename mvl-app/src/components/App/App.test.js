@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from '@emotion/styled';
 import GlobalStyle from '../../styles/GlobalStyle';
 import Routes from '../Routes/Routes';
 import App from './App';

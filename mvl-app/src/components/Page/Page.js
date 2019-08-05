@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { connect } from 'react-redux';
 import { getComicsForWeek, isLoading } from '../../state/comics/selectors';
 import { requestComics } from '../../state/comics/actions';
