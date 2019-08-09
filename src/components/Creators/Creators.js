@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const List = styled.ul`
   padding: 0;

@@ -11,11 +11,11 @@ action "install" {
 action "Test" {
   needs = "install"
   uses = "Borales/actions-yarn@master"
-  args = "workspace mvl-app build:test"
+  args = "build:test"
 }
 
 action "Build" {
   needs = "Test"
   uses = "Borales/actions-yarn@master"
-  args = "workspace mvl-app build"
+  args = "mvl-app build"
 }

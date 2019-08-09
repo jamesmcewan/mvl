@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../styles/GlobalStyle';
 import theme from '../../styles/theme';
 import Routes from '../Routes/Routes';
@@ -9,7 +9,7 @@ const App = () => {
     <>
       <ThemeProvider {...{ theme }}>
         <>
-          <GlobalStyle {...{ theme }} />
+          <GlobalStyle />
           <Routes />
         </>
       </ThemeProvider>
