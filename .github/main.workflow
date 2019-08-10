@@ -17,5 +17,5 @@ action "Test" {
 action "Build" {
   needs = "Test"
   uses = "Borales/actions-yarn@master"
-  args = "mvl-app build"
+  args = "build"
 }
