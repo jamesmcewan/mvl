@@ -16,48 +16,48 @@
   "routes": [
     {
       "src": "/api/",
-      "dest": "mvl-api/index.js?dateDescriptor=thisWeek",
+      "dest": "api/index.js?dateDescriptor=thisWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/thisweek",
-      "dest": "mvl-api/index.js?dateDescriptor=thisWeek",
+      "dest": "api/index.js?dateDescriptor=thisWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/nextweek",
-      "dest": "mvl-api/index.js?dateDescriptor=nextWeek",
+      "dest": "api/index.js?dateDescriptor=nextWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/api/lastweek",
-      "dest": "mvl-api/index.js?dateDescriptor=lastWeek",
+      "dest": "api/index.js?dateDescriptor=lastWeek",
       "headers": { "cache-control": "s-maxage=345600" }
     },
     {
       "src": "/static/(.*)",
       "headers": { "cache-control": "s-maxage=31536000,immutable" },
-      "dest": "/mvl-app/static/$1"
+      "dest": "/static/$1"
     },
     { "src": "/icon-114.png", "dest": "icon-114.png" },
     { "src": "/icon-144.png", "dest": "icon-144.png" },
     { "src": "/icon-512.png", "dest": "icon-512.png" },
-    { "src": "/favicon.ico", "dest": "/mvl-app/favicon.png" },
-    { "src": "/asset-manifest.json", "dest": "/mvl-app/asset-manifest.json" },
-    { "src": "/manifest.json", "dest": "/mvl-app/manifest.json" },
+    { "src": "/favicon.ico", "dest": "/favicon.png" },
+    { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
     {
       "src": "/precache-manifest.(.*)",
-      "dest": "/mvl-app/precache-manifest.$1"
+      "dest": "/precache-manifest.$1"
     },
     {
       "src": "/service-worker.js",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "/mvl-app/service-worker.js"
+      "dest": "/service-worker.js"
     },
     {
       "src": "/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "/mvl-app/index.html"
+      "dest": "/index.html"
     }
   ]
 }
