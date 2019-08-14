@@ -1,6 +1,6 @@
 {
   "name": "mvl",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "private": true,
   "dependencies": {
     "@reach/router": "1.2.1",
