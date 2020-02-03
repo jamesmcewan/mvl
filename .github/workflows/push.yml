@@ -18,6 +18,8 @@ jobs:
         env:
           CI: true
   build:
+    runs-on: ubuntu-latest
     needs: install
     steps:
+      - run: ls -a
       - run: yarn build
