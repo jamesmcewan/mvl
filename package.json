@@ -11,7 +11,7 @@
     "react-helmet-async": "1.0.2",
     "react-progressive-image": "0.6.0",
     "react-redux": "7.1.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.3.0",
     "redux": "4.0.1",
     "redux-actions": "2.6.5",
     "redux-devtools-extension": "2.13.8",
