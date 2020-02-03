@@ -3,9 +3,8 @@ name: Build and Test
 on: [push]
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 12.5.0
@@ -13,8 +12,13 @@ jobs:
         with:
           node-version: '12.5.0'
       - run: yarn install
-      - run: yarn lint
-      - run: yarn test:CI
-      - run: yarn build
+        # - run: yarn lint
+        # - run: yarn test:CI
+        # - run: yarn build
         env:
           CI: true
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn build
+      - needs: install
