@@ -12,22 +12,23 @@ jobs:
         with:
           node-version: '12.5.0'
       - run: yarn install
-      - name: Stash installed app
-        uses: actions/upload-artifact@v1
-        with:
-          name: mvlApp
-        # - run: yarn lint
-        # - run: yarn test:CI
-        # - run: yarn build
+      - run: ls -a
+        # - name: Stash installed app
+        #   uses: actions/upload-artifact@v1
+        #   with:
+        #     name: mvlApp
+        #   # - run: yarn lint
+        #   # - run: yarn test:CI
+        #   # - run: yarn build
         env:
           CI: true
-  build:
-    runs-on: ubuntu-latest
-    needs: install
-    steps:
-      - name: unstash installed app
-        uses: actions/download-artifact@v1
-        with:
-          name: mvlApp
-      - run: ls -a
-      - run: yarn build
+  # build:
+  #   runs-on: ubuntu-latest
+  #   needs: install
+  #   steps:
+  #     - name: unstash installed app
+  #       uses: actions/download-artifact@v1
+  #       with:
+  #         name: mvlApp
+  #     - run: ls -a
+  #     - run: yarn build
