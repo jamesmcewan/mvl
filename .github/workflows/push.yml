@@ -16,7 +16,6 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: mvlApp
-          path: /
         # - run: yarn lint
         # - run: yarn test:CI
         # - run: yarn build
