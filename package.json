@@ -1,6 +1,6 @@
 {
   "name": "mvl",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "private": true,
   "dependencies": {
     "@reach/router": "1.2.1",
@@ -24,14 +24,14 @@
     "start": "yarn now-dev",
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "build:test": "CI=true react-scripts test --env=node",
+    "test:CI": "CI=true react-scripts test --env=node",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/**/**/*.js",
     "format": "prettier --write 'src/**/**/**/*.js'",
     "setup:prod": "yarn && yarn build:test && yarn lint && yarn install --production",
     "now-dev": "yarn dev",
-    "pre-commit": "lint-staged && yarn build:test"
+    "pre-commit": "lint-staged && yarn test:CI"
   },
   "husky": {
     "hooks": {
