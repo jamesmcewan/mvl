@@ -11,8 +11,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.18.3'
-      - run: yarn install
-      - run: yarn build
+      - run: npm ci
+      - run: npm run build
         env:
           CI: true
   lint:
@@ -23,8 +23,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.18.3'
-      - run: yarn install
-      - run: yarn lint
+      - run: npm ci
+      - run: npm run lint
         env:
           CI: true
   test:
@@ -35,7 +35,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.18.3'
-      - run: yarn install
-      - run: yarn test:CI
+      - run: npm ci
+      - run: npm run test:CI
         env:
           CI: true
