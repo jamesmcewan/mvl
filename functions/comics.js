@@ -31,13 +31,11 @@ exports.handler = async (event) => {
   }
 
   try {
-    const {
-      data: { results }
-    } = await getData(week);
+    const { data } = await getData(week);
 
     return {
       statusCode: 200,
-      body: JSON.stringify(results)
+      body: JSON.stringify(data)
     };
   } catch (err) {
     return {
