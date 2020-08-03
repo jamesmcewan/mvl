@@ -23,3 +23,6 @@ yarn-error.log*
 
 getMock.js
 mock.js
+
+# Local Netlify folder
+.netlify
