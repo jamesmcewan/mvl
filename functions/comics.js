@@ -31,7 +31,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const data = await getData(week);
+    const { data } = await getData(week);
 
     return {
       statusCode: 200,
