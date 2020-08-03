@@ -24,10 +24,10 @@ const getData = async (dateDescriptor) => {
 
 exports.handler = async (event) => {
   try {
-    const data = await getData('thisWeek');
+    const { results } = await getData('thisWeek').json();
     return {
       statusCode: 200,
-      body: data
+      body: results
     };
   } catch (err) {
     return {
