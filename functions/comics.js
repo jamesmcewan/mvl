@@ -14,6 +14,7 @@ const getData = async (dateDescriptor) => {
 
   try {
     const response = await axios.get(`${url}`);
+    console.log(response);
     const { data } = await response;
 
     return data;
