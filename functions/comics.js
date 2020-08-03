@@ -10,8 +10,6 @@ const getData = async (dateDescriptor) => {
   const hash = md5(`${ts}${privateKey}${publicKey}`);
   const url = `${source}dateDescriptor=${dateDescriptor}&apikey=${publicKey}&ts=${ts}&hash=${hash}`;
 
-  console.log('trying url', url);
-
   try {
     const response = await axios.get(`${url}`);
     const { data } = await response;

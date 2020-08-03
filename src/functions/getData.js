@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 function currentURL(currentPlatform, weekId) {
   if (!currentPlatform) {
-    return `/api/${weekId}`;
+    return `/api/${weekId.toLowerCase()}`;
   }
 
   return `${currentPlatform}/comics?week=${weekId || 'thisWeek'}`;
@@ -23,9 +23,9 @@ const getComicsData = async (weekId) => {
 
 const getData = async () => {
   try {
-    const thisweek = await getComicsData('thisweek');
-    const lastweek = await getComicsData('lastweek');
-    const nextweek = await getComicsData('nextweek');
+    const thisweek = await getComicsData('thisWeek');
+    const lastweek = await getComicsData('lastWeek');
+    const nextweek = await getComicsData('nextWeek');
 
     return { thisweek, lastweek, nextweek };
   } catch (err) {
