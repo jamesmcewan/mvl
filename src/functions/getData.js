@@ -1,11 +1,17 @@
 import Axios from 'axios';
 
+function currentURL(currentPlatform, weekId) {
+  if (!currentPlatform) {
+    return `/api/${weekId}`;
+  }
+
+  return `${currentPlatform}/api?week=${weekId || 'thisWeek'}`;
+}
+
 const getComicsData = async (weekId) => {
   try {
     const response = await Axios.get(
-      `${process.env.REACT_APP_CURRENT_PLATFORM || ''}/api?week=${
-        weekId || 'thisWeek'
-      }`
+      currentURL(process.env.REACT_APP_CURRENT_PLATFORM, weekId)
     );
     const { results } = await response.data.data;
 
