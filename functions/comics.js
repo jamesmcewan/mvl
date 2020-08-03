@@ -23,14 +23,23 @@ const getData = async (dateDescriptor) => {
 };
 
 exports.handler = async (event) => {
+  const safePaths = ['thisWeek', 'nextWeek', 'lastWeek'];
+  const { week } = event.queryStringParameters;
+  if (!safePaths.includes(week)) {
+    return {
+      statusCode: 500,
+      body: `you don't have to go home but you can't stay here`
+    };
+  }
+
   try {
     const {
       data: { results }
-    } = await getData('thisWeek');
+    } = await getData(week);
 
     return {
       statusCode: 200,
-      body: results
+      body: JSON.stringify(results)
     };
   } catch (err) {
     return {
