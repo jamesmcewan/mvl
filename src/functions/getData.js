@@ -5,7 +5,7 @@ function currentURL(currentPlatform, weekId) {
     return `/api/${weekId}`;
   }
 
-  return `${currentPlatform}/api?week=${weekId || 'thisWeek'}`;
+  return `${currentPlatform}/comics?week=${weekId || 'thisWeek'}`;
 }
 
 const getComicsData = async (weekId) => {
