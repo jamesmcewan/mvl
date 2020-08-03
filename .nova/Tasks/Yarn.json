@@ -1,9 +1,0 @@
-{
-  "script" : "if [ $NOVA_TASK_NAME == \"build\" ]; then\n\tyarn build\nfi\n\nif [ $NOVA_TASK_NAME == \"run\" ]; then\n\tyarn start\nfi",
-  "runsCreateIndividualLogs" : true,
-  "actions" : [
-    "build",
-    "run"
-  ],
-  "identifier" : "D1A3CCDF-FB55-4771-B14F-8ADC0D4D4EB6"
-}
