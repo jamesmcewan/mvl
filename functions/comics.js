@@ -24,11 +24,13 @@ const getData = async (dateDescriptor) => {
 
 exports.handler = async (event) => {
   try {
-    const data = await getData('thisWeek');
-    console.log(data);
+    const {
+      data: { results }
+    } = await getData('thisWeek');
+
     return {
       statusCode: 200,
-      body: `test`
+      body: results
     };
   } catch (err) {
     return {
