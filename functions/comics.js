@@ -24,7 +24,7 @@ const getData = async (dateDescriptor) => {
 
 exports.handler = async (event) => {
   try {
-    const { results } = await getData('thisWeek').json();
+    const { results } = await getData('thisWeek');
     return {
       statusCode: 200,
       body: results
