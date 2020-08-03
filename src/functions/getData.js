@@ -3,7 +3,7 @@ import Axios from 'axios';
 const getComicsData = async (weekId) => {
   try {
     const response = await Axios.get(
-      `${process.env.CURRENT_PLATFORM || ''}/api/${weekId}`
+      `${process.env.REACT_APP_CURRENT_PLATFORM || ''}/api/${weekId}`
     );
     const { results } = await response.data.data;
 
