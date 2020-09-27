@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Comic from '../Comic/Comic';
 import Loading from '../Loading/Loading';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 
 const ComicsSection = styled.section`
   display: grid;
@@ -44,11 +44,9 @@ const Comics = ({ comics, isLoading, weekId }) => {
 
   return (
     <>
-      <HelmetProvider>
         <Helmet>
           <title>{`Comic releases for ${weekRm(weekId)} week`}</title>
         </Helmet>
-      </HelmetProvider>
       <WeekTitle>{`Comic releases for ${weekRm(weekId)} week`}</WeekTitle>
       <ComicsSection>{comics && comics.map(comicMap)}</ComicsSection>
     </>
