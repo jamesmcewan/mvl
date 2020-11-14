@@ -1,6 +1,6 @@
 {
   "name": "mvl",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "private": true,
   "dependencies": {
     "@reach/router": "1.3.4",
@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run now-dev",
+    "start": "netlify dev",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test:CI": "CI=true react-scripts test --env=node",

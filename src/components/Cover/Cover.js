@@ -7,6 +7,7 @@ import getCover from '../../functions/getCover';
 
 const CoverButton = styled.button`
   padding: 0;
+  margin: 0;
   background: transparent;
   border: 0;
   display: block;
@@ -15,14 +16,18 @@ const CoverButton = styled.button`
 
 const Img = styled.img`
   width: 100%;
-  opacity: ${props => (props.visible ? '0.2' : '1')};
+  border-radius: 50px;
+  opacity: ${(props) => (props.visible ? '0.1' : '1')};
+  filter: blur(${(props) => (props.visible ? '10px' : '0')})
+    hue-rotate(${(props) => (props.visible ? '-90deg' : '0')});
+  transition: filter 1.5s, opacity 1.5s;
 `;
 
 const Cover = ({ thumbnail, title, visible, setVisible }) => {
   return (
     <CoverButton onClick={() => setVisible(!visible)}>
       <ProgressiveImage src={getCover(thumbnail)} placeholder={placeHolder}>
-        {src => <Img src={src} alt={title} visible={visible} />}
+        {(src) => <Img src={src} alt={title} visible={visible} />}
       </ProgressiveImage>
     </CoverButton>
   );

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Details = ({ title, description }) => {
+const Details = ({ title }) => {
   return (
     <>
       <h2>{title}</h2>
-      <p>{description}</p>
     </>
   );
 };

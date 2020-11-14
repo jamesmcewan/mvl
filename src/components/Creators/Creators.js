@@ -10,14 +10,14 @@ const ListItem = styled.li`
   list-style-type: none;
 `;
 
-const creatorMap = creator => (
+const creatorMap = (creator) => (
   <ListItem key={`${creator.name}-${creator.role}`}>
     {creator.name} - {creator.role}
   </ListItem>
 );
 
-const Creators = ({ items }) => {
-  return <List>{items && items.map(creatorMap)}</List>;
+const Creators = ({ creators }) => {
+  return <List>{creators?.items?.map(creatorMap)}</List>;
 };
 
 Creators.propTypes = {

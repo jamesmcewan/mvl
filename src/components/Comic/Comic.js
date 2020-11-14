@@ -6,6 +6,8 @@ import Info from '../Info/Info';
 
 const ComicWrapper = styled.div`
   position: relative;
+  border-radius: 50px;
+  overflow: hidden;
 `;
 
 const Comic = ({ ...rest }) => {
