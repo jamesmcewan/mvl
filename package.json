@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "scripts": {
-    "start": "npm run now-dev",
+    "start": "netlify dev",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test:CI": "CI=true react-scripts test --env=node",
