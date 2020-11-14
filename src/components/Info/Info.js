@@ -5,6 +5,7 @@ import Creators from '../Creators/Creators';
 
 const InfoWrapper = styled.div`
   opacity: ${(props) => (props.visible ? '1' : '0')};
+  display: ${(props) => (props.visible ? 'block' : 'none')};
   position: absolute;
   z-index: 1;
   top: 0;
