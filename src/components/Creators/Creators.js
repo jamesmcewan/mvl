@@ -16,8 +16,8 @@ const creatorMap = (creator) => (
   </ListItem>
 );
 
-const Creators = ({ creators: { items } }) => {
-  return <List>{items && items.map(creatorMap)}</List>;
+const Creators = ({ creators }) => {
+  return <List>{creators?.items?.map(creatorMap)}</List>;
 };
 
 Creators.propTypes = {
