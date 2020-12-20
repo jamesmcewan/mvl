@@ -14,7 +14,7 @@ describe('Page', () => {
   });
 
   it('renders a Wrapper component', () => {
-    expect(wrapper.find(Wrapper)).toHaveLength(1);
+    expect(wrapper.find('[data-selector="wrapper"]')).toHaveLength(1);
   });
 
   it('renders a Logo component', () => {

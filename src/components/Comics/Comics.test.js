@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Comics, { ComicsSection, WeekTitle } from './Comics';
+import Comics from './Comics';
+import ComicsWeekTitle from './ComicsWeekTitle';
+import ComicsSection from './ComicsSection';
 import Loading from '../Loading/Loading';
 
 describe('Comics', () => {
@@ -17,7 +19,7 @@ describe('Comics', () => {
     const wrapper = shallow(<Comics {...mockProps} isLoading />);
 
     it('does not include a WeekTitle component', () => {
-      expect(wrapper.find(WeekTitle)).toHaveLength(0);
+      expect(wrapper.find(ComicsWeekTitle)).toHaveLength(0);
     });
 
     it('does not include a ComicsSection component', () => {
@@ -33,7 +35,7 @@ describe('Comics', () => {
     const wrapper = shallow(<Comics {...mockProps} Loading />);
 
     it('includes a WeekTitle component', () => {
-      expect(wrapper.find(WeekTitle)).toHaveLength(1);
+      expect(wrapper.find(ComicsWeekTitle)).toHaveLength(1);
     });
 
     it('includes a ComicsSection component', () => {
