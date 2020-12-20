@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { getComicsForWeek, isLoading } from '../../state/comics/selectors';
@@ -49,7 +49,4 @@ const mapDispatchToProps = {
 };
 
 export { Page, Wrapper };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Page);
+export default connect(mapStateToProps, mapDispatchToProps)(Page);

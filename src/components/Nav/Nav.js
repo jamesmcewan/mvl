@@ -1,31 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
 import NavLink from '../NavLink/NavLink';
 
-const StyledNav = styled.nav`
-  position: fixed;
-  bottom: 0;
-  z-index: 2;
-  width: 100%;
+const MVLNav = (props) => <nav {...props} />;
 
-  @media (min-width: 1000px) {
-    position: static;
-  }
-`;
+const MVLNavList = (props) => <ul {...props} />;
 
-const NavList = styled.ul`
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
-`;
-
-const NavListItem = styled.li`
-  list-style-type: none;
-  text-align: center;
-  background: ${props => props.theme.navBg};
-`;
+const MVLNavListItem = (props) => <li {...props} />;
 
 const isActive = (props, p2) => {
   return props.isCurrent
@@ -33,27 +13,27 @@ const isActive = (props, p2) => {
     : { 'data-current': 'false' };
 };
 
-const Nav = props => {
+const Nav = (props) => {
   return (
-    <StyledNav>
-      <NavList>
-        <NavListItem>
+    <MVLNav>
+      <MVLNavList>
+        <MVLNavListItem>
           <NavLink to="/lastweek" getProps={isActive}>
             Last week
           </NavLink>
-        </NavListItem>
-        <NavListItem>
+        </MVLNavListItem>
+        <MVLNavListItem>
           <NavLink to="/" getProps={isActive}>
             This week
           </NavLink>
-        </NavListItem>
-        <NavListItem>
+        </MVLNavListItem>
+        <MVLNavListItem>
           <NavLink to="/nextweek" getProps={isActive}>
             Next week
           </NavLink>
-        </NavListItem>
-      </NavList>
-    </StyledNav>
+        </MVLNavListItem>
+      </MVLNavList>
+    </MVLNav>
   );
 };
 
