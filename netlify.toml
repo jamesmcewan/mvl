@@ -1,0 +1,4 @@
+[dev]
+  functions = "api"
+  port = 4000 #port netlify dev runs on
+  command = 'npm run dev'

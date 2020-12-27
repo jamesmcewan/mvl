@@ -1,8 +1,6 @@
 // import PropTypes from 'prop-types';
 import Loading from '../Loading/Loading'
 import { Helmet } from 'react-helmet'
-import ComicsWeekTitle from './ComicsWeekTitle'
-import ComicsSection from './ComicsSection'
 import ComicsItem from './ComicsItem'
 
 const weekRm = (weekId) => weekId.replace('week', '')
@@ -17,10 +15,10 @@ const Comics = ({ comics, isLoading, weekId }) => {
       <Helmet>
         <title>{`Comic releases for ${weekRm(weekId)} week`}</title>
       </Helmet>
-      <ComicsWeekTitle>
-        {`Comic releases for ${weekRm(weekId)} week`}
-      </ComicsWeekTitle>
-      <ComicsSection>{comics && comics.map(ComicsItem)}</ComicsSection>
+      <h1>{`Comic releases for ${weekRm(weekId)} week`}</h1>
+      <section class="grid grid-cols-3">
+        {comics && comics.map(ComicsItem)}
+      </section>
     </>
   )
 }
