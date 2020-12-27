@@ -1,25 +1,17 @@
-import Details from '../Details/Details';
-import Creators from '../Creators/Creators';
+import Details from '../Details/Details'
+import Creators from '../Creators/Creators'
+import InfoWrapper from './InfoWrapper'
+import InfoContainer from './InfoContainer'
+import InfoButton from './InfoButton'
 
-const InfoWrapper = ({ children }) => <div>{children}</div>;
+const Info = ({ visible, setVisible, creators, ...rest }) => (
+  <InfoWrapper {...{ visible }}>
+    <InfoContainer>
+      <Details {...rest} />
+      <Creators {...{ creators }} />
+      <InfoButton onClick={() => setVisible(!visible)}>close</InfoButton>
+    </InfoContainer>
+  </InfoWrapper>
+)
 
-const InfoContainer = ({ children }) => <div>{children}</div>;
-
-const InfoButton = ({ children, onClick }) => (
-  <button onClick={onClick}>{children}</button>
-);
-
-const Info = ({ visible, setVisible, creators, ...rest }) => {
-  return (
-    <InfoWrapper {...{ visible }}>
-      <InfoContainer>
-        <Details {...rest} />
-        <Creators {...{ creators }} />
-        <InfoButton onClick={() => setVisible(!visible)}>close</InfoButton>
-      </InfoContainer>
-    </InfoWrapper>
-  );
-};
-
-export { InfoWrapper, InfoContainer, InfoButton };
-export default Info;
+export default Info

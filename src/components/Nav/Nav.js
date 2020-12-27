@@ -1,39 +1,34 @@
-import NavLink from '../NavLink/NavLink';
-
-const MVLNav = (props) => <nav {...props} />;
-
-const MVLNavList = (props) => <ul {...props} />;
-
-const MVLNavListItem = (props) => <li {...props} />;
+import NavLink from './NavLink'
+import NavList from './NavList'
+import NavListItem from './NavListItem'
+import NavWrapper from './NavWrapper'
 
 const isActive = (props, p2) => {
   return props.isCurrent
     ? { 'data-current': 'true' }
-    : { 'data-current': 'false' };
-};
+    : { 'data-current': 'false' }
+}
 
-const Nav = (props) => {
-  return (
-    <MVLNav>
-      <MVLNavList>
-        <MVLNavListItem>
-          <NavLink to="/lastweek" getProps={isActive}>
-            Last week
-          </NavLink>
-        </MVLNavListItem>
-        <MVLNavListItem>
-          <NavLink to="/" getProps={isActive}>
-            This week
-          </NavLink>
-        </MVLNavListItem>
-        <MVLNavListItem>
-          <NavLink to="/nextweek" getProps={isActive}>
-            Next week
-          </NavLink>
-        </MVLNavListItem>
-      </MVLNavList>
-    </MVLNav>
-  );
-};
+const Nav = (props) => (
+  <NavWrapper>
+    <NavList>
+      <NavListItem>
+        <NavLink to="/lastweek" getProps={isActive}>
+          Last week
+        </NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink to="/" getProps={isActive}>
+          This week
+        </NavLink>
+      </NavListItem>
+      <NavListItem>
+        <NavLink to="/nextweek" getProps={isActive}>
+          Next week
+        </NavLink>
+      </NavListItem>
+    </NavList>
+  </NavWrapper>
+)
 
-export default Nav;
+export default Nav

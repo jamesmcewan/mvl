@@ -1,11 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
-    background: ${props => props.theme.darkBg};
+    background: ${(props) => props.theme.darkBg};
   }
   body {
-    color: ${props => props.theme.primaryText};
+    color: ${(props) => props.theme.primaryText};
     font-family: "Oswald", sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -17,6 +17,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 20px;
     }
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import Cover from '../Cover/Cover';
-import Info from '../Info/Info';
+import { useState } from 'react'
+import Cover from '../Cover/Cover'
+import Info from '../Info/Info'
 
 const Comic = ({ ...rest }) => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
 
   return (
     <div
@@ -13,7 +13,7 @@ const Comic = ({ ...rest }) => {
       <Cover {...rest} {...{ visible, setVisible }} />
       <Info {...rest} {...{ visible, setVisible }} />
     </div>
-  );
-};
+  )
+}
 
-export default Comic;
+export default Comic

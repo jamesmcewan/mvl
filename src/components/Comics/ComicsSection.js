@@ -1,3 +1,3 @@
-const ComicsSection = ({ children }) => <section>{children}</section>;
+const ComicsSection = ({ children }) => <section>{children}</section>
 
-export default ComicsSection;
+export default ComicsSection

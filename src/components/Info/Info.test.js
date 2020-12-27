@@ -1,35 +1,35 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import Info, { InfoContainer, InfoWrapper, InfoButton } from './Info';
+import React from 'react'
+import { shallow } from 'enzyme'
+import Info from './Info'
 
 describe('Info', () => {
-  const wrapper = shallow(<Info />);
+  const wrapper = shallow(<Info />)
 
   it('should render without crashing', () => {
-    expect(wrapper).toHaveLength(1);
-  });
-});
+    expect(wrapper).toHaveLength(1)
+  })
+})
 
-describe('InfoContainer', () => {
-  const wrapper = shallow(<InfoContainer />);
+// describe('InfoContainer', () => {
+//   const wrapper = shallow(<InfoContainer />)
 
-  it('should render without crashing', () => {
-    expect(wrapper).toHaveLength(1);
-  });
-});
+//   it('should render without crashing', () => {
+//     expect(wrapper).toHaveLength(1)
+//   })
+// })
 
-describe('InfoWrapper', () => {
-  const wrapper = shallow(<InfoWrapper />);
+// describe('InfoWrapper', () => {
+//   const wrapper = shallow(<InfoWrapper />)
 
-  it('should render without crashing', () => {
-    expect(wrapper).toHaveLength(1);
-  });
-});
+//   it('should render without crashing', () => {
+//     expect(wrapper).toHaveLength(1)
+//   })
+// })
 
-describe('InfoButton', () => {
-  const wrapper = shallow(<InfoButton />);
+// describe('InfoButton', () => {
+//   const wrapper = shallow(<InfoButton />)
 
-  it('should render without crashing', () => {
-    expect(wrapper).toHaveLength(1);
-  });
-});
+//   it('should render without crashing', () => {
+//     expect(wrapper).toHaveLength(1)
+//   })
+// })

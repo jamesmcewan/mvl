@@ -1,3 +1,3 @@
-const Details = ({ title }) => <h2>{title}</h2>;
+const Details = ({ title }) => <h2>{title}</h2>
 
-export default Details;
+export default Details

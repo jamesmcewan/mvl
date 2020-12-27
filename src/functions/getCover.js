@@ -1,5 +1,5 @@
-const replaceHttp = url => url.replace('http', 'https');
+const replaceHttp = (url) => url.replace('http', 'https')
 
-const getCover = ({ path, extension }) => `${replaceHttp(path)}.${extension}`;
+const getCover = ({ path, extension }) => `${replaceHttp(path)}.${extension}`
 
-export default getCover;
+export default getCover

@@ -1,5 +1,5 @@
-import Comic from '../Comic/Comic';
+import Comic from '../Comic/Comic'
 
-const ComicsItem = (comic) => <Comic {...comic} key={comic.id} />;
+const ComicsItem = (comic) => <Comic {...comic} key={comic.id} />
 
-export default ComicsItem;
+export default ComicsItem

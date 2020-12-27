@@ -1,13 +1,13 @@
-import { handleActions } from 'redux-actions';
+import { handleActions } from 'redux-actions'
 
-import { COMICS_REQUESTED, COMICS_RECEIVED, COMICS_ERROR } from './actions';
+import { COMICS_REQUESTED, COMICS_RECEIVED, COMICS_ERROR } from './actions'
 
 const comics = handleActions(
   {
     [COMICS_RECEIVED]: (state, action) => action.payload
   },
   {}
-);
+)
 
 const isLoading = handleActions(
   {
@@ -16,6 +16,6 @@ const isLoading = handleActions(
     [COMICS_ERROR]: () => false
   },
   false
-);
+)
 
-export { comics, isLoading };
+export { comics, isLoading }

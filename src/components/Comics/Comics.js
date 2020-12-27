@@ -1,15 +1,15 @@
 // import PropTypes from 'prop-types';
-import Loading from '../Loading/Loading';
-import { Helmet } from 'react-helmet';
-import ComicsWeekTitle from './ComicsWeekTitle';
-import ComicsSection from './ComicsSection';
-import ComicsItem from './ComicsItem';
+import Loading from '../Loading/Loading'
+import { Helmet } from 'react-helmet'
+import ComicsWeekTitle from './ComicsWeekTitle'
+import ComicsSection from './ComicsSection'
+import ComicsItem from './ComicsItem'
 
-const weekRm = (weekId) => weekId.replace('week', '');
+const weekRm = (weekId) => weekId.replace('week', '')
 
 const Comics = ({ comics, isLoading, weekId }) => {
   if (isLoading) {
-    return <Loading />;
+    return <Loading />
   }
 
   return (
@@ -22,7 +22,7 @@ const Comics = ({ comics, isLoading, weekId }) => {
       </ComicsWeekTitle>
       <ComicsSection>{comics && comics.map(ComicsItem)}</ComicsSection>
     </>
-  );
-};
+  )
+}
 
-export default Comics;
+export default Comics
