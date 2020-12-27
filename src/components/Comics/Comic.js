@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Cover from '../Cover/Cover'
-import Info from '../Info/Info'
+import Cover from './Cover'
+import ComicInfo from './ComicInfo'
 
 const Comic = ({ ...rest }) => {
   const [visible, setVisible] = useState(false)
@@ -8,7 +8,7 @@ const Comic = ({ ...rest }) => {
   return (
     <div data-selector="comic-wrapper">
       <Cover {...rest} {...{ visible, setVisible }} />
-      <Info {...rest} {...{ visible, setVisible }} />
+      <ComicInfo {...rest} {...{ visible, setVisible }} />
     </div>
   )
 }

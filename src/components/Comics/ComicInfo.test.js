@@ -1,33 +1,33 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Info from './Info'
+import ComicInfo from './ComicInfo'
 
-describe('Info', () => {
-  const wrapper = shallow(<Info />)
+describe('ComicInfo', () => {
+  const wrapper = shallow(<ComicInfo />)
 
   it('should render without crashing', () => {
     expect(wrapper).toHaveLength(1)
   })
 })
 
-// describe('InfoContainer', () => {
-//   const wrapper = shallow(<InfoContainer />)
+// describe('ComicInfoContainer', () => {
+//   const wrapper = shallow(<ComicInfoContainer />)
 
 //   it('should render without crashing', () => {
 //     expect(wrapper).toHaveLength(1)
 //   })
 // })
 
-// describe('InfoWrapper', () => {
-//   const wrapper = shallow(<InfoWrapper />)
+// describe('ComicInfoWrapper', () => {
+//   const wrapper = shallow(<ComicInfoWrapper />)
 
 //   it('should render without crashing', () => {
 //     expect(wrapper).toHaveLength(1)
 //   })
 // })
 
-// describe('InfoButton', () => {
-//   const wrapper = shallow(<InfoButton />)
+// describe('ComicInfoButton', () => {
+//   const wrapper = shallow(<ComicInfoButton />)
 
 //   it('should render without crashing', () => {
 //     expect(wrapper).toHaveLength(1)

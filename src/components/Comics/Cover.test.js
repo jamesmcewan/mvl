@@ -18,8 +18,8 @@ describe('Cover', () => {
     expect(wrapper).toHaveLength(1)
   })
 
-  it('renders a CoverButton', () => {
-    expect(wrapper.find('CoverButton')).toHaveLength(1)
+  it('renders a button', () => {
+    expect(wrapper.find('button')).toHaveLength(1)
   })
 
   it('renders a ProgressiveImage crashing', () => {

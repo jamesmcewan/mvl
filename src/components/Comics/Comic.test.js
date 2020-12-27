@@ -1,8 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Comic from './Comic'
-import Cover from '../Cover/Cover'
-import Info from '../Info/Info'
 
 const mockProps = {
   thumbnail: {
@@ -23,10 +21,10 @@ describe('Comic', () => {
   })
 
   it('renders a Cover component', () => {
-    expect(wrapper.find(Cover)).toHaveLength(1)
+    expect(wrapper.find('Cover')).toHaveLength(1)
   })
 
   it('renders an Info component', () => {
-    expect(wrapper.find(Info)).toHaveLength(1)
+    expect(wrapper.find('ComicInfo')).toHaveLength(1)
   })
 })

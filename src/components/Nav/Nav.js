@@ -1,7 +1,5 @@
 import NavLink from './NavLink'
-import NavList from './NavList'
 import NavListItem from './NavListItem'
-import NavWrapper from './NavWrapper'
 
 const isActive = (props, p2) => {
   return props.isCurrent
@@ -10,8 +8,8 @@ const isActive = (props, p2) => {
 }
 
 const Nav = (props) => (
-  <NavWrapper>
-    <NavList>
+  <nav>
+    <ul>
       <NavListItem>
         <NavLink to="/lastweek" getProps={isActive}>
           Last week
@@ -27,8 +25,8 @@ const Nav = (props) => (
           Next week
         </NavLink>
       </NavListItem>
-    </NavList>
-  </NavWrapper>
+    </ul>
+  </nav>
 )
 
 export default Nav
