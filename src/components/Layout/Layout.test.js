@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Page } from './Page'
+import Layout from './Layout'
 
-describe('Page', () => {
-  const wrapper = shallow(<Page />)
+describe('Layout', () => {
+  const wrapper = shallow(<Layout />)
 
   it('renders without crashing', () => {
     expect(wrapper).toHaveLength(1)

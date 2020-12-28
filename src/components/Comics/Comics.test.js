@@ -28,19 +28,19 @@ describe('Comics', () => {
     })
   })
 
-  describe('when ready', () => {
-    const wrapper = shallow(<Comics {...mockProps} Loading />)
+  // describe('when ready', () => {
+  //   const wrapper = shallow(<Comics {...mockProps} Loading />)
 
-    it('includes a WeekTitle component', () => {
-      expect(wrapper.find('h1')).toHaveLength(1)
-    })
+  //   it('includes a WeekTitle component', () => {
+  //     expect(wrapper.find('h1')).toHaveLength(1)
+  //   })
 
-    it('includes a ComicsSection component', () => {
-      expect(wrapper.find('section')).toHaveLength(1)
-    })
+  //   it('includes a ComicsSection component', () => {
+  //     expect(wrapper.find('section')).toHaveLength(1)
+  //   })
 
-    it('does not include a Loading component', () => {
-      expect(wrapper.find('Loading')).toHaveLength(0)
-    })
-  })
+  //   it('does not include a Loading component', () => {
+  //     expect(wrapper.find('Loading')).toHaveLength(0)
+  //   })
+  // })
 })

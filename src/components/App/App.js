@@ -1,7 +1,11 @@
-import Routes from './Routes'
+import { Router } from '@reach/router'
+import Layout from '../Layout/Layout'
 
-const App = () => {
-  return <Routes />
-}
+const App = () => (
+  <Router>
+    <Layout path="/" weekId="thisweek" />
+    <Layout path="/:weekId" />
+  </Router>
+)
 
 export default App

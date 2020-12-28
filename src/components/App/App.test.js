@@ -9,7 +9,11 @@ describe('App', () => {
     expect(wrapper).toHaveLength(1)
   })
 
-  it('includes Routes', () => {
-    expect(wrapper.find('Routes')).toHaveLength(1)
+  it('renders a Router compnent', () => {
+    expect(wrapper.find('Router')).toHaveLength(1)
+  })
+
+  it('includes pages', () => {
+    expect(wrapper.find('Layout').length).toBeGreaterThanOrEqual(1)
   })
 })
