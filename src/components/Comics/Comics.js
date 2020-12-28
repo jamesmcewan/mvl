@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import getComics from '../../functions/getComics'
 import Loading from '../Loading/Loading'
 import Comic from './Comic'
 
@@ -9,10 +10,19 @@ const Comics = ({ weekId }) => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    //check local storage for comics, if empty get comics
-    //return data and loading false
-    setIsLoading(true)
-    setComics([])
+    const comicsData = localStorage.getItem(`comics`)
+
+    if (comicsData) {
+      setComics(JSON.parse(comicsData))
+      setIsLoading(false)
+      return
+    }
+
+    getComics().then((comics) => {
+      localStorage.setItem(`comics`, JSON.stringify(comics))
+      setComics(comics)
+      setIsLoading(false)
+    })
   }, [])
 
   return (
@@ -20,13 +30,13 @@ const Comics = ({ weekId }) => {
       {isLoading && <Loading />}
       {!isLoading && (
         <>
-          <h1 class="text-yellow-100 text-2xl">
+          <h1 className="text-yellow-100 text-2xl">
             {`Comic releases for ${currWeek} week`}
           </h1>
           <Helmet>
             <title>{`Comic releases for ${currWeek} week`}</title>
           </Helmet>
-          <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3">
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3">
             {comics?.map((comic) => (
               <Comic {...comic} key={comic.id} />
             ))}

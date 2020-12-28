@@ -1,8 +1,8 @@
-const CoverImg = ({ visible, alt, ...rest }) => (
+const CoverImg = ({ isVisible, alt, ...rest }) => (
   <img
     alt={alt}
-    class={`w-full rounded-lg	transition-all ${
-      visible ? 'opacity-10' : 'opacity-100'
+    className={`w-full rounded-lg	transition-all ${
+      isVisible ? 'opacity-10' : 'opacity-100'
     }`}
     {...rest}
   />

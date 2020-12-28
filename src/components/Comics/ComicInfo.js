@@ -1,15 +1,15 @@
 import Creator from './Creator'
 
-const ComicInfo = ({ visible, setVisible, title, creators, ...rest }) => (
-  <div {...{ visible }}>
+const ComicInfo = ({ isVisible, setIsVisible, title, creators, ...rest }) => (
+  <div>
     <div>
-      <h2 class="text-yellow-200 text-xl">{title}</h2>
-      <ul class="p-0">
+      <h2 className="text-yellow-200 text-xl">{title}</h2>
+      <ul className="p-0">
         {creators?.items?.map((creator) => (
           <Creator {...creator} key={creator.name} />
         ))}
       </ul>
-      <button onClick={() => setVisible(!visible)}>close</button>
+      <button onClick={() => setIsVisible(!isVisible)}>close</button>
     </div>
   </div>
 )

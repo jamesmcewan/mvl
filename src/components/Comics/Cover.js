@@ -3,13 +3,13 @@ import getCover from '../../functions/getCover'
 import CoverImg from './CoverImg'
 import placeHolder from '../../images/placeholder.jpg'
 
-const Cover = ({ thumbnail, title, visible, setVisible }) => (
+const Cover = ({ thumbnail, title, isVisible, setIsVisible }) => (
   <button
-    class="p-0 m-0 bg-transparent border-none block w-full"
-    onClick={() => setVisible(!visible)}
+    className="p-0 m-0 bg-transparent border-none block w-full"
+    onClick={() => setIsVisible(!isVisible)}
   >
     <ProgressiveImage src={getCover(thumbnail)} placeholder={placeHolder}>
-      {(src) => <CoverImg src={src} alt={title} visible={visible} />}
+      {(src) => <CoverImg src={src} alt={title} isVisible={isVisible} />}
     </ProgressiveImage>
   </button>
 )
