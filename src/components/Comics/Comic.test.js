@@ -24,7 +24,7 @@ describe('Comic', () => {
     expect(wrapper.find('Cover')).toHaveLength(1)
   })
 
-  it('renders an Info component', () => {
-    expect(wrapper.find('ComicInfo')).toHaveLength(1)
+  it('renders an Details component', () => {
+    expect(wrapper.find('ComicDetails')).toHaveLength(1)
   })
 })

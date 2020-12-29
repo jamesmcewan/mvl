@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Cover from './Cover'
 
-jest.mock('../../functions/getCover')
+jest.mock('../../helpers/getCover')
 
 describe('Cover', () => {
   const mockProps = {

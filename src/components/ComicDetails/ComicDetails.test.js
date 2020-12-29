@@ -1,9 +1,9 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import ComicInfo from './ComicInfo'
+import ComicDetails from './ComicDetails'
 
 describe('ComicInfo', () => {
-  const wrapper = shallow(<ComicInfo />)
+  const wrapper = shallow(<ComicDetails />)
 
   it('should render without crashing', () => {
     expect(wrapper).toHaveLength(1)

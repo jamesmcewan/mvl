@@ -1,13 +1,13 @@
 import Logo from '../Logo/Logo'
-import Comics from '../Comics/Comics'
 import Footer from '../Footer/Footer'
 import Nav from '../Nav/Nav'
+import Page from '../Page/Page'
 
 const Layout = ({ weekId }) => (
   <div data-selector="wrapper">
     <Logo />
     <Nav />
-    <Comics weekId={weekId} />
+    <Page weekId={weekId} />
     <Footer />
   </div>
 )

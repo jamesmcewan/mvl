@@ -17,8 +17,8 @@ describe('Layout', () => {
     expect(wrapper.find('Logo')).toHaveLength(1)
   })
 
-  it('renders a Comics component', () => {
-    expect(wrapper.find('Comics')).toHaveLength(1)
+  it('renders a Page component', () => {
+    expect(wrapper.find('Page')).toHaveLength(1)
   })
 
   it('renders a Footer component', () => {

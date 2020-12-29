@@ -1,5 +1,5 @@
 import ProgressiveImage from 'react-progressive-image'
-import getCover from '../../functions/getCover'
+import getCover from '../../helpers/getCover'
 import CoverImg from './CoverImg'
 import placeHolder from '../../images/placeholder.jpg'
 
