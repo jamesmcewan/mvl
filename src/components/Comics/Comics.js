@@ -8,7 +8,7 @@ const Comics = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const comicsData = localStorage.getItem(`comics`)
+    const comicsData = sessionStorage.getItem(`comics`)
 
     if (comicsData) {
       setComics(JSON.parse(comicsData))
@@ -17,7 +17,7 @@ const Comics = () => {
     }
 
     getComics().then((comics) => {
-      localStorage.setItem(`comics`, JSON.stringify(comics))
+      sessionStorage.setItem(`comics`, JSON.stringify(comics))
       setComics(comics)
       setIsLoading(false)
     })

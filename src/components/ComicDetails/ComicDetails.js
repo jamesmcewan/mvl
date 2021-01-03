@@ -1,4 +1,3 @@
-import Creator from '../Creators/Creator'
 import Creators from '../Creators/Creators'
 
 const ComicDetails = ({
