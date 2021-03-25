@@ -9,6 +9,9 @@ function currentURL(currentPlatform, weekId) {
 }
 
 async function getComics(weekId) {
+  if (!weekId) {
+    throw new Error('no week id')
+  }
   try {
     const response = await Axios.get(
       currentURL(process.env.REACT_APP_CURRENT_PLATFORM, weekId)

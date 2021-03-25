@@ -1,0 +1,17 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "npm run build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "rm -rf build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "npm run dev"
+    }
+  },
+  "identifier" : "8C0A56A1-F6A4-4E70-825C-01D0EDA1A3DD"
+}

@@ -38,6 +38,8 @@ function mapData(response) {
   const {
     creators: { items }
   } = results
+
+  return { code, status, attributionText, results, items }
 }
 
 const getData = async (dateDescriptor) => {

@@ -1,0 +1,19 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "npm run build\n"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "rm -rf build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "npm start"
+    }
+  },
+  "identifier" : "27D76D08-9E98-43C8-B6FA-5B5DEC6A7187",
+  "openLogOnRun" : "start",
+  "persistent" : true
+}
