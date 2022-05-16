@@ -16,7 +16,7 @@ const getComicsData = async (week) => {
 
     return data;
   } catch (err) {
-    throw new Error();
+    throw new Error(err);
   }
 };
 
