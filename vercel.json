@@ -3,5 +3,43 @@
     "env": {
       "ENABLE_VC_BUILD": "1"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/next-week",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/last-week",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/this-week",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "s-maxage=1, stale-while-revalidate"
+        }
+      ]
+    }
+  ]
 }

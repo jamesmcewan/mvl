@@ -5,7 +5,7 @@ import serializeJavaScript from 'serialize-javascript';
 import PropTypes from 'prop-types';
 import { jsxs, Fragment as Fragment$1, jsx } from 'react/jsx-runtime';
 import Axios from 'axios';
-import md5 from 'crypto-js/md5';
+import { Md5 } from 'ts-md5/dist/md5';
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -1074,7 +1074,7 @@ const PRIVATE_KEY = "e3b9f61987c94807d1919bd3fed3f40276b0eb86";
 const getComicsData = async (week) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?';
   const ts = Date.now().toString();
-  const hash = md5(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`);
+  const hash = Md5.hashStr(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`);
   const url = `${source}dateDescriptor=${week}Week&apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}`;
 
   try {
@@ -1107,9 +1107,15 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Layout;
   const { week } = Astro2.props;
-  const {
-    data: { results }
-  } = await getData(week);
+  async function getMyComics(week2) {
+    try {
+      const { data: { results } } = await getData(week2);
+      return results;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const myComics = await getMyComics(week);
   return render`<html lang="en">
   <head>
     <meta charset="utf-8">
@@ -1117,7 +1123,7 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
     <title>Comic releases for ${week} week</title>
   <!--astro:head--></head>
   <body>
-    ${renderComponent($$result, "Page", Page, { "week": week, "comics": results })}
+    ${renderComponent($$result, "Page", Page, { "week": week, "comics": myComics })}
     ${renderSlot($$result, $$slots["default"])}
   </body></html>`;
 });

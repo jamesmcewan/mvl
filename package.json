@@ -31,6 +31,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "crypto-js": "^4.1.1",
-    "prop-types": "^15.8.1"
+    "md5": "^2.3.0",
+    "prop-types": "^15.8.1",
+    "ts-md5": "^1.2.11"
   }
 }

@@ -1,15 +1,15 @@
 import Axios from 'axios';
-import md5 from 'crypto-js/md5.js';
+import {Md5} from 'ts-md5/dist/md5.js'
 
-const PUBLIC_KEY = import.meta.env.PUBLIC_KEY;
-const PRIVATE_KEY = import.meta.env.PRIVATE_KEY;
+const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || process.env.PUBLIC_KEY;
+const PRIVATE_KEY = import.meta.env.MARVEL_KEY || process.env.MARVEL_KEY;
 
 const getComicsData = async (week) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?';
   const ts = Date.now().toString();
-  const hash = md5(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`);
+  const hash = Md5.hashStr(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`);
   const url = `${source}dateDescriptor=${week}Week&apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}`;
-
+  
   try {
     const response = await Axios.get(`${url}`);
     const { data } = await response;
