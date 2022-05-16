@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/edge';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: vercel({ nodeVersion: '16.x' }),
+  adapter: vercel(),
   integrations: [react(), tailwind()]
 });
