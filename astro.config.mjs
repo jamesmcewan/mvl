@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  adapter: vercel(),
+  adapter: vercel({ nodeVersion: '16.x'}),
   integrations: [react(), tailwind()]
 });
