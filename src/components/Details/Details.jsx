@@ -3,7 +3,7 @@ import React from 'react';
 const Details = ({ creators, title }) => {
   return (
     <div className="px-5 py-5">
-      <div className="prose prose-zinc xl:prose-sm">
+      <div className="prose prose-stone xl:prose-sm">
         <h2>{title}</h2>
         <ul>
           {creators?.items?.map((creator) => (

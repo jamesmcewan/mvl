@@ -8,7 +8,7 @@ const getCover = ({ path, extension }) => `${replaceHttp(path)}.${extension}`;
 const Comic = (props) => {
   return (
     <div>
-      <img loading="lazy" src={getCover(props.thumbnail)} alt={props.title} />
+      <img className="rounded-md" loading="lazy" src={getCover(props.thumbnail)} alt={props.title} />
       <Details {...props} />
     </div>
   );
