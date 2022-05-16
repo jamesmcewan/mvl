@@ -1,4 +1,4 @@
-import * as adapter from '@astrojs/vercel/serverless/entrypoint';
+import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 import serializeJavaScript from 'serialize-javascript';
@@ -4175,18 +4175,18 @@ new RegExp(`\\.(${Array.from(STYLE_EXTENSIONS).map((s) => s.slice(1)).join("|")}
 const SCRIPT_EXTENSIONS = /* @__PURE__ */ new Set([".js", ".ts"]);
 new RegExp(`\\.(${Array.from(SCRIPT_EXTENSIONS).map((s) => s.slice(1)).join("|")})($|\\?)`);
 
-const _manifest = Object.assign(deserializeManifest({"routes":[{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/last-week\\/?$","segments":[[{"content":"last-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/last-week.astro","pathname":"/last-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/next-week\\/?$","segments":[[{"content":"next-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/next-week.astro","pathname":"/next-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/this-week\\/?$","segments":[[{"content":"this-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/this-week.astro","pathname":"/this-week"}}],"markdown":{"mode":"mdx","drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[]},"pageMap":null,"renderers":[],"entryModules":{"@astrojs/react/client.js":"entry.35a87e35.js","\u0000@astrojs-ssr-virtual-entry":"entry.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/entry.35a87e35.js","/favicon.ico"]}), {
+const _manifest = Object.assign(deserializeManifest({"routes":[{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/last-week\\/?$","segments":[[{"content":"last-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/last-week.astro","pathname":"/last-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/next-week\\/?$","segments":[[{"content":"next-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/next-week.astro","pathname":"/next-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/this-week\\/?$","segments":[[{"content":"this-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/this-week.astro","pathname":"/this-week"}}],"markdown":{"mode":"mdx","drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[]},"pageMap":null,"renderers":[],"entryModules":{"@astrojs/react/client.js":"entry.35a87e35.js","\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/entry.35a87e35.js","/favicon.ico"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
-const _args = undefined;
+const _args = {};
 
 const _exports = adapter.createExports(_manifest, _args);
-const _default = _exports['default'];
+const handler = _exports['handler'];
 
 const _start = 'start';
 if(_start in adapter) {
 	adapter[_start](_manifest, _args);
 }
 
-export { _default as default };
+export { handler };

@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "ENABLE_VC_BUILD=1 astro build",
     "preview": "astro preview",
     "lint": "eslint src --fix",
     "format": "prettier --write src"
