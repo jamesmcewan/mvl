@@ -21,6 +21,8 @@ const myComics = await getMyComics(week);
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#881337" />
+    <meta name="description" content="Marvel Comics releases">
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.png" sizes="any" />
     <link rel="apple-touch-icon" href="/icon-512.png" />
@@ -30,7 +32,7 @@ const myComics = await getMyComics(week);
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap"
       rel="stylesheet"
     />
-    <title>Comic releases for {week} week</title>
+    <title>Marvel Comics releases for {week} week</title>
   </head>
   <body>
     <Page {week} comics={myComics} />

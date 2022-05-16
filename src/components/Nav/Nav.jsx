@@ -7,7 +7,7 @@ const Nav = ({ week }) => {
   const currentWeekCSS = (item, currentWeek) =>
     item === currentWeek
       ? 'text-rose-100 bg-rose-900 font-medium'
-      : 'text-rose-200 font-light';
+      : 'text-rose-100 font-light';
 
   return (
     <>
@@ -16,7 +16,7 @@ const Nav = ({ week }) => {
           <div className="relative flex h-16 items-center justify-between">
             <div className="flex flex-1 items-center justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <img src={mvl} alt="MVL" className="h-10 w-auto" />
+                <img src={mvl} alt="MVL" width="99" height="40" className="h-10 w-auto" />
               </div>
 
               <nav className="hidden md:ml-6 md:block">

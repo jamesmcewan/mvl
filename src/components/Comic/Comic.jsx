@@ -10,8 +10,9 @@ const Comic = (props) => {
     <div>
       <img
         className="rounded-md"
-        loading="lazy"
         src={getCover(props.thumbnail)}
+        width="560"
+        height="850"
         alt={props.title}
       />
       <Details {...props} />
