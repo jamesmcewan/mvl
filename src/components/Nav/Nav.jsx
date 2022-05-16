@@ -5,7 +5,7 @@ const Nav = ({ week }) => {
   const weeks = ['last', 'this', 'next'];
 
   const currentWeekCSS = (item, currentWeek) =>
-    item === currentWeek ? 'text-white bg-rose-900' : 'text-rose-300';
+    item === currentWeek ? 'text-rose-100 bg-rose-900 font-medium' : 'text-rose-200 font-light';
 
   return (
     <>
@@ -23,7 +23,7 @@ const Nav = ({ week }) => {
                     <li key={`${i}-nav`}>
                       <a
                         href={`/${i}-week`}
-                        className={`rounded-md px-3 py-2 text-sm font-medium  hover:bg-rose-700 hover:text-white ${currentWeekCSS(
+                        className={`rounded-md px-3 py-2 text-base font-montserrat  hover:bg-rose-300 hover:text-rose-700 ${currentWeekCSS(
                           i,
                           week
                         )}`}
@@ -37,7 +37,7 @@ const Nav = ({ week }) => {
             </div>
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-white">{`Comic releases for ${week} week`}</h1>
+                <h1 className="text-rose-100 font-montserrat font-light">{`Comic releases for ${week} week`}</h1>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const Nav = ({ week }) => {
                   <li key={`${i}-nav`}>
                     <a
                       href={`/${i}-week`}
-                      className={`rounded-md px-3 py-2 text-sm font-medium  hover:bg-rose-700 hover:text-white ${currentWeekCSS(
+                      className={`rounded-md px-3 py-2 text-base  hover:bg-rose-700 hover:text-white ${currentWeekCSS(
                         i,
                         week
                       )}`}
