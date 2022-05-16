@@ -5,7 +5,7 @@ import serializeJavaScript from 'serialize-javascript';
 import PropTypes from 'prop-types';
 import { jsxs, Fragment as Fragment$1, jsx } from 'react/jsx-runtime';
 import Axios from 'axios';
-import { Md5 } from 'ts-md5/dist/md5';
+import { Md5 } from 'ts-md5/dist/md5.js';
 
 /**
  * Astro passes `children` as a string of HTML, so we need
@@ -895,16 +895,16 @@ function renderElement(name, { props: _props, children = "" }, shouldEscape = tr
   return `<${name}${spreadAttributes(props, shouldEscape)}>${children}</${name}>`;
 }
 
-var mvl = "/assets/asset.511b209c.svg";
+var mvl = "/assets/asset.4621375e.svg";
 
 const Nav = ({
   week
 }) => {
   const weeks = ["last", "this", "next"];
-  const currentWeekCSS = (item, currentWeek) => item === currentWeek ? "text-white bg-stone-900" : "text-stone-300";
+  const currentWeekCSS = (item, currentWeek) => item === currentWeek ? "text-white bg-rose-900" : "text-rose-300";
   return /* @__PURE__ */ jsxs(Fragment$1, {
     children: [/* @__PURE__ */ jsx("header", {
-      className: "bg-stone-600",
+      className: "bg-rose-700",
       children: /* @__PURE__ */ jsx("div", {
         className: "mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8",
         children: /* @__PURE__ */ jsxs("div", {
@@ -925,7 +925,7 @@ const Nav = ({
                 children: weeks.map((i) => /* @__PURE__ */ jsx("li", {
                   children: /* @__PURE__ */ jsxs("a", {
                     href: `/${i}-week`,
-                    className: `rounded-md px-3 py-2 text-sm font-medium  hover:bg-stone-700 hover:text-white ${currentWeekCSS(i, week)}`,
+                    className: `rounded-md px-3 py-2 text-sm font-medium  hover:bg-rose-700 hover:text-white ${currentWeekCSS(i, week)}`,
                     children: [i, " week"]
                   })
                 }, `${i}-nav`))
@@ -944,7 +944,7 @@ const Nav = ({
         })
       })
     }), /* @__PURE__ */ jsx("nav", {
-      className: "bg-stone-700",
+      className: "bg-rose-800",
       children: /* @__PURE__ */ jsx("div", {
         className: "mx-auto max-w-7xl px-2 py-2 sm:px-6 md:hidden lg:px-8",
         children: /* @__PURE__ */ jsx("div", {
@@ -956,7 +956,7 @@ const Nav = ({
               children: weeks.map((i) => /* @__PURE__ */ jsx("li", {
                 children: /* @__PURE__ */ jsxs("a", {
                   href: `/${i}-week`,
-                  className: `rounded-md px-3 py-2 text-sm font-medium  hover:bg-stone-700 hover:text-white ${currentWeekCSS(i, week)}`,
+                  className: `rounded-md px-3 py-2 text-sm font-medium  hover:bg-rose-700 hover:text-white ${currentWeekCSS(i, week)}`,
                   children: [i, " week"]
                 })
               }, `${i}-nav`))
@@ -972,20 +972,22 @@ const Details = ({
   creators,
   title
 }) => {
-  return /* @__PURE__ */ jsx("div", {
+  return /* @__PURE__ */ jsxs("div", {
     className: "px-5 py-5",
-    children: /* @__PURE__ */ jsxs("div", {
-      className: "prose prose-stone xl:prose-sm",
-      children: [/* @__PURE__ */ jsx("h2", {
+    children: [/* @__PURE__ */ jsx("div", {
+      children: /* @__PURE__ */ jsx("h2", {
+        className: "text-stone-800 font-bold text-lg mb-3",
         children: title
-      }), /* @__PURE__ */ jsx("ul", {
-        children: creators?.items?.map((creator) => /* @__PURE__ */ jsxs("li", {
-          children: [creator.name, " - ", /* @__PURE__ */ jsx("em", {
-            children: creator.role
-          })]
-        }, `${creator.name}-${creator.role}`))
-      })]
-    })
+      })
+    }), /* @__PURE__ */ jsx("ul", {
+      className: "list-none",
+      children: creators?.items?.map((creator) => /* @__PURE__ */ jsxs("li", {
+        className: "mb-1",
+        children: [creator.name, " - ", /* @__PURE__ */ jsx("em", {
+          children: creator.role
+        })]
+      }, `${creator.name}-${creator.role}`))
+    })]
   });
 };
 
@@ -1015,14 +1017,14 @@ const Comics = ({
   comics
 }) => {
   return /* @__PURE__ */ jsx("div", {
-    className: "bg-stone-900",
+    className: "bg-slate-900",
     children: /* @__PURE__ */ jsx("main", {
       className: " mx-auto max-w-7xl py-2 px-2 sm:px-6 sm:py-6 lg:px-8 lg:py-8",
       children: /* @__PURE__ */ jsx("ul", {
         role: "list",
-        className: "grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3",
+        className: "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3",
         children: comics && comics.map((comic) => /* @__PURE__ */ jsx("li", {
-          className: "col-span-1 flex flex-col divide-y divide-stone-400 rounded-lg bg-stone-200 shadow",
+          className: "col-span-1 flex flex-col divide-y divide-slate-400 rounded-lg bg-slate-200 shadow",
           children: /* @__PURE__ */ jsx(Comic, {
             ...comic
           })
@@ -1036,7 +1038,7 @@ Comics.propTypes = {
 };
 
 const Footer = () => /* @__PURE__ */ jsx("footer", {
-  className: "bg-gray-700",
+  className: "bg-slate-700",
   children: /* @__PURE__ */ jsx("div", {
     className: "mx-auto max-w-7xl p-2 sm:p-6 lg:p-8",
     children: /* @__PURE__ */ jsxs("p", {
@@ -1068,22 +1070,22 @@ var $$module1$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 	'default': Page
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const PUBLIC_KEY = (Object.assign({"PUBLIC_KEY":"475757670db6d3c2791cedb9f431b51a","BASE_URL":"/","MODE":"production","DEV":false,"PROD":true},{PRIVATE_KEY:"e3b9f61987c94807d1919bd3fed3f40276b0eb86",})).PUBLIC_KEY;
-const PRIVATE_KEY = "e3b9f61987c94807d1919bd3fed3f40276b0eb86";
+const PUBLIC_KEY = (Object.assign({"PUBLIC_KEY":"475757670db6d3c2791cedb9f431b51a","BASE_URL":"/","MODE":"production","DEV":false,"PROD":true},{MARVEL_KEY:"e3b9f61987c94807d1919bd3fed3f40276b0eb86",})).PUBLIC_KEY || process.env.PUBLIC_KEY;
+const PRIVATE_KEY = "e3b9f61987c94807d1919bd3fed3f40276b0eb86" ;
 
 const getComicsData = async (week) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?';
   const ts = Date.now().toString();
   const hash = Md5.hashStr(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`);
   const url = `${source}dateDescriptor=${week}Week&apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}`;
-
+  
   try {
     const response = await Axios.get(`${url}`);
     const { data } = await response;
 
     return data;
   } catch (err) {
-    throw new Error();
+    throw new Error(err);
   }
 };
 
@@ -1120,6 +1122,8 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/favicon.png" sizes="any">
+    <link rel="apple-touch-icon" href="/icon-512.png">
     <title>Comic releases for ${week} week</title>
   <!--astro:head--></head>
   <body>
@@ -4181,7 +4185,7 @@ new RegExp(`\\.(${Array.from(STYLE_EXTENSIONS).map((s) => s.slice(1)).join("|")}
 const SCRIPT_EXTENSIONS = /* @__PURE__ */ new Set([".js", ".ts"]);
 new RegExp(`\\.(${Array.from(SCRIPT_EXTENSIONS).map((s) => s.slice(1)).join("|")})($|\\?)`);
 
-const _manifest = Object.assign(deserializeManifest({"routes":[{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/last-week\\/?$","segments":[[{"content":"last-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/last-week.astro","pathname":"/last-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/next-week\\/?$","segments":[[{"content":"next-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/next-week.astro","pathname":"/next-week"}},{"file":"","links":["assets/asset.12e5bce3.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/this-week\\/?$","segments":[[{"content":"this-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/this-week.astro","pathname":"/this-week"}}],"markdown":{"mode":"mdx","drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[]},"pageMap":null,"renderers":[],"entryModules":{"@astrojs/react/client.js":"entry.35a87e35.js","\u0000@astrojs-ssr-virtual-entry":"entry.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/entry.35a87e35.js","/favicon.ico"]}), {
+const _manifest = Object.assign(deserializeManifest({"routes":[{"file":"","links":["assets/asset.7e2a2347.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/"}},{"file":"","links":["assets/asset.7e2a2347.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/last-week\\/?$","segments":[[{"content":"last-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/last-week.astro","pathname":"/last-week"}},{"file":"","links":["assets/asset.7e2a2347.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/next-week\\/?$","segments":[[{"content":"next-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/next-week.astro","pathname":"/next-week"}},{"file":"","links":["assets/asset.7e2a2347.css"],"scripts":[],"routeData":{"type":"page","pattern":"^\\/this-week\\/?$","segments":[[{"content":"this-week","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/this-week.astro","pathname":"/this-week"}}],"markdown":{"mode":"mdx","drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[]},"pageMap":null,"renderers":[],"entryModules":{"@astrojs/react/client.js":"entry.35a87e35.js","\u0000@astrojs-ssr-virtual-entry":"entry.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/entry.35a87e35.js","/favicon.png","/icon-114.png","/icon-144.png","/icon-512.png"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
