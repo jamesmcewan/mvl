@@ -7,7 +7,9 @@
     "build": "ENABLE_VC_BUILD=1 astro build",
     "preview": "astro preview",
     "lint": "eslint src --fix",
-    "format": "prettier --write src"
+    "format": "prettier --write .",
+    "prepare": "is-ci || husky install",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@astrojs/react": "^0.1.2",
@@ -29,8 +31,12 @@
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
-    "axios": "^0.27.2",
     "prop-types": "^15.8.1",
     "ts-md5": "^1.2.11"
+  },
+  "lint-staged": {
+    "*.md|*.html|*.json|*.astro": [
+      "prettier --write"
+    ]
   }
 }
