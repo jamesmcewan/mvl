@@ -1,0 +1,32 @@
+---
+import Page from '../components/Page/Page.jsx';
+import getData from '../functions/getData.mjs';
+
+const { week } = Astro.props;
+
+async function getMyComics(week) {
+  try {
+    const { data: { results } } = await getData(week);
+    return results;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const myComics = await getMyComics(week);
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" sizes="any">
+    <link rel="apple-touch-icon" href="/icon-512.png">
+    <title>Comic releases for {week} week</title>
+  </head>
+  <body>
+    <Page {week} comics={myComics} />
+    <slot />
+  </body>
+</html>
