@@ -1,6 +1,6 @@
 {
   "name": "mvl",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
