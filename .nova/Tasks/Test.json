@@ -1,13 +1,13 @@
 {
-  "actions" : {
-    "build" : {
-      "enabled" : true,
-      "script" : "npm run build"
+  "actions": {
+    "build": {
+      "enabled": true,
+      "script": "npm run build"
     },
-    "run" : {
-      "enabled" : true,
-      "script" : "npm run test"
+    "run": {
+      "enabled": true,
+      "script": "npm run test"
     }
   },
-  "identifier" : "7B5B2F75-CDC3-41E8-8D83-19391265EEDF"
+  "identifier": "7B5B2F75-CDC3-41E8-8D83-19391265EEDF"
 }

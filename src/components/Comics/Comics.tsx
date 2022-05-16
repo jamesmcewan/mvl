@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Comic from '../Comic/Comic';
+import Comic from '@components/Comic/Comic'
+import ComicsProps from '../../types/ComicsProps'
 
-const Comics = ({ comics }) => {
+const Comics = ({ comics }: ComicsProps) => {
   return (
     <div className="bg-slate-900">
       <main className=" mx-auto max-w-7xl py-2 px-2 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
@@ -22,11 +21,7 @@ const Comics = ({ comics }) => {
         </ul>
       </main>
     </div>
-  );
-};
+  )
+}
 
-Comics.propTypes = {
-  comics: PropTypes.array
-};
-
-export default Comics;
+export default Comics

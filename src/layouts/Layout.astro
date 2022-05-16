@@ -1,28 +1,33 @@
 ---
-import Page from '../components/Page/Page.jsx';
-import getData from '../functions/getData.mjs';
+import Page from '@components/Page/Page.tsx'
+import getUrl from '@functions/getUrl'
 
-const { week } = Astro.props;
+export interface Props {
+  week: string
+}
 
-async function getMyComics(week) {
+const { week } = Astro.props
+
+async function getMyComics(week: string) {
+  const url = getUrl(week)
   try {
-    const {
-      data: { results }
-    } = await getData(week);
-    return results;
-  } catch (error) {
-    console.log(error);
+    const response = await fetch(`${url}`)
+    const data = await response.json()
+    const { results } = data.data
+    return results
+  } catch {
+    console.log('oh no')
   }
 }
 
-const myComics = await getMyComics(week);
+const myComics = await getMyComics(week)
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="theme-color" content="#881337" />
-    <meta name="description" content="Marvel Comics releases">
+    <meta name="description" content="Marvel Comics releases" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.png" sizes="any" />
     <link rel="apple-touch-icon" href="/icon-512.png" />

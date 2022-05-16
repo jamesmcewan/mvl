@@ -15,27 +15,28 @@ jobs:
       - run: ENABLE_VC_BUILD=1 npm run build
         env:
           CI: true
-  # lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Use Node.js 16.15.0
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: '16.15.0'
-  #     - run: npm ci
-  #     - run: npm run lint
-  #       env:
-  #         CI: true
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Use Node.js 16.15.0
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: '16.15.0'
-  #     - run: npm ci
-  #     - run: npm run test:CI
-  #       env:
-  #         CI: true
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.15.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.15.0'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run format:check
+        env:
+          CI: true
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.15.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.15.0'
+      - run: npm ci
+      - run: npm run test
+        env:
+          CI: true

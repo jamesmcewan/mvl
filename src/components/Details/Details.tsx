@@ -1,6 +1,6 @@
-import React from 'react';
+import DetailsProps from '../../types/DetailsProps'
 
-const Details = ({ creators, title }) => {
+const Details = ({ creators, title }: DetailsProps) => {
   return (
     <div className="px-5 py-5">
       <div>
@@ -11,7 +11,7 @@ const Details = ({ creators, title }) => {
       <ul className="list-none">
         {creators?.items?.map((creator) => (
           <li
-            key={`${creator.name}-${creator.role}`}
+            key={`${title}-${creator.name}-${creator.role}`}
             className="mb-1 font-montserrat font-light text-stone-800"
           >
             {creator.name} - <em>{creator.role}</em>
@@ -19,7 +19,7 @@ const Details = ({ creators, title }) => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Details;
+export default Details

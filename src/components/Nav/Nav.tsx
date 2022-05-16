@@ -1,13 +1,16 @@
-import React from 'react';
-import mvl from '../../images/logo.svg';
+import mvl from '../../images/logo.svg'
+import NavProps from '../../types/NavProps'
 
-const Nav = ({ week }) => {
-  const weeks = ['last', 'this', 'next'];
+const Nav = ({ week }: NavProps) => {
+  const weeks = ['last', 'this', 'next']
 
-  const currentWeekCSS = (item, currentWeek) =>
+  const currentWeekCSS = (item: string, currentWeek: string) =>
     item === currentWeek
       ? 'text-rose-100 bg-rose-900 font-medium'
-      : 'text-rose-100 font-light';
+      : 'text-rose-100 font-light'
+
+  const baseLinkStyles =
+    'rounded-md px-3 py-2 font-montserrat text-base hover:bg-rose-300 hover:text-rose-700'
 
   return (
     <>
@@ -16,7 +19,13 @@ const Nav = ({ week }) => {
           <div className="relative flex h-16 items-center justify-between">
             <div className="flex flex-1 items-center justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <img src={mvl} alt="MVL" width="99" height="40" className="h-10 w-auto" />
+                <img
+                  src={mvl}
+                  alt="MVL"
+                  width="99"
+                  height="40"
+                  className="h-10 w-auto"
+                />
               </div>
 
               <nav className="hidden md:ml-6 md:block">
@@ -25,9 +34,9 @@ const Nav = ({ week }) => {
                     <li key={`${i}-nav`}>
                       <a
                         href={`/${i}-week`}
-                        className={`rounded-md px-3 py-2 font-montserrat text-base  hover:bg-rose-300 hover:text-rose-700 ${currentWeekCSS(
+                        className={`${baseLinkStyles} ${currentWeekCSS(
                           i,
-                          week
+                          week,
                         )}`}
                       >
                         {i} week
@@ -54,10 +63,7 @@ const Nav = ({ week }) => {
                   <li key={`${i}-nav`}>
                     <a
                       href={`/${i}-week`}
-                      className={`rounded-md px-3 py-2 text-base  hover:bg-rose-700 hover:text-white ${currentWeekCSS(
-                        i,
-                        week
-                      )}`}
+                      className={`${baseLinkStyles} ${currentWeekCSS(i, week)}`}
                     >
                       {i} week
                     </a>
@@ -69,7 +75,7 @@ const Nav = ({ week }) => {
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
