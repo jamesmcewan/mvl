@@ -3,9 +3,18 @@ import Page from '../components/Page/Page.jsx';
 import getData from '../functions/getData.mjs';
 
 const { week } = Astro.props;
-const {
-  data: { results }
-} = await getData(week);
+
+async function getMyComics(week) {
+  try {
+    const { data: { results } } = await getData(week);
+    return results;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const myComics = await getMyComics(week);
+
 ---
 
 <html lang="en">
@@ -15,7 +24,7 @@ const {
     <title>Comic releases for {week} week</title>
   </head>
   <body>
-    <Page {week} comics={results} />
+    <Page {week} comics={myComics} />
     <slot />
   </body>
 </html>

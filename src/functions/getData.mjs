@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import md5 from 'crypto-js/md5';
+import md5 from 'crypto-js/md5.js';
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_KEY;
 const PRIVATE_KEY = import.meta.env.PRIVATE_KEY;
