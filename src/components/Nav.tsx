@@ -1,5 +1,5 @@
 import mvl from '../../images/logo.svg'
-import NavProps from '../../types/NavProps'
+import NavProps from '../types/NavProps'
 
 const Nav = ({ week }: NavProps) => {
   const weeks = ['last', 'this', 'next']

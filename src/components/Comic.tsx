@@ -1,6 +1,6 @@
-import Details from '@components/Details/Details'
-import ComicProps from '../../types/ComicProps'
-import ThumbnailType from '../../types/ThumbnailType'
+import Details from '@components/Details'
+import ComicProps from '../types/ComicProps'
+import ThumbnailType from '../types/ThumbnailType'
 
 const replaceHttp = (url: string) => url.replace('http', 'https')
 const getCover = ({ path, extension }: ThumbnailType) =>
