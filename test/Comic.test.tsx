@@ -1,21 +1,6 @@
-import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import { mockCreators, mockThumbnail } from './__mocks__'
 import Comic from '../src/components/Comic'
-
-const mockThumbnail = {
-  path: 'comicbook',
-  extension: 'jpg',
-}
-
-const mockCreators = {
-  items: [
-    {
-      name: 'John Doe',
-      role: 'Author',
-    },
-  ],
-}
 
 describe('Comic', () => {
   it('should have the correct comic details', () => {

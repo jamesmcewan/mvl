@@ -1,44 +1,6 @@
-import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import { mockComics, mockWeek } from './__mocks__'
 import Page from '../src/components/Page'
-
-const mockWeek = 'this'
-
-const mockComics = [
-  {
-    id: 1,
-    title: 'Mystery Daring Strange',
-    thumbnail: {
-      path: 'golden-age',
-      extension: 'jpg',
-    },
-    creators: {
-      items: [
-        {
-          name: 'Jane Doe',
-          role: 'Author',
-        },
-      ],
-    },
-  },
-  {
-    id: 2,
-    title: 'Amazing Mighty Uncanny',
-    thumbnail: {
-      path: 'silver-age',
-      extension: 'jpg',
-    },
-    creators: {
-      items: [
-        {
-          name: 'John Doe',
-          role: 'Penciler',
-        },
-      ],
-    },
-  },
-]
 
 describe('Page', () => {
   it('should display the correct week', () => {
