@@ -1,5 +1,5 @@
-import Comic from '@components/Comic'
-import ComicsProps from '../types/ComicsProps'
+import Comic from '++components/Comic'
+import ComicsProps from '++types/ComicsProps'
 
 const Comics = ({ comics }: ComicsProps) => {
   return (

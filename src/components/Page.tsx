@@ -1,7 +1,7 @@
-import Nav from '@components/Nav'
-import Comics from '@components/Comics'
-import Footer from '@components/Footer'
-import PageProps from '../types/PageProps'
+import Nav from '++components/Nav'
+import Comics from '++components/Comics'
+import Footer from '++components/Footer'
+import PageProps from '++types/PageProps'
 
 const Page = ({ week, comics }: PageProps) => {
   return (

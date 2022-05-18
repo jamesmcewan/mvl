@@ -1,4 +1,4 @@
-import DetailsProps from '../types/DetailsProps'
+import DetailsProps from '++types/DetailsProps'
 
 const Details = ({ creators, title }: DetailsProps) => {
   return (

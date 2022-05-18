@@ -4,6 +4,7 @@
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
     "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
     // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",
     // Enable JSON imports.
@@ -17,10 +18,11 @@
     "types": ["vite/client", "node"],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@types/*": ["src/types/*"],
-      "@functions/*": ["src/functions/*"]
+      "++components/*": ["src/components/*"],
+      "++layouts/*": ["src/layouts/*"],
+      "++types/*": ["src/types/*"],
+      "++functions/*": ["src/functions/*"],
+      "++images/*": ["src/images/*"]
     }
   }
 }
