@@ -19,6 +19,7 @@
     "@astrojs/react": "^0.1.2",
     "@astrojs/tailwind": "^0.2.1",
     "@astrojs/vercel": "^0.2.2",
+    "@playwright/test": "^1.22.1",
     "@tailwindcss/typography": "^0.5.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
