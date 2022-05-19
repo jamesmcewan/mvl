@@ -34,6 +34,7 @@ const Nav = ({ week }: NavProps) => {
                     <li key={`${i}-nav`}>
                       <a
                         href={`/${i}-week`}
+                        data-testid={`${i}-nav`}
                         className={`${baseLinkStyles} ${currentWeekCSS(
                           i,
                           week,
