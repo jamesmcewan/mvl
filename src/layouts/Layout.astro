@@ -15,8 +15,8 @@ async function getMyComics(week: string) {
     const data = await response.json()
     const { results } = data.data
     return results
-  } catch {
-    console.log('oh no')
+  } catch (e) {
+    console.log('oh no', e)
   }
 }
 
