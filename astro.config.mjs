@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config'
 import react from '@astrojs/react'
-import vercel from '@astrojs/vercel/serverless'
+import netlify from '@astrojs/netlify/edge-functions'
 import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
   output: 'server',
-  adapter: vercel({ nodeVersion: '16.x' }),
+  adapter: netlify(),
   integrations: [react(), tailwind()],
 })

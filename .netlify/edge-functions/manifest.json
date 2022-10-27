@@ -1,0 +1,21 @@
+{
+  "functions": [
+    {
+      "function": "entry",
+      "path": "/"
+    },
+    {
+      "function": "entry",
+      "path": "/last-week"
+    },
+    {
+      "function": "entry",
+      "path": "/next-week"
+    },
+    {
+      "function": "entry",
+      "path": "/this-week"
+    }
+  ],
+  "version": 1
+}
