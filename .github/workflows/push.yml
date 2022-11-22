@@ -10,7 +10,7 @@ jobs:
       - name: Use Node.js 19
         uses: actions/setup-node@v1
         with:
-          node-version: "19"
+          node-version: '19'
       - run: npm install
       - run: ENABLE_VC_BUILD=1 npm run build
         env:
@@ -22,7 +22,7 @@ jobs:
       - name: Use Node.js 19
         uses: actions/setup-node@v1
         with:
-          node-version: "19"
+          node-version: '19'
       - run: npm install
       - run: npm run lint
       - run: npm run format:check
@@ -35,7 +35,7 @@ jobs:
       - name: Use Node.js 19
         uses: actions/setup-node@v1
         with:
-          node-version: "19"
+          node-version: '19'
       - run: npm install
       - run: npm run test
         env:
