@@ -16,9 +16,9 @@
     "update-dependencies": "npx npm-check-updates --upgrade && npm i"
   },
   "devDependencies": {
-    "@astrojs/netlify": "^1.2.0",
     "@astrojs/react": "^1.2.1",
     "@astrojs/tailwind": "^2.1.1",
+    "@astrojs/vercel": "^2.3.4",
     "@tailwindcss/typography": "^0.5.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
