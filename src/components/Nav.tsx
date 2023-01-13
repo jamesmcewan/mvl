@@ -14,30 +14,27 @@ const Nav = ({ week }: NavProps) => {
 
   return (
     <>
-      <header className="bg-rose-700">
-        <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="flex flex-1 items-center justify-start">
-              <div className="flex flex-shrink-0 items-center">
+      <header class="bg-rose-700">
+        <div class="mx-auto max-w-7xl px-2 py-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-start">
+              <div class="flex flex-shrink-0 items-center">
                 <img
                   src={mvl}
                   alt="MVL"
                   width="99"
                   height="40"
-                  className="h-10 w-auto"
+                  class="h-10 w-auto"
                 />
               </div>
 
-              <nav className="hidden md:ml-6 md:block">
-                <ul className="flex space-x-4">
+              <nav class="hidden md:ml-6 md:block">
+                <ul class="flex space-x-4">
                   {weeks.map((i) => (
-                    <li key={`${i}-nav`}>
+                    <li>
                       <a
                         href={`/${i}-week`}
-                        className={`${baseLinkStyles} ${currentWeekCSS(
-                          i,
-                          week,
-                        )}`}
+                        class={`${baseLinkStyles} ${currentWeekCSS(i, week)}`}
                       >
                         {i} week
                       </a>
@@ -46,24 +43,24 @@ const Nav = ({ week }: NavProps) => {
                 </ul>
               </nav>
             </div>
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <h1 className="font-montserrat font-light text-rose-100">{`Comic releases for ${week} week`}</h1>
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <h1 class="font-montserrat font-light text-rose-100">{`Comic releases for ${week} week`}</h1>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <nav className="bg-rose-800">
-        <div className="mx-auto max-w-7xl px-2 py-2 sm:px-6 md:hidden lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="flex flex-1 items-center justify-center">
-              <ul className="flex space-x-4">
+      <nav class="bg-rose-800">
+        <div class="mx-auto max-w-7xl px-2 py-2 sm:px-6 md:hidden lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-center">
+              <ul class="flex space-x-4">
                 {weeks.map((i) => (
-                  <li key={`${i}-nav`}>
+                  <li>
                     <a
                       href={`/${i}-week`}
-                      className={`${baseLinkStyles} ${currentWeekCSS(i, week)}`}
+                      class={`${baseLinkStyles} ${currentWeekCSS(i, week)}`}
                     >
                       {i} week
                     </a>

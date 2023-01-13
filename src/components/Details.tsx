@@ -2,18 +2,15 @@ import DetailsProps from '++types/DetailsProps'
 
 const Details = ({ creators, title }: DetailsProps) => {
   return (
-    <div className="px-5 py-5">
+    <div class="px-5 py-5">
       <div>
-        <h2 className="mb-3 font-montserrat text-lg font-medium text-stone-800">
+        <h2 class="mb-3 font-montserrat text-lg font-medium text-stone-800">
           {title}
         </h2>
       </div>
-      <ul className="list-none">
+      <ul class="list-none">
         {creators?.items?.map((creator) => (
-          <li
-            key={`${title}-${creator.name}-${creator.role}`}
-            className="mb-1 font-montserrat font-light text-stone-800"
-          >
+          <li class="mb-1 font-montserrat font-light text-stone-800">
             {creator.name} - <em>{creator.role}</em>
           </li>
         ))}

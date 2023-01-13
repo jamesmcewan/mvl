@@ -10,7 +10,7 @@ const Comic = ({ thumbnail, title, creators }: ComicProps) => {
   return (
     <div>
       <img
-        className="rounded-md"
+        class="rounded-md"
         src={getCover(thumbnail)}
         width="560"
         height="850"
