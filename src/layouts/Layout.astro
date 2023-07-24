@@ -1,6 +1,7 @@
 ---
-import Page from '++components/Page.tsx'
-import getUrl from '++functions/getUrl'
+import Page from '../components/Page.tsx'
+import getUrl from '../functions/getUrl'
+import { ViewTransitions } from 'astro:transitions'
 
 export interface Props {
   week: string
@@ -38,9 +39,10 @@ const myComics = await getMyComics(week)
       rel="stylesheet"
     />
     <title>Marvel Comics releases for {week} week</title>
+    <ViewTransitions />
   </head>
   <body>
-    <Page {week} comics={myComics} />
+    <Page {week} comics={myComics} transitions:animate="slide" />
     <slot />
   </body>
 </html>
