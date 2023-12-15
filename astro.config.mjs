@@ -5,9 +5,6 @@ import solidJs from '@astrojs/solid-js'
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    viewTransitions: true,
-  },
   output: 'server',
   adapter: vercel(),
   integrations: [tailwind(), solidJs()],
