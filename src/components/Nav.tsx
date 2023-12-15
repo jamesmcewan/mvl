@@ -1,4 +1,3 @@
-import mvl from '++images/logo.svg'
 import NavProps from '++types/NavProps'
 
 const Nav = ({ week }: NavProps) => {
@@ -20,7 +19,7 @@ const Nav = ({ week }: NavProps) => {
             <div class="flex flex-1 items-center justify-start">
               <div class="flex flex-shrink-0 items-center">
                 <img
-                  src={mvl}
+                  src="logo.svg"
                   alt="MVL"
                   width="99"
                   height="40"
