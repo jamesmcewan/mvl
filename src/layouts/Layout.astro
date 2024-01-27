@@ -39,6 +39,9 @@ const myComics = await getMyComics(week)
       rel="stylesheet"
     />
     <title>Marvel Comics releases for {week} week</title>
+    <script>
+      import 'htmx.org'
+    </script>
     <ViewTransitions />
   </head>
   <body>
