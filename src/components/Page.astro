@@ -1,0 +1,13 @@
+---
+import Nav from './Nav.astro'
+import Comics from './Comics.astro'
+import Footer from './Footer.astro'
+
+const { week, comics } = Astro.props
+---
+
+<div>
+  <Nav week={week} />
+  <Comics comics={comics} />
+  <Footer />
+</div>

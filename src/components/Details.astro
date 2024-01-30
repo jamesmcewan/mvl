@@ -1,0 +1,20 @@
+---
+const { creators, title } = Astro.props
+---
+
+<div class="px-5 py-5">
+  <div>
+    <h2 class="mb-3 font-montserrat text-lg font-medium text-stone-800">
+      {title}
+    </h2>
+  </div>
+  <ul class="list-none">
+    {
+      creators?.items?.map((creator) => (
+        <li class="mb-1 font-montserrat font-light text-stone-800">
+          {creator.name} - <em>{creator.role}</em>
+        </li>
+      ))
+    }
+  </ul>
+</div>

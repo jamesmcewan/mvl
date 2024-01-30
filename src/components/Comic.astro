@@ -1,0 +1,21 @@
+---
+import Details from './Details.astro'
+import ThumbnailType from '../types/ThumbnailType'
+
+const replaceHttp = (url: string) => url.replace('http', 'https')
+const getCover = ({ path, extension }: ThumbnailType) =>
+  `${replaceHttp(path)}.${extension}`
+
+const { thumbnail, title, creators } = Astro.props
+---
+
+<div>
+  <img
+    class="rounded-md"
+    src={getCover(thumbnail)}
+    width="560"
+    height="850"
+    alt={title}
+  />
+  <Details {title} {creators} />
+</div>
