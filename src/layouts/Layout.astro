@@ -1,30 +1,13 @@
 ---
 import Page from '../components/Page.astro'
-import getUrl from '../functions/getUrl'
 import { ViewTransitions } from 'astro:transitions'
 
 export interface Props {
   week: string
+  comics: []
 }
 
-const { week } = Astro.props
-
-async function getMyComics(week: string) {
-  const url = getUrl(week)
-  try {
-    const response = await fetch(`${url}`)
-    const data = await response.json()
-    const { results } = data.data
-    const regular = results.filter(
-      (comic) => comic.variantDescription === '' && comic.format === 'Comic',
-    )
-    return regular
-  } catch (e) {
-    console.log('oh no', e)
-  }
-}
-
-const myComics = await getMyComics(week)
+const { comics, week } = Astro.props
 ---
 
 <html lang="en">
@@ -45,7 +28,7 @@ const myComics = await getMyComics(week)
     <ViewTransitions />
   </head>
   <body>
-    <Page {week} comics={myComics} transitions:animate="slide" />
+    <Page {week} {comics} transitions:animate="slide" />
     <slot />
   </body>
 </html>
