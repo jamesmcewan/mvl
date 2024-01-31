@@ -27,7 +27,7 @@ const { comics, week } = Astro.props
     <title>Marvel Comics releases for {week} week</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-rose-900">
     <Page {week} {comics} transitions:animate="slide" />
     <slot />
   </body>
