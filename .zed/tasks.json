@@ -1,0 +1,12 @@
+[
+  {
+    "label": "build",
+    "command": "pnpm build",
+    "use_new_terminal": true
+  },
+  {
+    "label": "dev",
+    "command": "pnpm start",
+    "use_new_terminal": true
+  }
+]
