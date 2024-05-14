@@ -5,9 +5,10 @@ import { ViewTransitions } from 'astro:transitions'
 export interface Props {
   week: string
   comics: []
+  attributionText: string
 }
 
-const { comics, week } = Astro.props
+const { comics, week, attributionText } = Astro.props
 ---
 
 <html lang="en">
@@ -28,7 +29,7 @@ const { comics, week } = Astro.props
     <ViewTransitions />
   </head>
   <body class="bg-rose-900">
-    <Page {week} {comics} transitions:animate="slide" />
+    <Page {week} {comics} transitions:animate="slide" {attributionText} />
     <slot />
   </body>
 </html>

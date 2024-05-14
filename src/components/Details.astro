@@ -1,5 +1,5 @@
 ---
-const { creators, title } = Astro.props
+const { creators, title, series, pageCount, prices } = Astro.props
 ---
 
 <div class="px-5 py-5">
@@ -17,4 +17,21 @@ const { creators, title } = Astro.props
       ))
     }
   </ul>
+  <span
+    class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-gray-600"
+  >
+    {series.name}
+  </span>
+  <span
+    class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600"
+  >
+    {pageCount} pages
+  </span>
+  {
+    prices.map((price) => (
+      <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+        ${price.price}
+      </span>
+    ))
+  }
 </div>
