@@ -1,12 +1,12 @@
 ---
 import Details from './Details.astro'
-import ThumbnailType from '../types/ThumbnailType'
+import type ThumbnailType from '../types/ThumbnailType'
 
 const replaceHttp = (url: string) => url.replace('http', 'https')
 const getCover = ({ path, extension }: ThumbnailType) =>
   `${replaceHttp(path)}.${extension}`
 
-const { thumbnail, title, creators } = Astro.props
+const { thumbnail, title, creators, series } = Astro.props
 ---
 
 <div>
@@ -18,4 +18,5 @@ const { thumbnail, title, creators } = Astro.props
     alt={title}
   />
   <Details {title} {creators} />
+  {series}
 </div>
