@@ -10,10 +10,10 @@
     "lint:fix": "eslint src/**/*.ts *.mjs *.cjs --fix",
     "format:write": "prettier --write .",
     "format:check": "prettier --check  .",
-    "prepare": "is-ci || husky install",
+    "prepare": "is-ci || husky",
     "lint-staged": "lint-staged",
     "test": "vitest",
-    "update-dependencies": "npx npm-check-updates --upgrade && pnpm i"
+    "update-dependencies": "npx npm-check-updates --upgrade && npm i"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
