@@ -3,7 +3,7 @@ import getMyComics from '../data/getMyComics'
 import Layout from '../layouts/Layout.astro'
 
 const week = 'this'
-const comics = await getMyComics(week)
+const { comics, attributionText } = await getMyComics(week)
 ---
 
-<Layout {week} {comics} />
+<Layout {week} {comics} {attributionText} />

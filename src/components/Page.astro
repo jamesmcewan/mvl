@@ -3,11 +3,11 @@ import Nav from './Nav.astro'
 import Comics from './Comics.astro'
 import Footer from './Footer.astro'
 
-const { week, comics } = Astro.props
+const { week, comics, attributionText } = Astro.props
 ---
 
 <div>
   <Nav week={week} />
   <Comics comics={comics} />
-  <Footer />
+  <Footer {attributionText} />
 </div>

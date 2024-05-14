@@ -1,10 +1,12 @@
 ---
 import MightyDinosaur from './mighty-dinosaur.astro'
+const { attributionText } = Astro.props
 ---
 
 <footer class="bg-rose-900">
   <div class="mx-auto max-w-7xl p-2 sm:p-6 lg:p-8">
     <p class="font-montserrat font-light text-rose-100">
+      {attributionText}
       {`Comics are © ${new Date().getFullYear()} Marvel`}
     </p>
     <div class="w-40 py-2">
