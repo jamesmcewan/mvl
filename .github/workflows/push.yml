@@ -7,32 +7,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Use Node.js 19
+        uses: actions/setup-node@v1
         with:
-          node-version: 18
-      - name: Install pnpm 8
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-      - run: pnpm install
-      - run: ENABLE_VC_BUILD=1 pnpm run build
+          node-version: '19'
+      - run: npm install
+      - run: ENABLE_VC_BUILD=1 npm run build
         env:
           CI: true
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Use Node.js 19
+        uses: actions/setup-node@v1
         with:
-          node-version: 18
-      - name: Install pnpm 8
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-      - run: pnpm install
-      - run: pnpm run lint
-      - run: pnpm run format:check
+          node-version: '19'
+      - run: npm install
+      - run: npm run lint
+      - run: npm run format:check
         env:
           CI: true
