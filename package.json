@@ -13,7 +13,7 @@
     "prepare": "is-ci || husky",
     "lint-staged": "lint-staged",
     "test": "vitest",
-    "update-dependencies": "npx npm-check-updates --upgrade && npm i"
+    "update-dependencies": "bunx npm-check-updates --upgrade && bun i"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",

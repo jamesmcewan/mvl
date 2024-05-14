@@ -6,7 +6,7 @@ const replaceHttp = (url: string) => url.replace('http', 'https')
 const getCover = ({ path, extension }: ThumbnailType) =>
   `${replaceHttp(path)}.${extension}`
 
-const { thumbnail, title, creators, series } = Astro.props
+const { thumbnail, title, creators, series, prices, pageCount } = Astro.props
 ---
 
 <div>
@@ -17,6 +17,5 @@ const { thumbnail, title, creators, series } = Astro.props
     height="850"
     alt={title}
   />
-  <Details {title} {creators} />
-  {series}
+  <Details {title} {creators} {series} {prices} {pageCount} />
 </div>

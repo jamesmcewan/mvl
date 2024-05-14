@@ -7,24 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 19
-        uses: actions/setup-node@v1
-        with:
-          node-version: '19'
-      - run: npm install
-      - run: ENABLE_VC_BUILD=1 npm run build
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: ENABLE_VC_BUILD=1 bun run build
         env:
           CI: true
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 19
-        uses: actions/setup-node@v1
-        with:
-          node-version: '19'
-      - run: npm install
-      - run: npm run lint
-      - run: npm run format:check
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
+      - run: bun run lint
+      - run: bun run format:check
         env:
           CI: true
