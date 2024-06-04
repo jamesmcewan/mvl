@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for mvl on 2024-06-03T17:25:36+01:00
+# fly.toml app configuration file generated for mvl on 2024-06-04T22:02:39+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -9,7 +9,7 @@ primary_region = 'lhr'
 [build]
 
 [http_service]
-  internal_port = 3000
+  internal_port = 4321
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
