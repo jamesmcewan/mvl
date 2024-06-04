@@ -1,7 +1,5 @@
-import CreatorType from './CreatorType'
+import type { CreatorType } from './CreatorType'
 
-type CreatorsType = {
+export type CreatorsType = {
   items: CreatorType[]
 }
-
-export default CreatorsType

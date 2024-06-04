@@ -1,8 +1,6 @@
-import CreatorsType from './CreatorsType'
+import type { CreatorsType } from './CreatorsType'
 
-type DetailsProps = {
+export type DetailsProps = {
   title: string
   creators: CreatorsType
 }
-
-export default DetailsProps

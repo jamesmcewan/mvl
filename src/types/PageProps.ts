@@ -1,8 +1,6 @@
-import ComicProps from './ComicProps'
+import type { ComicProps } from './ComicProps'
 
-type PageProps = {
+export type PageProps = {
   week: string
   comics: ComicProps[]
 }
-
-export default PageProps

@@ -1,6 +1,6 @@
 ---
 import Details from './Details.astro'
-import type ThumbnailType from '../types/ThumbnailType'
+import type { ThumbnailType } from '../types/ThumbnailType'
 
 const replaceHttp = (url: string) => url.replace('http', 'https')
 const getCover = ({ path, extension }: ThumbnailType) =>

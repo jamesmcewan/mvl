@@ -1,11 +1,9 @@
-import CreatorsType from './CreatorsType'
-import ThumbnailType from './ThumbnailType'
+import type { CreatorsType } from './CreatorsType'
+import type { ThumbnailType } from './ThumbnailType'
 
-type ComicProps = {
+export type ComicProps = {
   id: number
   thumbnail: ThumbnailType
   title: string
   creators: CreatorsType
 }
-
-export default ComicProps
