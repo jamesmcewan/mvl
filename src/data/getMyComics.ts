@@ -10,6 +10,7 @@ async function getMyComics(week: string) {
     const data = await response.json()
     const { attributionText } = data
     const { results } = data.data
+    console.log(results)
     const regular = results.filter(
       (comic) => comic.variantDescription === '' && comic.format === 'Comic',
     )
