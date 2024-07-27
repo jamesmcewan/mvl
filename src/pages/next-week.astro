@@ -6,4 +6,4 @@ const week = 'next'
 const { comics, attributionText } = await getMyComics(week)
 ---
 
-<Layout {week} {comics} {attributionText} />
+{comics && <Layout {week} {comics} {attributionText} />}
