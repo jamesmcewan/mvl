@@ -3,7 +3,7 @@ import getUrl from '../functions/getUrl'
 async function getMyComics(week: string) {
   const url = getUrl(week)
   try {
-    console.log(`get comics from ${URL}`)
+    console.log(`get comics from ${url}`)
     const response = await fetch(`${url}`)
     console.log(response)
     const data = await response.json()
