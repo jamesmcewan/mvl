@@ -2,16 +2,16 @@
   "name": "mvl",
   "version": "8.1.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "lint": "eslint src/**/*.ts *.mjs *.cjs",
-    "lint:fix": "eslint src/**/*.ts *.mjs *.cjs --fix",
-    "format:write": "prettier --write .",
+    "dev": "astro dev",
     "format:check": "prettier --check  .",
-    "prepare": "is-ci || husky",
+    "format:write": "prettier --write .",
+    "lint": "eslint src/**/*.ts *.mjs *.cjs",
     "lint-staged": "lint-staged",
+    "lint:fix": "eslint src/**/*.ts *.mjs *.cjs --fix",
+    "prepare": "is-ci || husky",
+    "preview": "astro preview",
+    "start": "astro dev",
     "test": "vitest",
     "update-dependencies": "bunx npm-check-updates --upgrade && bun i"
   },
@@ -41,7 +41,9 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "astro-sst": "2.43.5",
     "solid-js": "^1.8.19",
+    "sst": "3.0.131",
     "ts-md5": "^1.3.1"
   },
   "lint-staged": {
