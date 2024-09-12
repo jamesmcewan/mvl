@@ -3,12 +3,12 @@
 export default $config({
   app(input) {
     return {
-      name: "mvl",
-      removal: input?.stage === "production" ? "retain" : "remove",
-      home: "aws",
-    };
+      name: 'mvl',
+      removal: input?.stage === 'production' ? 'retain' : 'remove',
+      home: 'aws',
+    }
   },
   async run() {
-    new sst.aws.Astro("MyWeb");
+    new sst.aws.Astro('mvl-astro')
   },
-});
+})
