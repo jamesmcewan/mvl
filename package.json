@@ -12,7 +12,8 @@
     "format:check": "prettier --check  .",
     "lint-staged": "lint-staged",
     "test": "vitest",
-    "update-dependencies": "bunx npm-check-updates --upgrade && bun i"
+    "prepare": "is-ci || husky",
+    "update-dependencies": "bunx @astrojs/upgrade;bunx npm-check-updates --upgrade && bun install"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
