@@ -6,11 +6,9 @@ async function getMyComics(week: string) {
     const response = await fetch(`${url}`, {
       signal: AbortSignal.timeout(5000),
     })
-    console.log(response)
     const data = await response.json()
     const { attributionText } = data
     const { results } = data.data
-    console.log(results)
     const regular = results.filter(
       (comic) => comic.variantDescription === '' && comic.format === 'Comic',
     )
