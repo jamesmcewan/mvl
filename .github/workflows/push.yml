@@ -22,7 +22,7 @@ jobs:
         with:
           deno-version: v2.x
       - run: deno install
-      - run: deno lint ./src ./*.mjs ./*.cjs ./*json
-      - run: deno fmt ./src ./*.mjs ./*.cjs ./*json --check
+      - run: deno lint
+      - run: deno fmt
         env:
           CI: true

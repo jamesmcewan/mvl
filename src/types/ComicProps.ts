@@ -1,11 +1,11 @@
-import CreatorsType from "./CreatorsType";
-import ThumbnailType from "./ThumbnailType";
+import CreatorsType from './CreatorsType'
+import ThumbnailType from './ThumbnailType'
 
 type ComicProps = {
-  id: number;
-  thumbnail: ThumbnailType;
-  title: string;
-  creators: CreatorsType;
-};
+  id: number
+  thumbnail: ThumbnailType
+  title: string
+  creators: CreatorsType
+}
 
-export default ComicProps;
+export default ComicProps

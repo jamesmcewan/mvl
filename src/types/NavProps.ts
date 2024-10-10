@@ -1,5 +1,5 @@
 type NavProps = {
-  week: string;
-};
+  week: string
+}
 
-export default NavProps;
+export default NavProps
