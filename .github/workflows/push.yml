@@ -10,7 +10,7 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      - run: deno install
+      - run: deno install --allow-scripts=npm:sharp@0.33.5
       - run: ENABLE_VC_BUILD=1 deno task build
         env:
           CI: true
@@ -21,7 +21,7 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      - run: deno install
+      - run: deno install --allow-scripts=npm:sharp@0.33.5
       - run: deno lint
       - run: deno fmt
         env:
