@@ -8,7 +8,8 @@ const getUrl = (week: string) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?'
   const ts = Date.now().toString()
   const hash = Md5.hashStr(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`)
-  const url = `${source}dateDescriptor=${week}Week&apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}`
+  const url =
+    `${source}dateDescriptor=${week}Week&apikey=${PUBLIC_KEY}&ts=${ts}&hash=${hash}`
 
   return url
 }

@@ -23,6 +23,6 @@ jobs:
           deno-version: v2.x
       - run: deno install --allow-scripts=npm:sharp@0.33.5
       - run: deno lint
-      - run: deno fmt
+      - run: deno fmt --check
         env:
           CI: true
