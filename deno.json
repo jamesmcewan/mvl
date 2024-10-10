@@ -1,6 +1,30 @@
 {
+  "tasks": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint-staged": "lint-staged",
+    "prepare": "is-ci || husky",
+    "update-dependencies": "deno run -A npm:@astrojs/upgrade;deno run -A npm:npm-check-updates --upgrade && deno install"
+  },
+  "imports": {
+    "@astrojs/tailwind": "npm:@astrojs/tailwind@^5.1.1",
+    "@deno/astro-adapter": "npm:@deno/astro-adapter@^0.1.3",
+    "@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.15",
+    "astro": "npm:astro@^4.15.12",
+    "autoprefixer": "npm:autoprefixer@^10.4.20",
+    "globals": "npm:globals@^15.9.0",
+    "husky": "npm:husky@^9.1.6",
+    "is-ci": "npm:is-ci@^3.0.1",
+    "lint-staged": "npm:lint-staged@^15.2.10",
+    "postcss": "npm:postcss@^8.4.45",
+    "tailwindcss": "npm:tailwindcss@^3.4.11",
+    "solid-js": "npm:solid-js@^1.8.22",
+    "ts-md5": "npm:ts-md5@^1.3.1"
+  },
   "lint": {
-    "exclude": ["dist", "vercel", ".astro", "public", "node_modules"]
+    "exclude": ["dist", "vercel", "public", "node_modules"]
   },
 
   "fmt": {
