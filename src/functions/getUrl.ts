@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { Md5 } from 'ts-md5/dist/md5.js'
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || process.env.PUBLIC_KEY

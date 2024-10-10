@@ -7,18 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: oven-sh/setup-bun@v1
-      - run: bun install
-      - run: ENABLE_VC_BUILD=1 bun run build
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: deno install
+      - run: ENABLE_VC_BUILD=1 deno task build
         env:
           CI: true
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: oven-sh/setup-bun@v1
-      - run: bun install
-      - run: bun run lint
-      - run: bun run format:check
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: deno install
+      - run: deno lint ./src ./*.mjs ./*.cjs ./*json
+      - run: deno fmt ./src ./*.mjs ./*.cjs ./*json --check
         env:
           CI: true
