@@ -1,7 +1,7 @@
 import { Md5 } from 'ts-md5/dist/md5.js'
 
-const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || Deno.env.PUBLIC_KEY
-const PRIVATE_KEY = import.meta.env.MARVEL_KEY || Deno.env.MARVEL_KEY
+const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || Deno.env.get('PUBLIC_KEY')
+const PRIVATE_KEY = import.meta.env.MARVEL_KEY || Deno.env.get('MARVEL_KEY')
 
 const getUrl = (week: string) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?'
