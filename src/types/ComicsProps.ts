@@ -1,7 +1,7 @@
-import ComicProps from './ComicProps'
+import ComicProps from "./ComicProps";
 
 type ComicsProps = {
-  comics: ComicProps[]
-}
+  comics: ComicProps[];
+};
 
-export default ComicsProps
+export default ComicsProps;

@@ -1,6 +1,6 @@
 type ThumbnailType = {
-  path: string
-  extension: string
-}
+  path: string;
+  extension: string;
+};
 
-export default ThumbnailType
+export default ThumbnailType;

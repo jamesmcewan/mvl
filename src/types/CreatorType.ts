@@ -1,6 +1,6 @@
 type CreatorType = {
-  name: string
-  role: string
-}
+  name: string;
+  role: string;
+};
 
-export default CreatorType
+export default CreatorType;
