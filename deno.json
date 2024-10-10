@@ -1,0 +1,13 @@
+{
+  "lint": {
+    "exclude": ["dist", "vercel", ".astro", "public", "node_modules"]
+  },
+
+  "fmt": {
+    "useTabs": false,
+    "indentWidth": 2,
+    "semiColons": false,
+    "singleQuote": true,
+    "exclude": ["dist", "vercel", ".astro", "public", "node_modules"]
+  }
+}
