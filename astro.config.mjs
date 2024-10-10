@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
-import node from '@astrojs/node'
+import deno from '@deno/astro-adapter'
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: node({
-    mode: 'standalone',
-  }),
+  adapter: deno(),
   integrations: [tailwind()],
 })
