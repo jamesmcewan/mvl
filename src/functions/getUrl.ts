@@ -1,7 +1,8 @@
 import { Md5 } from 'ts-md5/dist/md5.js'
+import { Resource } from 'sst'
 
-const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || process.env.PUBLIC_KEY
-const PRIVATE_KEY = import.meta.env.MARVEL_KEY || process.env.MARVEL_KEY
+const PUBLIC_KEY = import.meta.env.PUBLIC_KEY || Resource.PublicKey.value
+const PRIVATE_KEY = import.meta.env.MARVEL_KEY || Resource.MarvelKey.value
 
 const getUrl = (week: string) => {
   const source = 'https://gateway.marvel.com/v1/public/comics?'
