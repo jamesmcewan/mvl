@@ -7,6 +7,7 @@ async function getMyComics(week: string) {
       signal: AbortSignal.timeout(5000),
     })
     const data = await response.json()
+
     const { attributionText } = data
     const { results } = data.data
     const regular = results.filter(
