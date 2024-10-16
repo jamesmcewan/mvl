@@ -4,4 +4,4 @@
 
 Astro based fullstack app for this weeks Marvel comics
 
-https://mvl.mcwn.dev
+<https://mvl.mightydinosaur.dev>
