@@ -4,5 +4,18 @@
 import 'sst'
 export {}
 declare module 'sst' {
-  export interface Resource {}
+  export interface Resource {
+    MarvelKey: {
+      type: 'sst.sst.Secret'
+      value: string
+    }
+    PublicKey: {
+      type: 'sst.sst.Secret'
+      value: string
+    }
+    'mvl-app-astro': {
+      type: 'sst.aws.Astro'
+      url: string
+    }
+  }
 }

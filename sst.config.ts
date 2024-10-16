@@ -4,7 +4,7 @@
 export default $config({
   app(input) {
     return {
-      name: 'mvlapp',
+      name: 'mvl-app',
       removal: input?.stage === 'main' ? 'retain' : 'remove',
       home: 'aws',
       providers: {
@@ -18,7 +18,7 @@ export default $config({
     const publicKey = new sst.Secret('PublicKey')
     const marvelKey = new sst.Secret('MarvelKey')
 
-    new sst.aws.Astro('mvlapp-astro', {
+    new sst.aws.Astro('mvl-app-astro', {
       link: [publicKey, marvelKey],
       buildCommand: 'bun run build',
       domain:
