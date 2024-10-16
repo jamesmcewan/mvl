@@ -25,11 +25,7 @@ export default $config({
         $app.stage === 'main'
           ? {
               name: 'mvl.mightydinosaur.dev',
-              redirects: [
-                'mvl.mightydinosaur.net',
-                'mvl.mcewan.io',
-                'mvl.mcwn.dev',
-              ],
+              redirects: ['mvl.mcwn.dev'],
               dns: sst.aws.dns(),
             }
           : undefined,
