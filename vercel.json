@@ -1,0 +1,10 @@
+{
+  "buildCommand": "bun run build",
+  "cleanUrls": true,
+  "devCommand": "bun run dev",
+  "framework": "astro",
+  "installCommand": "bun install",
+  "outputDirectory": "dist",
+  "regions": ["lhr1"],
+  "trailingSlash": true
+}

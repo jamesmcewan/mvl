@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
-import aws from 'astro-sst'
+
+import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: aws(),
   integrations: [tailwind()],
+  adapter: vercel(),
 })
