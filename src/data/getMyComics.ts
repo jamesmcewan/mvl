@@ -6,6 +6,9 @@ async function getMyComics(week: string) {
     const response = await fetch(`${url}`, {
       signal: AbortSignal.timeout(5000),
     })
+    if (!response.ok) {
+      throw new Error('Network response was not ok')
+    }
     const data = await response.json()
 
     const { attributionText } = data
@@ -16,6 +19,7 @@ async function getMyComics(week: string) {
     return { comics: regular, attributionText }
   } catch (e) {
     console.log('oh no', e)
+    return {}
   }
 }
 
