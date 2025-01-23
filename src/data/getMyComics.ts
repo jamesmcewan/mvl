@@ -7,6 +7,7 @@ async function getMyComics(week: string) {
       signal: AbortSignal.timeout(5000),
     })
     if (!response.ok) {
+      console.log(response)
       throw new Error('Network response was not ok')
     }
     const data = await response.json()
