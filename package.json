@@ -16,17 +16,17 @@
     "update-dependencies": "bunx @astrojs/upgrade;bunx npm-check-updates --upgrade && bun install"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "5.1.5",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.0",
     "@types/bun": "^1.1.18",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/node": "^22.10.7",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "astro": "5.1.8",
-    "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -37,8 +37,8 @@
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.10",
-    "tailwindcss": "^3.4.17",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5.7.3"
   },
   "dependencies": {

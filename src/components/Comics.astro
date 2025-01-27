@@ -13,7 +13,7 @@ const { comics } = Astro.props
       {
         comics &&
           comics.map((comic) => (
-            <li class="col-span-1 flex flex-col divide-y divide-slate-400 rounded-lg bg-slate-200 shadow">
+            <li class="col-span-1 flex flex-col divide-y divide-slate-400 rounded-lg bg-slate-200 shadow-sm">
               <Comic {...comic} />
             </li>
           ))
