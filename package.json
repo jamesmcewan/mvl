@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "start": "astro dev",
     "test": "vitest",
-    "update-dependencies": "bunx @astrojs/upgrade;bunx npm-check-updates --upgrade && bun install"
+    "update-dependencies": "bunx @astrojs/upgrade;bun update"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -21,12 +21,12 @@
     "@tailwindcss/postcss": "^4.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.0",
-    "@types/bun": "^1.2.0",
+    "@types/bun": "^1.2.1",
     "@types/eslint__eslintrc": "^2.1.2",
-    "@types/node": "^22.10.10",
-    "@typescript-eslint/eslint-plugin": "^8.21.0",
-    "@typescript-eslint/parser": "^8.21.0",
-    "astro": "^5.1.9",
+    "@types/node": "^22.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "astro": "^5.1.10",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
