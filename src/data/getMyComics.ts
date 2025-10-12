@@ -3,9 +3,8 @@ import getUrl from '../functions/getUrl'
 async function getMyComics(week: string) {
   const url = getUrl(week)
   try {
-    const response = await fetch(`${url}`, {
-      signal: AbortSignal.timeout(5000),
-    })
+    console.log('fetching: ', url)
+    const response = await fetch(`${url}`)
     if (!response.ok) {
       throw new Error('Network response was not ok')
     }
