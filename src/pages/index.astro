@@ -9,7 +9,9 @@ try {
   const response = await getMyComics(week)
   comics = response.comics
   attributionText = response.attributionText
-} catch {}
+} catch (e) {
+  console.log(e)
+}
 ---
 
 <Layout {week} {comics} {attributionText} />
