@@ -5,7 +5,11 @@ async function getMyComics(week: string) {
   let response: Response | undefined
 
   try {
-    console.log('Fetching Marvel API:', { url, week, timestamp: new Date().toISOString() })
+    console.log('Fetching Marvel API:', {
+      url,
+      week,
+      timestamp: new Date().toISOString(),
+    })
 
     response = await fetch(`${url}`)
 
@@ -14,7 +18,7 @@ async function getMyComics(week: string) {
       let errorBody = ''
       try {
         errorBody = await response.text()
-      } catch (bodyError) {
+      } catch {
         errorBody = 'Unable to read response body'
       }
 
@@ -28,11 +32,15 @@ async function getMyComics(week: string) {
         headers: {
           'content-type': response.headers.get('content-type'),
           'x-ratelimit-limit': response.headers.get('x-ratelimit-limit'),
-          'x-ratelimit-remaining': response.headers.get('x-ratelimit-remaining'),
-        }
+          'x-ratelimit-remaining': response.headers.get(
+            'x-ratelimit-remaining',
+          ),
+        },
       })
 
-      throw new Error(`Marvel API returned ${response.status}: ${response.statusText}`)
+      throw new Error(
+        `Marvel API returned ${response.status}: ${response.statusText}`,
+      )
     }
 
     const data = await response.json()
@@ -65,7 +73,7 @@ async function getMyComics(week: string) {
       week: week,
       statusCode: response?.status,
       errorMessage: e instanceof Error ? e.message : String(e),
-      stack: e instanceof Error ? e.stack : undefined
+      stack: e instanceof Error ? e.stack : undefined,
     }
 
     console.error('Marvel API Request Failed:', errorDetails)
